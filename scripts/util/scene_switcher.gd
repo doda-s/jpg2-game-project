@@ -13,7 +13,7 @@ func _deferred_switch_scene(res_path):
 	current_scene.free()
 	var scene = load(res_path)
 	if scene == null or not (scene is PackedScene):
-		push_error("Recurso inválido ou cena não encontrada: " + str(res_path))
+		push_error("Invalid or scene not found: " + str(res_path))
 		return
 	current_scene = scene.instantiate()
 	get_tree().root.add_child(current_scene)

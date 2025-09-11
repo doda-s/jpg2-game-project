@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djtqy8722xkrx"]
 
-[ext_resource type="Texture2D" uid="uid://bpbtxtecmsv0j" path="res://assets/sprites/world/sign.png" id="1_cr2eo"]
+[ext_resource type="Texture2D" uid="uid://bpbtxtecmsv0j" path="res://scripts/components/assets/sprites/world/sign.png" id="1_cr2eo"]
 [ext_resource type="Script" uid="uid://d2ni6d5wg2kei" path="res://scripts/sign.gd" id="1_od5wx"]
 [ext_resource type="PackedScene" uid="uid://dbcd02dvpuy70" path="res://resources/components/interactable_component.tscn" id="2_od5wx"]
 

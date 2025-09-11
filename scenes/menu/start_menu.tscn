@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy64tsunlym0m"]
+
+[ext_resource type="Script" uid="uid://bpws7hvwfc4qv" path="res://scripts/menu/start_menu.gd" id="1_idqd0"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idqd0")
+
+[node name="StartMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idqd0")
+
+[node name="MenuOptions" type="VBoxContainer" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 345.0
+offset_top = 300.0
+offset_right = -357.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="StartMenu/MenuOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start"
+
+[node name="Options" type="Button" parent="StartMenu/MenuOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="StartMenu/MenuOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit
+"
+
+[connection signal="button_down" from="StartMenu/MenuOptions/Start" to="StartMenu" method="_on_start_button_down"]
+[connection signal="pressed" from="StartMenu/MenuOptions/Start" to="." method="_on_start_pressed"]
+[connection signal="button_down" from="StartMenu/MenuOptions/Options" to="StartMenu" method="_on_options_button_down"]
+[connection signal="button_down" from="StartMenu/MenuOptions/Quit" to="StartMenu" method="_on_quit_button_down"]
