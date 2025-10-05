@@ -41,13 +41,14 @@ func show_dialog(_dialog) -> void:
 func close_dialog() -> void:
 	if visible:
 		visible = false
+	title_text_reach.clear()
+	text_text_reach.clear()
+	_clear_options()
 
 func _load_options(options) -> void:
 	# Loads the response buttons. 
 	# Adding placeholders and connecting them to the button interaction signals.
-	
-	if options_vbox.get_children().size() > 0:
-		_clear_options()
+	_clear_options()
 	
 	for opt in options:
 		var _opt_button: Button = preload('res://resources/ui/option_button.tscn').instantiate()
@@ -56,5 +57,8 @@ func _load_options(options) -> void:
 		options_vbox.add_child(_opt_button)
 
 func _clear_options() -> void:
+	if not options_vbox.get_children().size() > 0:
+		return
+	
 	for btn in options_vbox.get_children():
 		btn.queue_free()
