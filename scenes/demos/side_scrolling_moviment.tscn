@@ -1,15 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdm3qd8hvrdog"]
+[gd_scene load_steps=5 format=3 uid="uid://5eheinxpxu3d"]
 
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="1_xfaor"]
 [ext_resource type="Texture2D" uid="uid://bu3s46h74qfpk" path="res://scripts/components/assets/sprites/world/ground-placeholder.png" id="2_ce1xr"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="2_jdho2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqeqr"]
 size = Vector2(1019, 16)
 
 [node name="World" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_xfaor")]
-position = Vector2(547, 262)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(574, 494)
@@ -22,3 +20,18 @@ texture = ExtResource("2_ce1xr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(-0.5, 6)
 shape = SubResource("RectangleShape2D_sqeqr")
+
+[node name="Door" parent="." groups=["doors"] instance=ExtResource("2_jdho2")]
+position = Vector2(96, 409)
+door_id = "1"
+target_id = "2"
+target_scene_path = "res://scenes/demos/side_scrolling_moviment.tscn"
+
+[node name="Door2" parent="." groups=["doors"] instance=ExtResource("2_jdho2")]
+position = Vector2(1053, 409)
+door_id = "2"
+target_id = "3"
+target_scene_path = "res://scenes/demos/teste.tscn"
+
+[node name="Player" parent="." instance=ExtResource("1_xfaor")]
+position = Vector2(192, 352)

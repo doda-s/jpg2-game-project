@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JPG2 Project"
-run/main_scene="uid://05wdjxqdm5il"
+run/main_scene="uid://yth4xjsmwy5m"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,10 +23,15 @@ buses/default_bus_layout=""
 
 SceneSwitcher="*res://scripts/util/scene_switcher.gd"
 AudioPlayer="*res://scripts/util/audio_player.gd"
+Globals="*res://scripts/globals.gd"
 
 [dotnet]
 
 project/assembly_name="JPG2 Project"
+
+[global_group]
+
+doors="doors_ids"
 
 [input]
 
