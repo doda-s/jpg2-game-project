@@ -21,3 +21,5 @@ texture = ExtResource("1_ucweq")
 _entity = NodePath("..")
 
 [node name="PlayerControllerComponent" parent="." instance=ExtResource("3_1ie0h")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
