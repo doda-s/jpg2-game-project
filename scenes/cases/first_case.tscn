@@ -44,7 +44,6 @@ script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper2" type="Sprite2D" parent="DragAndDrop/Doc_1"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_0lq4y")
 
 [node name="Content" type="Label" parent="DragAndDrop/Doc_1/LargePaper2"]
@@ -84,7 +83,6 @@ script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper3" type="Sprite2D" parent="DragAndDrop/Doc_2"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_0lq4y")
 
 [node name="Content" type="Label" parent="DragAndDrop/Doc_2/LargePaper3"]
@@ -124,7 +122,6 @@ script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/Doc_3"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_0lq4y")
 
 [node name="Content" type="Label" parent="DragAndDrop/Doc_3/LargePaper1"]
@@ -154,7 +151,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/Doc_3"]
 light_mask = 2
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1g8ti")
 disabled = true
 
