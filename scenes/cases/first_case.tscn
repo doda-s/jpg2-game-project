@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c2tu6ahdq5vl4"]
+[gd_scene load_steps=16 format=4 uid="uid://c2tu6ahdq5vl4"]
 
 [ext_resource type="Texture2D" uid="uid://m7pdmgqugy0h" path="res://assets/kitchen assets/kitchen assets/Island/Island3.png" id="1_0lq4y"]
 [ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="1_1g8ti"]
@@ -8,7 +8,8 @@
 [ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="4_a7jp4"]
 [ext_resource type="Script" uid="uid://dg6yu7ai3wkou" path="res://scripts/cases/open_note_pad.gd" id="4_uq2ah"]
 [ext_resource type="PackedScene" uid="uid://ckuoxphavmbuf" path="res://resources/grabbable_itens/pencil.tscn" id="6_a7jp4"]
-[ext_resource type="Script" uid="uid://dqyl0phu8s5p5" path="res://scenes/demos/relevant_area.gd" id="7_k7ilh"]
+[ext_resource type="PackedScene" uid="uid://bo670a1t8erqd" path="res://resources/components/relevant_area/relevant_area_highlighter.tscn" id="9_1hi2x"]
+[ext_resource type="PackedScene" uid="uid://qocbbciyn3mw" path="res://resources/components/relevant_area/relevant_area_text.tscn" id="9_one6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqk4k"]
 texture = ExtResource("1_0lq4y")
@@ -18,11 +19,7 @@ texture = ExtResource("1_0lq4y")
 [sub_resource type="TileSet" id="TileSet_42o0s"]
 sources/0 = SubResource("TileSetAtlasSource_hqk4k")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7ilh"]
-size = Vector2(202.5, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hi2x"]
-size = Vector2(67.5, 15.3846)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42o0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g8ti"]
 size = Vector2(226, 326)
@@ -31,8 +28,6 @@ size = Vector2(226, 326)
 line_spacing = 0.0
 font_size = 11
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42o0s"]
 
 [node name="FirstCase" type="Node2D"]
 script = ExtResource("1_42o0s")
@@ -43,12 +38,27 @@ tile_set = SubResource("TileSet_42o0s")
 
 [node name="DragAndDrop" parent="." instance=ExtResource("1_1g8ti")]
 
+[node name="GrabbablePencil" type="CharacterBody2D" parent="DragAndDrop"]
+collision_mask = 2
+input_pickable = true
+script = ExtResource("2_uq2ah")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/GrabbablePencil"]
+position = Vector2(42, 164)
+scale = Vector2(-0.882835, 3.13554)
+shape = SubResource("RectangleShape2D_42o0s")
+disabled = true
+
+[node name="Pencil" parent="DragAndDrop/GrabbablePencil" instance=ExtResource("6_a7jp4")]
+position = Vector2(42, 164)
+
 [node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
 script = ExtResource("4_a7jp4")
 metadata/_custom_type_script = "uid://cwnwd6i3jfob0"
 
 [node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(178, 227)
+position = Vector2(171, 221)
 scale = Vector2(0.4, 0.52)
 collision_mask = 2
 input_pickable = true
@@ -57,6 +67,16 @@ metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper2" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
 texture = ExtResource("4_0lq4y")
+
+[node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
+position = Vector2(-70, -84.6154)
+scale = Vector2(-1.62915, 0.298444)
+areaGroup = "1"
+
+[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
+position = Vector2(-2.5, -103.846)
+scale = Vector2(4.96396, 0.284879)
+areaGroup = "1"
 
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
 offset_left = -101.0
@@ -81,48 +101,13 @@ text = "asdasdasd"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="RelevantArea" type="Area2D" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
-script = ExtResource("7_k7ilh")
-areaGroup = "1"
-metadata/_custom_type_script = "uid://dqyl0phu8s5p5"
-
-[node name="ColorRect" type="ColorRect" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2/RelevantArea"]
-visible = false
-offset_left = -100.0
-offset_top = -108.0
-offset_right = 98.0
-offset_bottom = -96.0
-color = Color(1, 1, 0, 0.376471)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2/RelevantArea"]
-position = Vector2(-1.25, -101.923)
-shape = SubResource("RectangleShape2D_k7ilh")
-
-[node name="RelevantArea2" type="Area2D" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
-position = Vector2(0, 21.1538)
-script = ExtResource("7_k7ilh")
-areaGroup = "1"
-metadata/_custom_type_script = "uid://dqyl0phu8s5p5"
-
-[node name="ColorRect" type="ColorRect" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2/RelevantArea2"]
-visible = false
-offset_left = -100.0
-offset_top = -109.615
-offset_right = -37.0
-offset_bottom = -97.6154
-color = Color(1, 1, 0, 0.376471)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2/RelevantArea2"]
-position = Vector2(-68.75, -103.846)
-shape = SubResource("RectangleShape2D_1hi2x")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
 light_mask = 2
 shape = SubResource("RectangleShape2D_1g8ti")
 disabled = true
 
 [node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(348, 263)
+position = Vector2(340, 214)
 scale = Vector2(0.4, 0.52)
 collision_mask = 2
 input_pickable = true
@@ -155,13 +140,18 @@ text = "asdasdasd"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper3" instance=ExtResource("9_1hi2x")]
+position = Vector2(-72.5, -103.846)
+scale = Vector2(-1.44356, 0.244996)
+areaGroup = "2"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 light_mask = 2
 shape = SubResource("RectangleShape2D_1g8ti")
 disabled = true
 
 [node name="Doc_3" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(324, 240)
+position = Vector2(243, 247)
 scale = Vector2(0.4, 0.52)
 collision_mask = 2
 input_pickable = true
@@ -171,6 +161,17 @@ metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
 texture = ExtResource("4_0lq4y")
 
+[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
+position = Vector2(17.5, -5.76929)
+scale = Vector2(3.66164, -0.278924)
+areaGroup = "3"
+
+[node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
+position = Vector2(-90, 9.61548)
+rotation = 3.14159
+scale = Vector2(0.741599, -0.256004)
+areaGroup = "3"
+
 [node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
 offset_left = -101.0
 offset_top = -110.0
@@ -179,7 +180,7 @@ offset_bottom = 128.0
 scale = Vector2(1, 1.0126)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 11
-text = "	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis at enim in lobortis. Maecenas nisi odio, sollicitudin a blandit quis, posuere ut massa. Morbi quis odio vel ligula porttitor hendrerit. Mauris interdum in justo a egestas. Sed rhoncus nisl sit amet ullamcorper semper. Sed condimentum euismod mauris a egestas. Nulla ultrices ante porttitor velit dictum feugiat. Morbi nec elit porta, malesuada erat id, scelerisque erat. Nulla vestibulum bibendum eleifend. Nullam id posuere odio. Nulla venenatis.
+text = "	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Outro espaço com texto imporatante blandit quis, posuere ut massa. Morbi quis odio vel ligula porttitor hendrerit. Mauris interdum in justo a egestas. testando o component que criei. Sed condimentum euismod mauris a egestas. Nulla ultrices ante porttitor velit dictum feugiat. Morbi nec elit porta, malesuada erat id, scelerisque erat. Nulla vestibulum bibendum eleifend. Nullam id posuere odio. Nulla venenatis.
 
 "
 label_settings = SubResource("LabelSettings_42o0s")
@@ -201,20 +202,66 @@ light_mask = 2
 shape = SubResource("RectangleShape2D_1g8ti")
 disabled = true
 
-[node name="GrabbablePencil" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+[node name="List" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(56, 263)
+scale = Vector2(0.4, 0.52)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/GrabbablePencil"]
-position = Vector2(42, 164)
-scale = Vector2(-0.882835, 3.13554)
-shape = SubResource("RectangleShape2D_42o0s")
-disabled = true
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/List"]
+texture = ExtResource("4_0lq4y")
 
-[node name="Pencil" parent="DragAndDrop/RelevantAreaController/GrabbablePencil" instance=ExtResource("6_a7jp4")]
-position = Vector2(42, 164)
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1"]
+offset_left = -111.0
+offset_top = -136.0
+offset_right = 111.0
+offset_bottom = -113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pontos Importantes"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RelevantAreaText" parent="DragAndDrop/RelevantAreaController/List/LargePaper1" instance=ExtResource("9_one6m")]
+position = Vector2(-95, -107.692)
+scale = Vector2(0.996227, 1)
+areaGroup = "1"
+
+[node name="Label" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1/RelevantAreaText"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "- Assim que as frases..."
+
+[node name="RelevantAreaText2" parent="DragAndDrop/RelevantAreaController/List/LargePaper1" instance=ExtResource("9_one6m")]
+position = Vector2(-95, -84.6154)
+scale = Vector2(0.996227, 1)
+areaGroup = "2"
+
+[node name="Label" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1/RelevantAreaText2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "- ...vão surgir..."
+
+[node name="RelevantAreaText3" parent="DragAndDrop/RelevantAreaController/List/LargePaper1" instance=ExtResource("9_one6m")]
+position = Vector2(-189.642, -169.231)
+scale = Vector2(0.992467, 1)
+areaGroup = "3"
+
+[node name="Label" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1/RelevantAreaText3"]
+visible = false
+offset_left = 95.3598
+offset_top = 107.692
+offset_right = 239.36
+offset_bottom = 130.692
+text = "- ... para o jogador."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/List"]
+light_mask = 2
+shape = SubResource("RectangleShape2D_1g8ti")
+disabled = true
 
 [node name="OpenNotePad" type="Button" parent="."]
 z_index = 100
@@ -234,4 +281,6 @@ script = ExtResource("4_uq2ah")
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/List" to="DragAndDrop/RelevantAreaController/List" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/List" to="DragAndDrop/RelevantAreaController/List" method="_on_mouse_exited"]
 [connection signal="button_down" from="OpenNotePad" to="OpenNotePad" method="_on_button_down"]

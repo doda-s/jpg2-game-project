@@ -12,6 +12,7 @@ var chosen = false
 
 func _ready():
 	add_to_group("grabbable_objects_group")
+	# TODO: verificar porque esta quebrando
 	if has_signal("mouse_entered"):
 		connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	if has_signal("mouse_exited"):

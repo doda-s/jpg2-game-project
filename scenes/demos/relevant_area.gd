@@ -18,8 +18,7 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	emit_signal("on_mouse_exited")
 
-func change_visibility():
+func change_visibility(state: bool):
 	for child in get_children():
 		if (child is ColorRect):
-			child.visible = !child.visible
-		pass
+			child.visible = state

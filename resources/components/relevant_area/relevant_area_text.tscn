@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qocbbciyn3mw"]
+
+[ext_resource type="Script" uid="uid://beldpg2n3uql6" path="res://resources/components/relevant_area/relevant_area_text.gd" id="1_hufd7"]
+
+[node name="RelevantAreaText" type="Node2D"]
+scale = Vector2(0.996227, 1)
+script = ExtResource("1_hufd7")
