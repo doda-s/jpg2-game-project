@@ -2,6 +2,7 @@ extends Node
 
 var target_scene_path = ''
 var target_door_id = ''
+var response_final_list = []
 
 var relevant_area_list = []
 

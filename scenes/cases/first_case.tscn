@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cpsu05qcfiv4d" path="res://scripts/cases/first_case.gd" id="1_42o0s"]
 [ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="2_uq2ah"]
 [ext_resource type="Texture2D" uid="uid://ph50784k8u2t" path="res://assets/large-paper.png" id="4_0lq4y"]
-[ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="4_a7jp4"]
+[ext_resource type="Script" path="res://scripts/components/relevant_area_pressed.gd" id="4_a7jp4"]
 [ext_resource type="Script" uid="uid://dg6yu7ai3wkou" path="res://scripts/cases/open_note_pad.gd" id="4_uq2ah"]
 [ext_resource type="PackedScene" uid="uid://ckuoxphavmbuf" path="res://resources/grabbable_itens/pencil.tscn" id="6_a7jp4"]
 [ext_resource type="PackedScene" uid="uid://bo670a1t8erqd" path="res://resources/components/relevant_area/relevant_area_highlighter.tscn" id="9_1hi2x"]
@@ -61,7 +61,6 @@ position = Vector2(42, 164)
 
 [node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
 script = ExtResource("4_a7jp4")
-metadata/_custom_type_script = "uid://cwnwd6i3jfob0"
 
 [node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
 position = Vector2(331, 242)
@@ -252,6 +251,7 @@ text = "
 "
 label_settings = SubResource("LabelSettings_1hi2x")
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/List"]
 light_mask = 2
@@ -269,6 +269,7 @@ scale = Vector2(0.4, 0.52)
 text = "Note_pad
 "
 script = ExtResource("4_uq2ah")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_exited"]

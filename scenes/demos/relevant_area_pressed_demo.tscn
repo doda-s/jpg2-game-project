@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4073f3w8ee6l"]
 
-[ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="1_mfel0"]
+[ext_resource type="Script" path="res://scripts/components/relevant_area_pressed.gd" id="1_mfel0"]
 [ext_resource type="Script" uid="uid://dqyl0phu8s5p5" path="res://scenes/demos/relevant_area.gd" id="2_ir6kf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfel0"]
@@ -23,7 +23,6 @@ text = "asd"
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-1, 0)
 script = ExtResource("2_ir6kf")
-areaGroup = "1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(153, 91)
@@ -39,7 +38,6 @@ offset_bottom = 112.0
 [node name="RelevantArea" type="Area2D" parent="."]
 position = Vector2(251, 91)
 script = ExtResource("2_ir6kf")
-areaGroup = "1"
 metadata/_custom_type_script = "uid://dqyl0phu8s5p5"
 
 [node name="ColorRect" type="ColorRect" parent="RelevantArea"]
