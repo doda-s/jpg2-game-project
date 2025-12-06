@@ -1,12 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://pftpfvcl56bh"]
+[gd_scene load_steps=11 format=3 uid="uid://pftpfvcl56bh"]
 
 [ext_resource type="Script" uid="uid://spirl3hbi36k" path="res://scripts/player/player.gd" id="1_1ie0h"]
 [ext_resource type="PackedScene" uid="uid://cf11q68cn7wn" path="res://resources/components/moviment_component.tscn" id="2_08t41"]
-[ext_resource type="Texture2D" uid="uid://ccytdumjvfhpl" path="res://assets/advogado_design/advogado_design.png" id="2_8y3ba"]
 [ext_resource type="PackedScene" uid="uid://cy6d66oxhmb5j" path="res://resources/components/player_controller_component.tscn" id="3_1ie0h"]
+[ext_resource type="Texture2D" uid="uid://bqx1o8qinlup8" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_01.png" id="4_r4w5y"]
+[ext_resource type="Texture2D" uid="uid://cuswcntuxjjb7" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_02.png" id="5_emn8m"]
+[ext_resource type="Texture2D" uid="uid://bdwro6mqcm6jn" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_03.png" id="6_aj70s"]
+[ext_resource type="Texture2D" uid="uid://c4f8byppuytgu" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_04.png" id="7_f2fsf"]
+[ext_resource type="Texture2D" uid="uid://cfo4c0cw5hede" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_05.png" id="8_p8jiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08t41"]
 size = Vector2(14, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwaia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r4w5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_emn8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aj70s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f2fsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p8jiw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_1ie0h")
@@ -15,15 +42,22 @@ script = ExtResource("1_1ie0h")
 position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_08t41")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -18)
-scale = Vector2(2, 2)
-texture = ExtResource("2_8y3ba")
-hframes = 4
-
 [node name="MovimentComponent" parent="." node_paths=PackedStringArray("_entity") instance=ExtResource("2_08t41")]
 _entity = NodePath("..")
+_speed = 80.0
+_jump_force = 130.0
 
 [node name="PlayerControllerComponent" parent="." instance=ExtResource("3_1ie0h")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, 0)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_uwaia")
+animation = &"idle"
+autoplay = "idle"
+frame = 4
+frame_progress = 0.286639
+centered = false
+offset = Vector2(0, -19)
