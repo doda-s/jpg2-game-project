@@ -1,5 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://di3xgcctaekf4"]
 
+[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_iaf5o"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_rr7fk"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_gdufv"]
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="3_lv01a"]
@@ -8,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://c41rbxojnqp6d" path="res://resources/entities/mother_npc.tscn" id="6_gdufv"]
 [ext_resource type="PackedScene" uid="uid://dbcd02dvpuy70" path="res://resources/components/interactable_component.tscn" id="7_r61gk"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="8_iaf5o"]
-[ext_resource type="PackedScene" uid="uid://c83mrkppqekr0" path="res://resources/ui/dialog_view.tscn" id="9_iaf5o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wmaw"]
 texture = ExtResource("1_rr7fk")
@@ -1396,6 +1396,8 @@ size = Vector2(52, 36)
 
 [node name="PlayerLivingRoom" type="Node2D"]
 
+[node name="PlayerHud" parent="." instance=ExtResource("1_iaf5o")]
+
 [node name="Landscape" type="Node2D" parent="."]
 
 [node name="Void" type="TileMapLayer" parent="Landscape"]
@@ -1430,10 +1432,3 @@ shape = SubResource("RectangleShape2D_r61gk")
 [node name="DialogProvider" parent="MotherNPC" instance=ExtResource("8_iaf5o")]
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
 context = "dialog-demonstration-1"
-
-[node name="DialogView" parent="." instance=ExtResource("9_iaf5o")]
-visible = false
-anchors_preset = -1
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_vertical = 0
