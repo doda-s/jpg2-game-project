@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4apbcjjpyi1h"]
+[gd_scene load_steps=8 format=3 uid="uid://4apbcjjpyi1h"]
 
 [ext_resource type="Texture2D" uid="uid://ciww12dyxdrdl" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_01.png" id="1_1c2cu"]
 [ext_resource type="Texture2D" uid="uid://cbwp8udbtp63u" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_02.png" id="2_n1pcj"]
 [ext_resource type="Texture2D" uid="uid://cfv4e7cd86tef" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_03.png" id="3_575o8"]
 [ext_resource type="Texture2D" uid="uid://f0eoupd7cvqa" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_04.png" id="4_pdpvr"]
 [ext_resource type="Texture2D" uid="uid://sbiqid8o7w5s" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_05.png" id="5_wsk8m"]
+[ext_resource type="PackedScene" uid="uid://vv1vkrpj6vtu" path="res://resources/components/look_to_player.tscn" id="6_n1pcj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lyecu"]
 animations = [{
@@ -32,7 +33,6 @@ animations = [{
 [node name="BossNPC" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-9, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_lyecu")
 animation = &"idle"
@@ -40,4 +40,7 @@ autoplay = "idle"
 frame = 2
 frame_progress = 0.678389
 centered = false
-offset = Vector2(0, -19)
+offset = Vector2(-4.5, -19)
+
+[node name="LookToPlayer" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("6_n1pcj")]
+sprite = NodePath("../AnimatedSprite2D")
