@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5o28q47l6wm"]
+
+[ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="1_6uly3"]
+
+[node name="OptionButton" type="Button"]
+scale = Vector2(0.602906, 0.205908)
+theme_override_fonts/font = ExtResource("1_6uly3")
+theme_override_font_sizes/font_size = 12
+text = "Option 1"
+alignment = 0
+text_overrun_behavior = 2
+autowrap_mode = 3
+clip_text = true

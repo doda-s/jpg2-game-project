@@ -1,6 +1,8 @@
 extends Control
 class_name DialogView
 
+@export var opt_button_scene: String
+
 var options_vbox: VBoxContainer
 var title_text_reach: RichTextLabel
 var text_text_reach: RichTextLabel
@@ -44,7 +46,13 @@ func _load_options(options) -> void:
 	
 	var index: int = 0
 	for opt in options:
-		var _opt_button: Button = preload('res://resources/ui/option_button.tscn').instantiate()
+		var buttom_scene: String = 'res://resources/ui/option_button.tscn'
+
+		if opt_button_scene != "":
+			print("entrpou aqoiueoqiuwue")
+			buttom_scene = opt_button_scene
+
+		var _opt_button: Button = load(buttom_scene).instantiate()
 		_opt_button.button_up.connect(DialogHandler.next_dialog.bind(opt.Goes, index), CONNECT_ONE_SHOT)
 		_opt_button.text = opt.Placeholder
 		options_vbox.add_child(_opt_button)

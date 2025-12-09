@@ -46,6 +46,7 @@ target_scene_path = "res://scenes/demos/teste.tscn"
 position = Vector2(676, 478)
 
 [node name="InteractableComponent" type="Node2D" parent="MotherNPC"]
+position = Vector2(4, -9)
 script = ExtResource("6_4dkjl")
 metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
 
@@ -56,14 +57,15 @@ position = Vector2(-1, -22)
 shape = SubResource("RectangleShape2D_er8t5")
 
 [node name="DialogProvider" parent="MotherNPC" instance=ExtResource("7_a7nyn")]
+position = Vector2(4, -10)
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
 context = "caso-um"
 
 [node name="DialogView" parent="." instance=ExtResource("8_4dkjl")]
-offset_left = 473.0
-offset_top = 544.0
-offset_right = 473.0
-offset_bottom = 544.0
+offset_left = 471.0
+offset_top = 470.0
+offset_right = 471.0
+offset_bottom = 470.0
 
 [node name="Player" parent="." instance=ExtResource("1_xfaor")]
 position = Vector2(192, 352)

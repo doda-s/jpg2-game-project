@@ -13,6 +13,8 @@ func _ready() -> void:
 	if _interactable_component != null and not _interactable_component.interaction_emitter.is_connected(_init_dialog):
 		print_debug("Interactable component found.")
 		_interactable_component.interaction_emitter.connect(_init_dialog)
+	else:
+		_init_dialog()
 
 func _init_dialog() -> void:
 	_dialog_scoop = _load_dialog_json()
