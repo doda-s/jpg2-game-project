@@ -24,5 +24,6 @@ func _load_dialog_json():
 	if not FileAccess.file_exists(dialog_json_file):
 		print_debug("Dialog file not exist.")
 		return
-	
-	return JSON.parse_string(FileAccess.open(dialog_json_file, FileAccess.READ).get_as_text())
+	var dialog_obj = JSON.parse_string(FileAccess.open(dialog_json_file, FileAccess.READ).get_as_text())
+	Globals.set_dialog_obj(dialog_obj)
+	return dialog_obj

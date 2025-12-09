@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://5eheinxpxu3d"]
+[gd_scene load_steps=11 format=3 uid="uid://5eheinxpxu3d"]
 
+[ext_resource type="Script" uid="uid://cpi1uf4q4jmer" path="res://scripts/sidescrollscript.gd" id="1_3ytmu"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="1_xfaor"]
 [ext_resource type="Texture2D" uid="uid://bu3s46h74qfpk" path="res://scripts/components/assets/sprites/world/ground-placeholder.png" id="2_ce1xr"]
 [ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="2_jdho2"]
+[ext_resource type="PackedScene" uid="uid://c41rbxojnqp6d" path="res://resources/entities/mother_npc.tscn" id="5_mhb5f"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="6_4dkjl"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="7_a7nyn"]
+[ext_resource type="PackedScene" uid="uid://c83mrkppqekr0" path="res://resources/ui/dialog_view.tscn" id="8_4dkjl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqeqr"]
 size = Vector2(1019, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er8t5"]
+size = Vector2(35, 61)
+
 [node name="World" type="Node2D"]
+script = ExtResource("1_3ytmu")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(574, 494)
@@ -32,6 +41,29 @@ position = Vector2(1053, 409)
 door_id = "2"
 target_id = "3"
 target_scene_path = "res://scenes/demos/teste.tscn"
+
+[node name="MotherNPC" parent="." instance=ExtResource("5_mhb5f")]
+position = Vector2(676, 478)
+
+[node name="InteractableComponent" type="Node2D" parent="MotherNPC"]
+script = ExtResource("6_4dkjl")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="MotherNPC/InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MotherNPC/InteractableComponent/Area2D"]
+position = Vector2(-1, -22)
+shape = SubResource("RectangleShape2D_er8t5")
+
+[node name="DialogProvider" parent="MotherNPC" instance=ExtResource("7_a7nyn")]
+dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
+context = "caso-um"
+
+[node name="DialogView" parent="." instance=ExtResource("8_4dkjl")]
+offset_left = 473.0
+offset_top = 544.0
+offset_right = 473.0
+offset_bottom = 544.0
 
 [node name="Player" parent="." instance=ExtResource("1_xfaor")]
 position = Vector2(192, 352)
