@@ -18,6 +18,7 @@ func _init_dialog() -> void:
 	_dialog_scoop = _load_dialog_json()
 	for ctx in _dialog_scoop.Context:
 		if ctx.Name == context:
+			Globals.set_dialog_obj(ctx)
 			DialogHandler.init_dialog(ctx)
 
 func _load_dialog_json():
@@ -25,5 +26,4 @@ func _load_dialog_json():
 		print_debug("Dialog file not exist.")
 		return
 	var dialog_obj = JSON.parse_string(FileAccess.open(dialog_json_file, FileAccess.READ).get_as_text())
-	Globals.set_dialog_obj(dialog_obj)
 	return dialog_obj
