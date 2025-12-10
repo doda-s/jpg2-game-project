@@ -12,6 +12,10 @@ func _ready() -> void:
 	# conecta o controller a lista para mostrar as respostas
 	relevantAreaController.connect("get_current_area", Callable(self, "update_msg_list"))
 	group_list = get_tree().get_nodes_in_group("relevant_area_group")
+
+	SceneSwitcher.current_scene = self
+	if not DialogHandler.dialog_ended_signal.is_connected(teste):
+		DialogHandler.dialog_ended_signal.connect(teste)
 	
 
 func update_msg_list(currentSelectArea: String) -> void:
@@ -45,3 +49,8 @@ func format_msg_list() -> String:
 	for msg in msg_list:
 		finalMsg += (msg + "\n")
 	return finalMsg
+
+func teste(_arr):
+	Globals.ResponseArr.clear()
+	Globals.ResponseArr.append_array(_arr)
+	SceneSwitcher.switch_scene("res://scenes/demos/final_scene.tscn")
