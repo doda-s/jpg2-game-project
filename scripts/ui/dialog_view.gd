@@ -49,7 +49,6 @@ func _load_options(options) -> void:
 		var buttom_scene: String = 'res://resources/ui/option_button.tscn'
 
 		if opt_button_scene != "":
-			print("entrpou aqoiueoqiuwue")
 			buttom_scene = opt_button_scene
 
 		var _opt_button: Button = load(buttom_scene).instantiate()

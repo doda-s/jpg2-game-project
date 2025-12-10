@@ -9,12 +9,11 @@ func _ready() -> void:
 	if not DialogHandler.dialog_ended_signal.is_connected(player_choice_map):
 		DialogHandler.dialog_ended_signal.connect(player_choice_map)
 
-	print('chegou aqui 0')
 	arr = Globals.obj_dialog
 	responseQuestion = Globals.ResponseArr
-	print('chegou aqui 1')
+
 	tratamentIndexed(arrIndexed)
-	print('chegou aqui 2')
+
 	await get_tree().create_timer(3.0).timeout
 	visibilityTrue($Panel)
 
@@ -26,14 +25,10 @@ func tratamentIndexed(arre: Array) -> void:
 
 	var perguntas = arr["DialogNodes"]
 
-	print('chegou aqui 1.1')
-
 	if arr["Name"] == "caso-um":
 		caso = "1"
 	elif arr["Name"] == "caso-dois":
 		caso = "2"
-
-	print('chegou aqui 1.2')
 
 	for i in range(responseQuestion.size()):
 		var pergunta_index = i
@@ -62,24 +57,17 @@ func tratamentIndexed(arre: Array) -> void:
 
 		lista_consequencias.append(texto_final)
 
-	print('chegou aqui 1.3')
 
 	# Preenche os labels dentro do ScrollContainer/VBox
 	$Panel/ScrollContainer/VBoxContainer.add_theme_constant_override("separation", 25)
-	print('chegou aqui 1.3.1')
 	for child in $Panel/ScrollContainer/VBoxContainer.get_children():
-		print('chegou aqui 1.3.2')
-		print(lista_consequencias)
 		var texto = lista_consequencias[count]
-		print('chegou aqui 1.3.3')
 		child.text = texto
 		if texto.contains("Resposta correta: "):
 			child.add_theme_color_override("font_color", Color(1, 0, 0)) # vermelho
 		else:
 			child.remove_theme_color_override("font_color")
 		count += 1
-	print('chegou aqui 1.4')
-
 
 func buscar_consequencia(caso: String, pergunta: int, resposta: int) -> String:
 	for item in consequencia:
@@ -108,7 +96,6 @@ func _on_button_pressed():
 
 func player_choice_map(arr_choice_map):
 	responseQuestion = arr_choice_map
-	print("Respostas do jogador: ", arr_choice_map)
 	
 var consequencia = [
 	# CASO 1

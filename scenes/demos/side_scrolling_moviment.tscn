@@ -23,6 +23,7 @@ position = Vector2(574, 494)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 z_index = -1
+rotation = 0.0010405
 scale = Vector2(32, 1)
 texture = ExtResource("2_ce1xr")
 
