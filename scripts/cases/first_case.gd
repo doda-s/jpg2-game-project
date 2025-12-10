@@ -12,6 +12,7 @@ func _ready() -> void:
 	# conecta o controller a lista para mostrar as respostas
 	relevantAreaController.connect("get_current_area", Callable(self, "update_msg_list"))
 	group_list = get_tree().get_nodes_in_group("relevant_area_group")
+	
 
 func update_msg_list(currentSelectArea: String) -> void:
 	# adiciona frases na lista
