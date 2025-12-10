@@ -13,7 +13,7 @@ func _ready() -> void:
 	responseQuestion = Globals.ResponseArr
 	
 	tratamentIndexed(arrIndexed)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	visibilityTrue($Panel)
 
 
