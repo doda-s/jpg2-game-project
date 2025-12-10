@@ -50,6 +50,7 @@ _jump_force = 130.0
 [node name="PlayerControllerComponent" parent="." instance=ExtResource("3_1ie0h")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -25)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-10, 0)

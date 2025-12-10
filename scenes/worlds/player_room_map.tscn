@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://bogm0d0qetkp"]
+[gd_scene load_steps=18 format=4 uid="uid://b40k6efnw8cvj"]
 
+[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_7nq4g"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_36mdb"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_7nq4g"]
 [ext_resource type="Texture2D" uid="uid://dyyumjyrixk4n" path="res://assets/mp_house_interiors_tileset_pack/parents_room.png" id="3_clenk"]
@@ -1249,6 +1250,8 @@ sources/0 = SubResource("TileSetAtlasSource_2axrc")
 
 [node name="PlayerRoomMap" type="Node2D"]
 
+[node name="PlayerHud" parent="." instance=ExtResource("1_7nq4g")]
+
 [node name="Landscape" type="Node2D" parent="."]
 
 [node name="Void" type="TileMapLayer" parent="Landscape"]
@@ -1268,3 +1271,4 @@ tile_map_data = PackedByteArray("AAAHAP7/AAAJAAcAAAAHAP//AAAJAAgAAAA=")
 tile_set = SubResource("TileSet_uj7oo")
 
 [node name="Player" parent="." instance=ExtResource("5_myjni")]
+position = Vector2(89, 0)
