@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://k831fo4rioya"]
+
+[ext_resource type="Texture2D" uid="uid://co2bw46f1n2no" path="res://assets/npcs/IDLE/BARISTA/BARISTA_IDLE_01.png" id="1_oma6y"]
+[ext_resource type="Texture2D" uid="uid://cvpvhd8vxuirn" path="res://assets/npcs/IDLE/BARISTA/BARISTA_IDLE_02.png" id="2_fskcp"]
+[ext_resource type="Texture2D" uid="uid://dik8kvble4w8t" path="res://assets/npcs/IDLE/BARISTA/BARISTA_IDLE_03.png" id="3_x8dqv"]
+[ext_resource type="Texture2D" uid="uid://iyo3xjhsg01h" path="res://assets/npcs/IDLE/BARISTA/BARISTA_IDLE_04.png" id="4_vfhkn"]
+[ext_resource type="Texture2D" uid="uid://sywh6c4nwq26" path="res://assets/npcs/IDLE/BARISTA/BARISTA_IDLE_05.png" id="5_f2q5i"]
+[ext_resource type="PackedScene" uid="uid://vv1vkrpj6vtu" path="res://resources/components/look_to_player.tscn" id="6_fskcp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5v2c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oma6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fskcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x8dqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vfhkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f2q5i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BaristaNPC" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5v2c2")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0298316
+centered = false
+offset = Vector2(-5.5, -19)
+
+[node name="LookToPlayer" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("6_fskcp")]
+sprite = NodePath("../AnimatedSprite2D")

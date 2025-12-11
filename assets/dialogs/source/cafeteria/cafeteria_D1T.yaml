@@ -1,0 +1,114 @@
+context:
+  - name: first-day-afternoon
+    start_in: barista-sees-him-again
+    end_in: leaving-again
+    dialog_nodes:
+      - id: barista-sees-him-again
+        title: Barista
+        text: Olha só quem voltou vivo! Sobreviveu ao primeiro dia ou esse é seu espírito vagando por aí?
+        options:
+          - placeholder: Sobrevivi! Eu acho. Não confirmaram se ainda tenho alma.
+            goes: reaction-survived
+          - placeholder: Considerando tudo o que aconteceu… tô surpreso de estar em pé.
+            goes: reaction-tired
+          - placeholder: Se eu disser que quase fugi no almoço, você promete não rir?
+            goes: reaction-ran-away
+
+      - id: reaction-survived
+        title: Barista
+        text: Boa! Trago boas notícias então, se você ainda tá sentindo dor nas costas, provavelmente continua vivo.
+        options:
+          - placeholder: Isso explica muita coisa.
+            goes: how-was-day-question
+
+      - id: reaction-tired
+        title: Barista
+        text: Aí sim, clima de série jurídica raiz. Falta só uma trilha sonora dramática quando você entra na sala.
+        options:
+          - placeholder: Eu ouvi trilha sonora na minha cabeça, conta?
+            goes: how-was-day-question
+
+      - id: reaction-ran-away
+        title: Barista
+        text: Prometo nada! Mas, olha, fugir no almoço é tradição milenar do estagiário moderno.
+        options:
+          - placeholder: Acho que participei dessa tradição sem querer.
+            goes: how-was-day-question
+
+      - id: how-was-day-question
+        title: Barista
+        text: Mas me conta… como foi afinal? O escritório é tão assustador quanto parece?
+        options:
+          - placeholder: Assustador eu não sei… mas me deram mais papéis que um concurso público.
+            goes: too-many-docs
+          - placeholder: Tive que fingir confiança mais vezes do que eu gostaria de admitir.
+            goes: pretending-confidence
+          - placeholder: Meu chefe falou comigo três vezes e eu tive mini infartos nas três.
+            goes: boss-mini-heart-attacks
+
+      - id: too-many-docs
+        title: Barista
+        text: Clássico! Escritório jurídico só funciona porque árvores fazem pacto com entidades místicas pra não acabar.
+        options:
+          - placeholder: Me senti engolido por um tsunami de papel.
+            goes: talking-energy
+
+      - id: pretending-confidence
+        title: Barista
+        text: Hahaha! O famoso “cara de quem sabe o que tá fazendo”. Eu sou mestre nisso.
+        options:
+          - placeholder: Acho que você faria sucesso como estagiária então.
+            goes: talking-energy
+
+      - id: boss-mini-heart-attacks
+        title: Barista
+        text: Mini infarto é de praxe. Se o chefe abre a boca, o estagiário perde um ano de vida.
+        options:
+          - placeholder: Então eu já tô devendo uns cinco anos.
+            goes: talking-energy
+
+      - id: talking-energy
+        title: Barista
+        text: Tá com cara de quem precisa de café. Muito café. Quer o mesmo de manhã ou um nível acima?
+        options:
+          - placeholder: Um nível acima, por favor. O dia foi longo.
+            goes: level-up-coffee
+          - placeholder: O mesmo já resolve. Eu só preciso acordar de novo.
+            goes: same-drink
+
+      - id: level-up-coffee
+        title: Barista
+        text: Beleza, vou preparar um “Eu disse que trabalhava, não que sofria”. É potente.
+        options:
+          - placeholder: Acho que é exatamente isso que eu preciso.
+            goes: casual-ending
+
+      - id: same-drink
+        title: Barista
+        text: Capuccino clássico, então. Elegante, consistente… igual alguém tentando parecer que teve um dia normal.
+        options:
+          - placeholder: Me entregou sem dó agora.
+            goes: casual-ending
+
+      - id: casual-ending
+        title: Barista
+        text: Pronto! E aí? Vai voltar amanhã ou já pensou em largar tudo e virar barista também?
+        options:
+          - placeholder: Vou voltar sim… acho que dá pra sobreviver.
+            goes: leaving-again
+          - placeholder: Se eu largar tudo, você me ensina a fazer café?
+            goes: barista-teaches
+
+      - id: barista-teaches
+        title: Barista
+        text: Ensinar eu ensino! Só não prometo que você vai sobreviver ao primeiro turno.
+        options:
+          - placeholder: Justo. Acho que vou continuar na advocacia mesmo.
+            goes: leaving-again
+
+      - id: leaving-again
+        title: Barista
+        text: Beleza, novato. Vai descansar que amanhã tem mais. E lembra, se sobreviver, você me conta tudo de novo.
+        options:
+          - placeholder: Fechado! Até amanhã.
+            goes: leaving-again
