@@ -206,7 +206,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogProvider" parent="." instance=ExtResource("9_k1im2")]
 dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
-context = "perguntas-augusto"
+context = "caso-um"
 
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
