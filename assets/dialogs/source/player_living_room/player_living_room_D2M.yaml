@@ -1,0 +1,98 @@
+context:
+  - name: good-morning-mom
+    start_in: did-you-sleep-well
+    end_in: i-need-to-go
+    dialog_nodes:
+      - id: did-you-sleep-well
+        title: Mãe
+        text: Bom dia, meu filho! Dormiu bem?
+        options:
+          - placeholder: Dormi sim. Acho que vou me acostumar rápido com o mundo jurídico.
+            goes: i-like-the-trust
+          - placeholder: Dormir, eu dormi. Agora… descansar é outra história.
+            goes: welcome-to-the-world-of-the-tired-ones
+          - placeholder: Sonhei que estava preso num contrato sem cláusula de saída…
+            goes: legal-tragedy-in-a-dream
+      
+      - id: i-like-the-trust
+        title: Mãe
+        text: Olha só! Começou ontem e já tá se achando promotor. Gostei, confiança é tudo!
+        options:
+          - placeholder: ...
+            goes: how-was-the-first-day
+      
+      - id: welcome-to-the-world-of-the-tired-ones
+        title: Mãe
+        text: Ih, já viu que advogado sofre desde o primeiro dia, né? Bem-vindo ao clube de quem vive cansado!
+        options:
+          - placeholder: ...
+            goes: how-was-the-first-day
+      
+      - id: legal-tragedy-in-a-dream
+        title: Mãe
+        text: Credo, menino! Nem começou e já tá vivendo tragédia jurídica nos sonhos!
+        options:
+          - placeholder: ...
+            goes: how-was-the-first-day
+      
+      - id: how-was-the-first-day
+        title: Mãe
+        text: Mas me conta… como foi o primeiro dia no estágio?
+        options:
+          - placeholder: Foi tranquilo até… Passei na cafeteria, e depois o meu chefe me fez várias perguntas e me deu um monte de papéis.
+            goes: coffee-and-paperwork
+          - placeholder: Me senti num episódio de série jurídica.
+            goes: excitement-on-the-first-day
+          - placeholder: Quase respondi errado uma pergunta fácil pro advogado, mãe! Minha alma saiu pelo pé.
+            goes: dont-send-anyone-to-jail
+      
+      - id: coffee-and-paperwork
+        title: Mãe
+        text: Ah, começou na base do cafezinho e da papelada. Clássico! Todo grande advogado começa assim.
+        options:
+          - placeholder: ...
+            goes: are-your-colleagues-nice
+      
+      - id: excitement-on-the-first-day
+        title: Mãe
+        text: Olhaaa! Já tá vivendo emoção no primeiro dia. Na minha época, primeiro dia era varrer a sala.
+        options:
+          - placeholder: ...
+            goes: are-your-colleagues-nice
+      
+      - id: dont-send-anyone-to-jail
+        title: Mãe
+        text: Meu Deus… só me promete que não vai mandar ninguém pra cadeia por acidente, tá?
+        options:
+          - placeholder: Fica tranquila, isso não vai acontecer.
+            goes: are-your-colleagues-nice
+
+      - id: are-your-colleagues-nice
+        title: Mãe
+        text: E o pessoal lá parece gente boa?
+        options:
+          - placeholder: Sim! Me receberam bem. Eles parecem legais.
+            goes: positive-environment
+          - placeholder: Acho que são legais… não deu tempo de decorar os nomes.
+            goes:
+      
+      - id: positive-environment
+        title: Mãe
+        text: Ótimo! Ambiente bom já é meio caminho andado.
+        options:
+          - placeholder: ...
+            goes: i-need-to-go
+      
+      - id: i-think-they-are-cool
+        title: Mãe
+        text: Normal, normal. Leva uns dias pra saber quem é quem. Até hoje não sei o nome da vizinha
+        options:
+          - placeholder: ...
+            goes: i-need-to-go
+      
+      - id: i-need-to-go
+        title: Mãe
+        text: Bom filho, eu tenho que ir agora. Espero que você tenha um ótimo dia. Lembre-se, eu te amo.
+        options:
+          - placeholder: Também te amo mãe.
+            goes: i-need-to-go

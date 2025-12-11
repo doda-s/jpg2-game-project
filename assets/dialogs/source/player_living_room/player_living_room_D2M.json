@@ -1,0 +1,163 @@
+{
+	"Context": [
+		{
+			"Name": "good-morning-mom",
+			"StartIn": "did-you-sleep-well",
+			"EndIn": "i-need-to-go",
+			"DialogNodes": [
+				{
+					"ID": "did-you-sleep-well",
+					"Title": "Mãe",
+					"Text": "Bom dia, meu filho! Dormiu bem?",
+					"Options": [
+						{
+							"Placeholder": "Dormi sim. Acho que vou me acostumar rápido com o mundo jurídico.",
+							"Goes": "i-like-the-trust"
+						},
+						{
+							"Placeholder": "Dormir, eu dormi. Agora… descansar é outra história.",
+							"Goes": "welcome-to-the-world-of-the-tired-ones"
+						},
+						{
+							"Placeholder": "Sonhei que estava preso num contrato sem cláusula de saída…",
+							"Goes": "legal-tragedy-in-a-dream"
+						}
+					]
+				},
+				{
+					"ID": "i-like-the-trust",
+					"Title": "Mãe",
+					"Text": "Olha só! Começou ontem e já tá se achando promotor. Gostei, confiança é tudo!",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "how-was-the-first-day"
+						}
+					]
+				},
+				{
+					"ID": "welcome-to-the-world-of-the-tired-ones",
+					"Title": "Mãe",
+					"Text": "Ih, já viu que advogado sofre desde o primeiro dia, né? Bem-vindo ao clube de quem vive cansado!",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "how-was-the-first-day"
+						}
+					]
+				},
+				{
+					"ID": "legal-tragedy-in-a-dream",
+					"Title": "Mãe",
+					"Text": "Credo, menino! Nem começou e já tá vivendo tragédia jurídica nos sonhos!",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "how-was-the-first-day"
+						}
+					]
+				},
+				{
+					"ID": "how-was-the-first-day",
+					"Title": "Mãe",
+					"Text": "Mas me conta… como foi o primeiro dia no estágio?",
+					"Options": [
+						{
+							"Placeholder": "Foi tranquilo até… Passei na cafeteria, e depois o meu chefe me fez várias perguntas e me deu um monte de papéis.",
+							"Goes": "coffee-and-paperwork"
+						},
+						{
+							"Placeholder": "Me senti num episódio de série jurídica.",
+							"Goes": "excitement-on-the-first-day"
+						},
+						{
+							"Placeholder": "Quase respondi errado uma pergunta fácil pro advogado, mãe! Minha alma saiu pelo pé.",
+							"Goes": "dont-send-anyone-to-jail"
+						}
+					]
+				},
+				{
+					"ID": "coffee-and-paperwork",
+					"Title": "Mãe",
+					"Text": "Ah, começou na base do cafezinho e da papelada. Clássico! Todo grande advogado começa assim.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "are-your-colleagues-nice"
+						}
+					]
+				},
+				{
+					"ID": "excitement-on-the-first-day",
+					"Title": "Mãe",
+					"Text": "Olhaaa! Já tá vivendo emoção no primeiro dia. Na minha época, primeiro dia era varrer a sala.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "are-your-colleagues-nice"
+						}
+					]
+				},
+				{
+					"ID": "dont-send-anyone-to-jail",
+					"Title": "Mãe",
+					"Text": "Meu Deus… só me promete que não vai mandar ninguém pra cadeia por acidente, tá?",
+					"Options": [
+						{
+							"Placeholder": "Fica tranquila, isso não vai acontecer.",
+							"Goes": "are-your-colleagues-nice"
+						}
+					]
+				},
+				{
+					"ID": "are-your-colleagues-nice",
+					"Title": "Mãe",
+					"Text": "E o pessoal lá parece gente boa?",
+					"Options": [
+						{
+							"Placeholder": "Sim! Me receberam bem. Eles parecem legais.",
+							"Goes": "positive-environment"
+						},
+						{
+							"Placeholder": "Acho que são legais… não deu tempo de decorar os nomes.",
+							"Goes": ""
+						}
+					]
+				},
+				{
+					"ID": "positive-environment",
+					"Title": "Mãe",
+					"Text": "Ótimo! Ambiente bom já é meio caminho andado.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "i-need-to-go"
+						}
+					]
+				},
+				{
+					"ID": "i-think-they-are-cool",
+					"Title": "Mãe",
+					"Text": "Normal, normal. Leva uns dias pra saber quem é quem. Até hoje não sei o nome da vizinha",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "i-need-to-go"
+						}
+					]
+				},
+				{
+					"ID": "i-need-to-go",
+					"Title": "Mãe",
+					"Text": "Bom filho, eu tenho que ir agora. Espero que você tenha um ótimo dia. Lembre-se, eu te amo.",
+					"Options": [
+						{
+							"Placeholder": "Também te amo mãe.",
+							"Goes": "i-need-to-go"
+						}
+					]
+				}
+			]
+		}
+	]
+}

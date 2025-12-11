@@ -1,0 +1,40 @@
+{
+	"Context": [
+		{
+			"Name": "bathroom-door",
+			"StartIn": "bathroom-door-locked",
+			"EndIn": "bathroom-door-locked",
+			"DialogNodes": [
+				{
+					"ID": "bathroom-door-locked",
+					"Title": "Você",
+					"Text": "Esse é o banheiro. Não preciso utilizar ele no momento.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "bathroom-door-locked"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "letter-from-mom",
+			"StartIn": "letter-content",
+			"EndIn": "letter-content",
+			"DialogNodes": [
+				{
+					"ID": "letter-content",
+					"Title": "Carta da Mamãe",
+					"Text": "Bom dia filho! Desculpa por não poder te dar bom dia hoje, eu tive que sair na pressa. Preparado para seu primeiro dia? Espero que dê tudo certo... Mantenha a calma, e dê o seu melhor! Com amor, MAMÃE.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "letter-content"
+						}
+					]
+				}
+			]
+		}
+	]
+}
