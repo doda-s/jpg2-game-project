@@ -51,7 +51,7 @@ offset_right = 426.0
 offset_bottom = 544.0
 
 [node name="MotherNPC" parent="." instance=ExtResource("5_mhb5f")]
-position = Vector2(950, 478)
+position = Vector2(195, 477)
 
 [node name="InteractableComponent" type="Node2D" parent="MotherNPC"]
 position = Vector2(4, -9)
@@ -66,8 +66,8 @@ shape = SubResource("RectangleShape2D_er8t5")
 
 [node name="DialogProvider" parent="MotherNPC" instance=ExtResource("7_a7nyn")]
 position = Vector2(4, -10)
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "caso-dois"
+dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
+context = "cena2-augusto-e-case"
 
 [node name="Player" parent="." instance=ExtResource("1_xfaor")]
 position = Vector2(192, 352)

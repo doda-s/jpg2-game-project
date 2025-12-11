@@ -1,0 +1,301 @@
+{
+	"Context": [
+		{
+			"Name": "reception_dialog",
+			"StartIn": "hello_laura",
+			"EndIn": "farewell",
+			"DialogNodes": [
+				{
+					"ID": "hello_laura",
+					"Title": "Laura",
+					"Text": "Oi! Você deve ser o novo estagiário. Parabéns — começar aqui não é comum. E você tem cara de quem está pronto para algo grande (sorriso no rosto).\n",
+					"Options": [
+						{
+							"Placeholder": "Eu vim preparado.",
+							"Goes": "im_ready"
+						},
+						{
+							"Placeholder": "Um pouco nervoso, mas animado.",
+							"Goes": "im_nervous_reply"
+						},
+						{
+							"Placeholder": "Depende… o chefinho é muito sério?",
+							"Goes": "sus_reply"
+						}
+					]
+				},
+				{
+					"ID": "im_ready",
+					"Title": "Laura",
+					"Text": "Ótimo. O Doutor Augusto gosta de gente que chega sabendo o que quer. E você… parece saber.\n",
+					"Options": [
+						{
+							"Placeholder": "Continuar.",
+							"Goes": "farewell"
+						}
+					]
+				},
+				{
+					"ID": "im_nervous_reply",
+					"Title": "Laura",
+					"Text": "Normal. A animação compensa o nervoso. E o Doutor Augusto vê valor nisso. Pode entrar — ele está esperando.\n",
+					"Options": [
+						{
+							"Placeholder": "Continuar.",
+							"Goes": "farewell"
+						}
+					]
+				},
+				{
+					"ID": "sus_reply",
+					"Title": "Laura",
+					"Text": "“Chefinho”, né? Corajoso você. Ele é sério… quando quer. Mas vai com fé, acho que ele vai gostar de você.\n",
+					"Options": [
+						{
+							"Placeholder": "Continuar.",
+							"Goes": "farewell"
+						}
+					]
+				},
+				{
+					"ID": "farewell",
+					"Title": "Laura",
+					"Text": "Boa sorte!",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "farewell"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "cena2-augusto-e-case",
+			"StartIn": "go_to_augusto",
+			"EndIn": "case_intro3",
+			"DialogNodes": [
+				{
+					"ID": "go_to_augusto",
+					"Title": "Dr. Augusto",
+					"Text": "Se você estiver aqui para fazer o básico… já pode voltar. Eu não treino pessoas comuns.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "go_to_augusto1"
+						}
+					]
+				},
+				{
+					"ID": "go_to_augusto1",
+					"Title": "Dr. Augusto",
+					"Text": "...",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "augusto_intro"
+						}
+					]
+				},
+				{
+					"ID": "augusto_intro",
+					"Title": "Dr. Augusto",
+					"Text": "Bem-vindo. Sou o Doutor Augusto. Metade mentor, metade enigma — você decide qual metade descobrir primeiro.",
+					"Options": [
+						{
+							"Placeholder": "Prazer, chefinho.",
+							"Goes": "augusto_nickname"
+						}
+					]
+				},
+				{
+					"ID": "augusto_nickname",
+					"Title": "Dr. Augusto",
+					"Text": "Interessante apelido. Ousado. Vamos ver se você sustenta ele.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "augusto_seat"
+						}
+					]
+				},
+				{
+					"ID": "augusto_seat",
+					"Title": "Dr. Augusto",
+					"Text": "Antes de você dizer qualquer coisa… três detalhes sobre você já me chamaram atenção. Não vou te dizer quais. Pessoas inteligentes descobrem sozinhas.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "augusto_relax"
+						}
+					]
+				},
+				{
+					"ID": "augusto_relax",
+					"Title": "Dr. Augusto",
+					"Text": "Relaxe, eu só pareço bravo. Na verdade, sou uma ótima pessoa… pelo menos até a hora do almoço.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro"
+						}
+					]
+				},
+				{
+					"ID": "case_intro0",
+					"Title": "Dr. Augusto",
+					"Text": "(Abre pasta e retira documento)",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro"
+						}
+					]
+				},
+				{
+					"ID": "case_intro",
+					"Title": "Dr. Augusto",
+					"Text": "Pronto. Seu primeiro desafio. Cliente: Joana. Professora. Recebeu um alvará municipal em 2018 para construir um depósito de canoas. Simples, direto, nada demais.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro1"
+						}
+					]
+				},
+				{
+					"ID": "case_intro1",
+					"Title": "Dr. Augusto",
+					"Text": "E qual é o problema? Problema? Ela demorou só… cinco anos para começar.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro2"
+						}
+					]
+				},
+				{
+					"ID": "case_intro2",
+					"Title": "Dr. Augusto",
+					"Text": "Em 2023, o Estado lançou uma lei proibindo aterro em lagoas naturais. E quando ela resolve começar a obra… Ibama, fiscais, embargo imediato.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro3"
+						}
+					]
+				},
+				{
+					"ID": "case_intro3",
+					"Title": "Dr. Augusto",
+					"Text": "Agora vamos ver: como você avaliaria este caso?",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "case_intro3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "perguntas-augusto",
+			"StartIn": "p1_question",
+			"EndIn": "p4_question",
+			"DialogNodes": [
+				{
+					"ID": "p1_question",
+					"Title": "Dr. Augusto",
+					"Text": "Na audiência, o advogado da Joana construiu a defesa inteira em cima do alvará de construção concedido pela Prefeitura em 2018. Ele tratou aquele papel como se fosse a peça central da defesa. Se você estivesse revisando essa tese comigo, antes da sessão, qual linha de raciocínio daria mais sustentação jurídica?",
+					"Options": [
+						{
+							"Placeholder": "R1 — O alvará municipal, concedido antes da lei estadual de 2023, assegura à Joana o direito de concluir a obra como planejado, ainda que a legislação ambiental tenha se tornado mais restritiva depois.",
+							"Goes": "p2_question"
+						},
+						{
+							"Placeholder": "R2 — Como o alvará municipal foi emitido quando ainda não existia a proibição estadual, a obra de Joana não pode ser afetada pelas normas ambientais novas, que só valem para autorizações futuras.",
+							"Goes": "p2_question"
+						},
+						{
+							"Placeholder": "R3 — O alvará municipal foi válido quando emitido, mas a continuidade da obra precisa ser compatibilizada com a legislação ambiental posterior, inclusive com a lei estadual de 2023 que passou a restringir intervenções na lagoa.",
+							"Goes": "p2_question"
+						},
+						{
+							"Placeholder": "R4 — O alvará municipal demonstra que a Prefeitura avaliou o projeto previamente, de modo que, em respeito à segurança jurídica, a fiscalização ambiental não deveria mais impor novos limites à obra de Joana.",
+							"Goes": "p2_question"
+						}
+					]
+				},
+				{
+					"ID": "p2_question",
+					"Title": "Dr. Augusto",
+					"Text": "Depois que a obra já caminhava, entrou em vigor a lei estadual ambiental de 2023, proibindo aterros em lagoas naturais. O advogado da Joana tentou tratar essa lei quase como um ‘aviso para obras futuras’, distante do caso concreto. Se você tivesse que explicar o papel dessa lei no processo, como enquadraria a situação da Joana?",
+					"Options": [
+						{
+							"Placeholder": "R1 — A lei estadual de 2023 incide principalmente sobre situações constituídas antes de 2018, para corrigir projetos antigos que não consideravam a proteção adequada da lagoa.",
+							"Goes": "p3_question"
+						},
+						{
+							"Placeholder": "R2 — A lei estadual de 2023 entra em vigor e passa a disciplinar os efeitos que ainda se projetam no tempo, de modo que obras em andamento na lagoa, como a de Joana, devem se ajustar às novas exigências ambientais.",
+							"Goes": "p3_question"
+						},
+						{
+							"Placeholder": "R3 — A lei estadual de 2023 só pode alcançar obras cuja análise e aprovação ainda estejam pendentes, permanecendo neutra em relação às intervenções já autorizadas pela Prefeitura.",
+							"Goes": "p3_question"
+						},
+						{
+							"Placeholder": "R4 — A lei estadual de 2023 afeta apenas novos pedidos de alvará, sem qualquer reflexo sobre construções que já contavam com autorização municipal anterior.",
+							"Goes": "p3_question"
+						}
+					]
+				},
+				{
+					"ID": "p3_question",
+					"Title": "Dr. Augusto",
+					"Text": "Em certo momento, o advogado da Joana puxou o argumento de direito adquirido. Ele somou o planejamento da obra, o alvará municipal anterior e concluiu que nada do que veio depois poderia atingir a situação da cliente. Se você estivesse do meu lado, avaliando essa tese, como responderia a esse raciocínio em chave ambiental?",
+					"Options": [
+						{
+							"Placeholder": "R1 — O planejamento da obra, somado ao alvará municipal anterior à lei estadual, configura direito adquirido de Joana de concluir a intervenção na lagoa nos exatos termos inicialmente aprovados.",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R2 — Mesmo com o alvará municipal anterior e com o planejamento feito antes de 2023, não se reconhece direito adquirido para manter situação que, à luz da lei estadual ambiental posterior, passa a ser vista como potencialmente lesiva à lagoa.",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R3 — A existência de aprovação municipal anterior impede o reconhecimento de qualquer limitação posterior, de modo que a lei estadual não pode alterar o direito adquirido de Joana sobre o uso do terreno.",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R4 — O direito adquirido de Joana decorre do fato de ser proprietária do imóvel, de forma que alterações na legislação ambiental não podem interferir nas escolhas privadas sobre o destino de sua área.",
+							"Goes": "p4_question"
+						}
+					]
+				},
+				{
+					"ID": "p4_question",
+					"Title": "Dr. Augusto",
+					"Text": "Chegando ao fim, o processo da Joana tem duas peças centrais na mesa: – de um lado, o alvará de construção dado pela Prefeitura em 2018; – de outro, a lei estadual ambiental de 2023, que passou a vedar aterros em lagoas como a dela. Se eu te pedisse um parecer curto, qual leitura você adotaria sobre o futuro da obra?",
+					"Options": [
+						{
+							"Placeholder": "R1 — Alvará prevalece.",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R2 — Lei estadual limita o que o alvará legitima. (✔)",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R3 — Balancear, ficando com a opção mais favorável à proprietária.",
+							"Goes": "p4_question"
+						},
+						{
+							"Placeholder": "R4 — Alvará impede atuação da lei estadual.",
+							"Goes": "p4_question"
+						}
+					]
+				}
+			]
+		}
+	]
+}
