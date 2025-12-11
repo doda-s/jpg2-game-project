@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b56823nrapcnq"]
+[gd_scene load_steps=11 format=3 uid="uid://b56823nrapcnq"]
 
+[ext_resource type="Script" uid="uid://dee4am8sc5qos" path="res://scenes/cases/second_case.gd" id="1_1yr3k"]
 [ext_resource type="Texture2D" uid="uid://b2h7bbpy5fmyy" path="res://assets/desk.jpg" id="1_4p6r4"]
 [ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="2_4w0do"]
 [ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="3_0lqxb"]
@@ -10,9 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="10_psjvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfux"]
-size = Vector2(266.744, 357.877)
+size = Vector2(107.794, 173.607)
 
 [node name="SecondCase" type="Node2D"]
+script = ExtResource("1_1yr3k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(201, 193)
@@ -24,209 +26,134 @@ texture = ExtResource("1_4p6r4")
 [node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
 script = ExtResource("3_0lqxb")
 
-[node name="Doc_4" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(338, 173)
-scale = Vector2(0.4, 0.52)
-collision_mask = 2
-input_pickable = true
-script = ExtResource("4_j4d82")
-metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
-
-[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
-position = Vector2(-75.795, -59.1033)
-scale = Vector2(1.7327, 1.40711)
-texture = ExtResource("5_ociyq")
-
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_4/LargePaper1"]
-anchors_preset = -1
-anchor_left = 0.00394781
-anchor_top = -0.0771004
-anchor_right = 0.0349195
-anchor_bottom = -0.0157507
-offset_left = -106.892
-offset_top = -108.865
-offset_right = 95.1082
-offset_bottom = 129.135
-scale = Vector2(1, 1.00588)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 8
-text = "Essa tensão entre preservar a reputação individual e garantir a transparência jornalística logo se tornou evidente, permeando tanto o processo judicial quanto o debate público que se seguiu ao caso."
-autowrap_mode = 3
-text_overrun_behavior = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_4/LargePaper1"]
-offset_left = -112.082
-offset_top = -154.799
-offset_right = 109.918
-offset_bottom = -131.799
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 14
-text = "Relato dos Fatos: 4"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
-light_mask = 2
-position = Vector2(-78.0173, -58.7513)
-scale = Vector2(1.44721, 1.27299)
-shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
-
 [node name="Doc_3" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(335, 170)
-scale = Vector2(0.4, 0.52)
+position = Vector2(306, 133)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("4_j4d82")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
-position = Vector2(-75.795, -59.1033)
-scale = Vector2(1.7327, 1.40711)
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("5_ociyq")
 
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
-anchors_preset = -1
-anchor_left = 0.00394781
-anchor_top = -0.0771004
-anchor_right = 0.0349195
-anchor_bottom = -0.0157507
-offset_left = -106.892
-offset_top = -108.865
-offset_right = 95.1082
-offset_bottom = 129.135
-scale = Vector2(1, 1.00588)
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 8
-text = "Decidido a reparar esse dano, Miguel ajuizou contra Carlos uma ação de indenização por danos morais e uso indevido de imagem. Ele argumentou que a publicação da foto o expôs ao vexame público e violou seus direitos à imagem, à privacidade e à honra, além de afrontar a garantia constitucional de que ninguém será considerado culpado antes do trânsito em julgado. Carlos, por sua vez, defendeu-se invocando a liberdade de informar e o interesse público na divulgação de fatos relacionados a figuras políticas e à corrupção, sustentando que apenas cumprira seu dever jornalístico de manter a sociedade informada sobre assuntos de relevância pública. Formou-se, assim, um conflito direto entre direitos fundamentais: de um lado, Miguel clamando por tutela à sua imagem, honra e presunção de inocência; de outro, Carlos escudando-se na liberdade de imprensa e no direito da sociedade à informação."
-autowrap_mode = 3
-text_overrun_behavior = 4
+theme_override_font_sizes/font_size = 5
+text = "Carlos, por sua vez, defendeu-se invocando a liberdade de informar e o interesse público na divulgação de fatos relacionados a figuras políticas e à corrupção, sustentando que apenas cumprira seu dever jornalístico de manter a sociedade informada sobre assuntos de relevância pública. Formou-se, assim, um conflito direto entre direitos fundamentais: de um lado, Miguel clamando por tutela à sua imagem, honra e presunção de inocência; de outro, Carlos escudando-se na liberdade de imprensa e no direito da sociedade à informação. Essa tensão entre preservar a reputação individual e garantir a transparência jornalística logo se tornou evidente, permeando tanto o processo judicial quanto o debate público que se seguiu ao caso."
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
-offset_left = -110.639
-offset_top = -154.799
-offset_right = 111.361
-offset_bottom = -131.799
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 12
 text = "Relato dos Fatos: 3"
 horizontal_alignment = 1
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
 light_mask = 2
-position = Vector2(-78.0173, -58.7513)
+position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
 
 [node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(332, 167)
-scale = Vector2(0.4, 0.52)
+position = Vector2(304, 131)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("4_j4d82")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
-position = Vector2(-75.795, -59.1033)
-scale = Vector2(1.7327, 1.40711)
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("5_ociyq")
-
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper1"]
-anchors_preset = -1
-anchor_left = 0.00119599
-anchor_top = -0.0769929
-anchor_right = 0.0321677
-anchor_bottom = -0.052453
-offset_left = -103.27
-offset_top = -99.9003
-offset_right = 98.7301
-offset_bottom = 138.1
-scale = Vector2(1, 1.00588)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 8
-text = "A imagem espalhou-se rapidamente e teve um impacto devastador na vida de Miguel. Assim que viu sua foto exposta publicamente, Miguel sentiu uma mistura de vergonha e desespero. Em poucas horas, ele viu sua reputação ser profundamente abalada: colegas de profissão e até alguns familiares passaram a evitá-lo, receosos de serem associados a um “criminoso” estampado nos noticiários. Em casa, a situação tornou-se angustiante – sua esposa tentou ampará-lo enquanto consolava a filha de 9 anos do casal, que passou a sofrer bullying na escola em razão da exposição do pai naquela situação humilhante. Nas redes sociais, Miguel virou alvo de comentários mordazes e piadas cruéis, e o nome da família foi exposto ao ridículo em grupos de discussão locais. Sentindo-se injustiçado e com a dignidade em frangalhos, Miguel vivenciou o efeito de uma condenação pública antecipada, mesmo antes de qualquer julgamento formal. "
-autowrap_mode = 3
-text_overrun_behavior = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper1"]
-offset_left = -110.639
-offset_top = -154.799
-offset_right = 111.361
-offset_bottom = -131.799
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 14
-text = "Relato dos Fatos: 2"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 light_mask = 2
-position = Vector2(-78.0173, -58.7513)
+position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
+
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 5
+text = "Em casa, a situação tornou-se angustiante – sua esposa tentou ampará-lo enquanto consolava a filha de 9 anos do casal, que passou a sofrer bullying na escola em razão da exposição do pai naquela situação humilhante. Nas redes sociais, Miguel virou alvo de comentários mordazes e piadas cruéis, e o nome da família foi exposto ao ridículo em grupos de discussão locais. Sentindo-se injustiçado e com a dignidade em frangalhos, Miguel vivenciou o efeito de uma condenação pública antecipada, mesmo antes de qualquer julgamento formal. Decidido a reparar esse dano, Miguel ajuizou contra Carlos uma ação de indenização por danos morais e uso indevido de imagem. Ele argumentou que a publicação da foto o expôs ao vexame público e violou seus direitos à imagem, à privacidade e à honra, além de afrontar a garantia constitucional de que ninguém será considerado culpado antes do trânsito em julgado. "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 2"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(329, 164)
-scale = Vector2(0.4, 0.52)
+position = Vector2(302, 128)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("4_j4d82")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
-position = Vector2(-75.795, -59.1033)
-scale = Vector2(1.7327, 1.40711)
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("5_ociyq")
 
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper1"]
-anchors_preset = -1
-anchor_left = 0.00119599
-anchor_top = -0.0769929
-anchor_right = 0.0321677
-anchor_bottom = -0.052453
-offset_left = -103.27
-offset_top = -99.9003
-offset_right = 98.7301
-offset_bottom = 138.1
-scale = Vector2(1, 1.00588)
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 8
-text = "Carlos, jornalista investigativo respeitado em sua comunidade, publicou em seu site de notícias uma matéria sobre uma grande operação policial de combate à corrupção supostamente envolvendo o ex-deputado federal Miguel. Junto à reportagem textual, Carlos divulgou uma fotografia de Miguel algemado, tirada no corredor da delegacia logo após o depoimento de Miguel à polícia. Vale frisar que Miguel estava em prisão preventiva, apenas suspeito de lavagem de dinheiro, sem qualquer condenação judicial. "
-autowrap_mode = 3
-text_overrun_behavior = 4
+theme_override_font_sizes/font_size = 5
+text = "Carlos, jornalista investigativo respeitado em sua comunidade, publicou em seu site de notícias uma matéria sobre uma grande operação policial de combate à corrupção supostamente envolvendo o ex-deputado federal Miguel. Junto à reportagem textual, Carlos divulgou uma fotografia de Miguel algemado, tirada no corredor da delegacia logo após o depoimento de Miguel à polícia. Vale frisar que Miguel estava em prisão preventiva, apenas suspeito de lavagem de dinheiro, sem qualquer condenação judicial. A imagem espalhou-se rapidamente e teve um impacto devastador na vida de Miguel. Assim que viu sua foto exposta publicamente, Miguel sentiu uma mistura de vergonha e desespero. Em poucas horas, ele viu sua reputação ser profundamente abalada: colegas de profissão e até alguns familiares passaram a evitá-lo, receosos de serem associados a um “criminoso” estampado nos noticiários. "
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper1"]
-offset_left = -110.639
-offset_top = -154.799
-offset_right = 111.361
-offset_bottom = -131.799
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_vxejt")
-theme_override_font_sizes/font_size = 14
-text = " Relato dos Fatos: 1"
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 1"
 horizontal_alignment = 1
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
 light_mask = 2
-position = Vector2(-78.0173, -58.7513)
+position = Vector2(0, 11.5)
 scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_7mfux")
-disabled = true
 
 [node name="DialogView" parent="." instance=ExtResource("9_8wvqs")]
 z_index = 10
@@ -242,8 +169,6 @@ metadata/_edit_use_anchors_ = true
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
 context = "caso-um"
 
-[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_entered"]
