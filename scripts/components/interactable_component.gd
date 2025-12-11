@@ -2,9 +2,12 @@ extends Node2D
 class_name InteractableComponent
 
 var interactable_area: Area2D
+var _interaction_hint_text: RichTextLabel
 signal interaction_emitter
 
 func _ready() -> void:
+	_interaction_hint_text = SceneSwitcher.current_scene.get_node("PlayerHud").get_node("InteractionHint")
+
 	if get_child_count() < 1:
 		push_error("InteractableComponent needs an Area2D")
 		return
@@ -22,6 +25,7 @@ func _on_area_enter(body: Node2D):
 		playerControllerComponent = (body as Player).get_node("PlayerControllerComponent") as PlayerControllerComponent
 		if not playerControllerComponent.interaction.is_connected(_interaction_emitter):
 			playerControllerComponent.interaction.connect(_interaction_emitter)
+		_interaction_hint_text.visible = true
 
 func _on_area_exit(body: Node2D):
 	if body.name == "Player":
@@ -29,7 +33,9 @@ func _on_area_exit(body: Node2D):
 		playerControllerComponent = (body as Player).get_node("PlayerControllerComponent") as PlayerControllerComponent
 		if playerControllerComponent.interaction.is_connected(_interaction_emitter):
 			playerControllerComponent.interaction.disconnect(_interaction_emitter)
+		_interaction_hint_text.visible = false
 
 
 func _interaction_emitter():
 	interaction_emitter.emit()
+	_interaction_hint_text.visible = false
