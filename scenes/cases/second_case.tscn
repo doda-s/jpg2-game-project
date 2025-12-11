@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="4_j4d82"]
 [ext_resource type="Texture2D" uid="uid://ph50784k8u2t" path="res://assets/large-paper.png" id="5_ociyq"]
 [ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="6_vxejt"]
-[ext_resource type="PackedScene" uid="uid://ba682s7i27q8j" path="res://resources/ui/case_dialog_view.tscn" id="9_8wvqs"]
+[ext_resource type="PackedScene" path="res://resources/ui/case_dialog_view.tscn" id="9_8wvqs"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="10_psjvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfux"]

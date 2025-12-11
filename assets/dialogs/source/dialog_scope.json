@@ -74,7 +74,7 @@
 			  "Options": [
 				{
 				  "Placeholder": "Ele garante a Joana o direito permanente de construir, mesmo contra leis futuras.",
-				  "Goes": "segundo-dialogo-caso-um",
+				  "Goes": "segundo-dialogo-caso-um"
 				},
 				{
 				  "Placeholder": "Ele impede completamente qualquer fiscalização ambiental posterior.",
@@ -182,125 +182,125 @@
 				}
 			  ]
 			},
+		  ]
+		},
+		{
+		"Name": "caso-dois",
+		  "StartIn": "primeiro-dialogo-caso-dois",
+		  "EndIn": "quinto-dialogo-caso-dois",
+		  "DialogNodes": [
 			{
-			  "Name": "caso-dois",
-			  "StartIn": "primeiro-dialogo-caso-dois",
-			  "EndIn": "quinto-dialogo-caso-dois",
-			  "DialogNodes": [
+			  "ID": "primeiro-dialogo-caso-dois",
+			  "Title": "Conflito de Normas",
+			  "Text": "O que torna esse caso tão difícil de resolver?",
+			  "Options": [
 				{
-				  "ID": "primeiro-dialogo-caso-dois",
-				  "Title": "Conflito de Normas",
-				  "Text": "O que torna esse caso tão difícil de resolver?",
-				  "Options": [
-					{
-					  "Placeholder": "Se torna difícil resolver esse caso por ter um conflito de normas constitucionais-princípio.",
-					  "Goes": "segundo-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Porque basta identificar qual direito aparece primeiro na Constituição para saber qual deve prevalecer.",
-					  "Goes": "segundo-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Porque quando dois direitos entram em conflito, um deles deve ser ignorado para evitar dúvidas no processo.",
-					  "Goes": "segundo-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Porque envolve princípios constitucionais que precisam ser ponderados, mas nesse caso a solução deve favorecer automaticamente o direito mais forte.",
-					  "Goes": "segundo-dialogo-caso-dois"
-					}
-				  ]
+				  "Placeholder": "Porque basta identificar qual direito aparece primeiro na Constituição para saber qual deve prevalecer.",
+				  "Goes": "segundo-dialogo-caso-dois"
 				},
 				{
-				  "ID": "segundo-dialogo-caso-dois",
-				  "Title": "Divulgação da Imagem",
-				  "Text": "A divulgação da imagem de Miguel algemado viola algum direito?",
-				  "Options": [
-					{
-					  "Placeholder": "Sim, viola o direito de honra, imagem e vida privada.",
-					  "Goes": "terceiro-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Não, se tratando de um contexto onde a imagem serve como benéfica à comunidade não viola nenhum direito.",
-					  "Goes": "terceiro-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Sim, viola o direito LXXII onde fala que o acusado só será culpado se ele for preso.",
-					  "Goes": "terceiro-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Sim, viola o direito de propriedade.",
-					  "Goes": "terceiro-dialogo-caso-dois"
-					}
-				  ]
+				  "Placeholder": "Se torna difícil resolver esse caso por ter um conflito de normas constitucionais-princípio.",
+				  "Goes": "segundo-dialogo-caso-dois"
 				},
 				{
-				  "ID": "terceiro-dialogo-caso-dois",
-				  "Title": "Presunção de Inocência",
-				  "Text": "Após ter lido o caso, o que o princípio da presunção de inocência garante?",
-				  "Options": [
-					{
-					  "Placeholder": "Ele garante que ninguém será considerado culpado antes de uma sentença condenatória definitiva.",
-					  "Goes": "quarto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Ele garante que ninguém é culpado até que seja preso.",
-					  "Goes": "quarto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Ele garante que ninguém é inocente até que se prove o contrário.",
-					  "Goes": "quarto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Ele garante que investigados não podem ser comentados pela imprensa até perderem seus direitos de cidadão.",
-					  "Goes": "quarto-dialogo-caso-dois"
-					}
-				  ]
+				  "Placeholder": "Porque quando dois direitos entram em conflito, um deles deve ser ignorado para evitar dúvidas no processo.",
+				  "Goes": "segundo-dialogo-caso-dois"
 				},
 				{
-				  "ID": "quarto-dialogo-caso-dois",
-				  "Title": "Princípio da Proporcionalidade",
-				  "Text": "No caso de proporcionalidade, esse caso deve tomar o seguinte pensamento:",
-				  "Options": [
-					{
-					  "Placeholder": "Analisar se a medida usada (a divulgação da foto) era adequada, necessária e proporcional ao objetivo de informar.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Analisar apenas se era possível tomar qualquer medida, independentemente do impacto.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Favorecer automaticamente a vítima quando houver conflito entre direitos.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Aplicar sempre o direito mais favorável à imprensa, porque ela tem prioridade social.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					}
-				  ]
+				  "Placeholder": "Porque envolve princípios constitucionais que precisam ser ponderados, mas nesse caso a solução deve favorecer automaticamente o direito mais forte.",
+				  "Goes": "segundo-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "segundo-dialogo-caso-dois",
+			  "Title": "Divulgação da Imagem",
+			  "Text": "A divulgação da imagem de Miguel algemado viola algum direito?",
+			  "Options": [
+				{
+				  "Placeholder": "Sim, viola o direito de honra, imagem e vida privada.",
+				  "Goes": "terceiro-dialogo-caso-dois"
 				},
 				{
-				  "ID": "quinto-dialogo-caso-dois",
-				  "Title": "Difamação e Punição à Imprensa",
-				  "Text": "Seguindo a ideia de prejudicar a imprensa por difamar, qual caminho se deve tomar para aplicar uma punição?",
-				  "Options": [
-					{
-					  "Placeholder": "Aplicar sanções proporcionais ao dano causado, observando a legislação vigente.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Suspender imediatamente o veículo de imprensa envolvido, independentemente da gravidade do caso.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Priorizar o interesse individual do ofendido e aplicar a pena máxima prevista, sem necessidade de análise aprofundada.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					},
-					{
-					  "Placeholder": "Considerar que qualquer crítica publicada pela imprensa pode ser tratada como difamação, permitindo punição mais ampla.",
-					  "Goes": "quinto-dialogo-caso-dois"
-					}
-				  ]
+				  "Placeholder": "Não, se tratando de um contexto onde a imagem serve como benéfica à comunidade não viola nenhum direito.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Sim, viola o direito LXXII onde fala que o acusado só será culpado se ele for preso.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Sim, viola o direito de propriedade.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "terceiro-dialogo-caso-dois",
+			  "Title": "Presunção de Inocência",
+			  "Text": "Após ter lido o caso, o que o princípio da presunção de inocência garante?",
+			  "Options": [
+				{
+				  "Placeholder": "Ele garante que ninguém é culpado até que seja preso.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que ninguém será considerado culpado antes de uma sentença condenatória definitiva.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que ninguém é inocente até que se prove o contrário.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que investigados não podem ser comentados pela imprensa até perderem seus direitos de cidadão.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "quarto-dialogo-caso-dois",
+			  "Title": "Princípio da Proporcionalidade",
+			  "Text": "No caso de proporcionalidade, esse caso deve tomar o seguinte pensamento:",
+			  "Options": [
+				{
+				  "Placeholder": "Analisar apenas se era possível tomar qualquer medida, independentemente do impacto.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Favorecer automaticamente a vítima quando houver conflito entre direitos.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Aplicar sempre o direito mais favorável à imprensa, porque ela tem prioridade social.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Analisar se a medida usada (a divulgação da foto) era adequada, necessária e proporcional ao objetivo de informar.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "quinto-dialogo-caso-dois",
+			  "Title": "Difamação e Punição à Imprensa",
+			  "Text": "Seguindo a ideia de prejudicar a imprensa por difamar, qual caminho se deve tomar para aplicar uma punição?",
+			  "Options": [
+				{
+				  "Placeholder": "Aplicar sanções proporcionais ao dano causado, observando a legislação vigente.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Suspender imediatamente o veículo de imprensa envolvido, independentemente da gravidade do caso.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Priorizar o interesse individual do ofendido e aplicar a pena máxima prevista, sem necessidade de análise aprofundada.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Considerar que qualquer crítica publicada pela imprensa pode ser tratada como difamação, permitindo punição mais ampla.",
+				  "Goes": "quinto-dialogo-caso-dois"
 				}
 			  ]
 			}

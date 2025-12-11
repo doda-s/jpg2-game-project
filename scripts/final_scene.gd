@@ -106,53 +106,53 @@ var consequencia = [
 	{"Caso": "1", "Pergunta": "1", "Respostas": "4", "correct": "false", "consequencia": "O juiz rejeitou a alegação como falsa. Defesa prejudicada."},
 
 	# Pergunta 2
-	{"Caso": "1", "Pergunta": "2", "Respostas": "1", "correct": "false", "consequencia": "O juiz ironizou o argumento, chamando de “cronologia seletiva”. Defesa enfraquecida."},
-	{"Caso": "1", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "O juiz corrigiu dizendo que a lei estava vigente desde a publicação. Credibilidade reduzida."},
-	{"Caso": "1", "Pergunta": "2", "Respostas": "3", "correct": "true", "consequencia": "O juiz concordou com a interpretação correta. Defesa tecnicamente sólida."},
-	{"Caso": "1", "Pergunta": "2", "Respostas": "4", "correct": "false", "consequencia": "O juiz lembrou que leis ambientais não retroagem. Má impressão."},
+	{"Caso": "1", "Pergunta": "2", "Respostas": "1", "correct": "false", "consequencia": "O juiz ironizou o argumento, chamando de “cronologia seletiva”."},
+	{"Caso": "1", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "O juiz corrigiu dizendo que a lei estava vigente desde a publicação."},
+	{"Caso": "1", "Pergunta": "2", "Respostas": "3", "correct": "true", "consequencia": "O juiz concordou com a interpretação correta."},
+	{"Caso": "1", "Pergunta": "2", "Respostas": "4", "correct": "false", "consequencia": "O juiz lembrou que leis ambientais não retroagem."},
 
 	# Pergunta 3
-	{"Caso": "1", "Pergunta": "3", "Respostas": "1", "correct": "false", "consequencia": "O juiz afirmou que isso não tem apoio jurídico. Argumento descartado."},
-	{"Caso": "1", "Pergunta": "3", "Respostas": "2", "correct": "true", "consequencia": "O juiz reconheceu o acerto técnico. Defesa preservada."},
-	{"Caso": "1", "Pergunta": "3", "Respostas": "3", "correct": "false", "consequencia": "O juiz rebateu de imediato: “Ambiental não funciona assim”. Defesa enfraquecida."},
-	{"Caso": "1", "Pergunta": "3", "Respostas": "4", "correct": "false", "consequencia": "O juiz rejeitou porque contrariava a Constituição. Péssimo para a defesa."},
+	{"Caso": "1", "Pergunta": "3", "Respostas": "1", "correct": "false", "consequencia": "O juiz afirmou que isso não tem apoio jurídico."},
+	{"Caso": "1", "Pergunta": "3", "Respostas": "2", "correct": "true", "consequencia": "O juiz reconheceu o acerto técnico."},
+	{"Caso": "1", "Pergunta": "3", "Respostas": "3", "correct": "false", "consequencia": "O juiz rebateu de imediato: “Ambiental não funciona assim”."},
+	{"Caso": "1", "Pergunta": "3", "Respostas": "4", "correct": "false", "consequencia": "O juiz rejeitou porque contrariava a Constituição."},
 
 	# Pergunta 4
-	{"Caso": "1", "Pergunta": "4", "Respostas": "1", "correct": "false", "consequencia": "O juiz classificou como absurdo jurídico. Defesa abalada."},
-	{"Caso": "1", "Pergunta": "4", "Respostas": "2", "correct": "true", "consequencia": "O juiz concordou. Defesa correta, obra continua irregular."},
-	{"Caso": "1", "Pergunta": "4", "Respostas": "3", "correct": "false", "consequencia": "O juiz explicou que isso não existe no direito. Defesa perdeu ponto."},
+	{"Caso": "1", "Pergunta": "4", "Respostas": "1", "correct": "false", "consequencia": "O juiz classificou como absurdo jurídico."},
+	{"Caso": "1", "Pergunta": "4", "Respostas": "2", "correct": "true", "consequencia": "O juiz concordou"},
+	{"Caso": "1", "Pergunta": "4", "Respostas": "3", "correct": "false", "consequencia": "O juiz explicou que isso não existe no direito."},
 	{"Caso": "1", "Pergunta": "4", "Respostas": "4", "correct": "false", "consequencia": "O juiz rejeitou rapidamente, criticando a lógica."},
 
 	# Pergunta 5
-	{"Caso": "1", "Pergunta": "5", "Respostas": "1", "correct": "false", "consequencia": "O juiz rejeitou imediatamente. Situação piorou."},
-	{"Caso": "1", "Pergunta": "5", "Respostas": "2", "correct": "false", "consequencia": "O juiz afirmou que planejamento não gera direito. Defesa perdeu credibilidade."},
-	{"Caso": "1", "Pergunta": "5", "Respostas": "3", "correct": "true", "consequencia": "O juiz concordou. Defesa técnica, obra segue embargada."},
-	{"Caso": "1", "Pergunta": "5", "Respostas": "4", "correct": "false", "consequencia": "O juiz disse que isso é incompatível com a Constituição. Grande prejuízo à defesa."},
+	{"Caso": "1", "Pergunta": "5", "Respostas": "1", "correct": "false", "consequencia": "O juiz rejeitou imediatamente."},
+	{"Caso": "1", "Pergunta": "5", "Respostas": "2", "correct": "false", "consequencia": "O juiz afirmou que planejamento não gera direito."},
+	{"Caso": "1", "Pergunta": "5", "Respostas": "3", "correct": "true", "consequencia": "O juiz concordou."},
+	{"Caso": "1", "Pergunta": "5", "Respostas": "4", "correct": "false", "consequencia": "O juiz disse que isso é incompatível com a Constituição."},
 
 	# CASO 2
 	# Pergunta 1
-	{"Caso": "2", "Pergunta": "1", "Respostas": "1", "correct": "true", "consequencia": "O juiz reconhece que o advogado entendeu corretamente o cerne constitucional do conflito. A defesa ganha credibilidade técnica."},
-	{"Caso": "2", "Pergunta": "1", "Respostas": "2", "correct": "false", "consequencia": "O juiz mostra estranheza com a simplicidade da resposta; a defesa perde força."},
-	{"Caso": "2", "Pergunta": "1", "Respostas": "3", "correct": "false", "consequencia": "O juiz critica a ideia de ignorar direitos fundamentais. Defesa desfavorecida."},
-	{"Caso": "2", "Pergunta": "1", "Respostas": "4", "correct": "false", "consequencia": "O juiz critica a noção de favorecimento automático. Defesa perde credibilidade."},
+	{"Caso": "2", "Pergunta": "1", "Respostas": "1", "correct": "false", "consequencia": "O juiz mostra estranheza com a simplicidade da resposta."},
+	{"Caso": "2", "Pergunta": "1", "Respostas": "2", "correct": "true", "consequencia": "O juiz reconhece que o advogado entendeu corretamente o cerne constitucional do conflito."},
+	{"Caso": "2", "Pergunta": "1", "Respostas": "3", "correct": "false", "consequencia": "O juiz critica a ideia de ignorar direitos fundamentais."},
+	{"Caso": "2", "Pergunta": "1", "Respostas": "4", "correct": "false", "consequencia": "O juiz critica a noção de favorecimento automático."},
 
 	# Pergunta 2
 	{"Caso": "2", "Pergunta": "2", "Respostas": "1", "correct": "true", "consequencia": "O juiz concorda que é fundamentado. Defesa se fortalece."},
-	{"Caso": "2", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "O juiz afirma que utilidade pública não elimina direitos. Defesa perde credibilidade."},
-	{"Caso": "2", "Pergunta": "2", "Respostas": "3", "correct": "false", "consequencia": "O juiz percebe citação equivocada. Defesa enfraquece."},
-	{"Caso": "2", "Pergunta": "2", "Respostas": "4", "correct": "false", "consequencia": "O juiz considera a resposta inadequada. Defesa parece despreparada."},
+	{"Caso": "2", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "O juiz afirma que utilidade pública não elimina direitos."},
+	{"Caso": "2", "Pergunta": "2", "Respostas": "3", "correct": "false", "consequencia": "O juiz percebe citação equivocada."},
+	{"Caso": "2", "Pergunta": "2", "Respostas": "4", "correct": "false", "consequencia": "O juiz considera a resposta inadequada."},
 
 	# Pergunta 3
-	{"Caso": "2", "Pergunta": "3", "Respostas": "1", "correct": "true", "consequencia": "O juiz confirma a interpretação correta. A defesa demonstra domínio técnico."},
-	{"Caso": "2", "Pergunta": "3", "Respostas": "2", "correct": "false", "consequencia": "O juiz corrige dizendo que prisão não define culpabilidade. A defesa perde autoridade."},
-	{"Caso": "2", "Pergunta": "3", "Respostas": "3", "correct": "false", "consequencia": "O juiz afirma que isso inverte totalmente o princípio. Péssima impressão."},
-	{"Caso": "2", "Pergunta": "3", "Respostas": "4", "correct": "false", "consequencia": "O juiz aponta que o argumento é fantasioso e sem base legal. Defesa sofre desgaste."},
-
+	{"Caso": "2", "Pergunta": "3", "Respostas": "1", "correct": "false", "consequencia": "O juiz corrige dizendo que prisão não define culpabilidade."},
+	{"Caso": "2", "Pergunta": "3", "Respostas": "2", "correct": "true", "consequencia": "O juiz confirma a interpretação correta."},
+	{"Caso": "2", "Pergunta": "3", "Respostas": "3", "correct": "false", "consequencia": "O juiz afirma que isso inverte totalmente o princípio."},
+	{"Caso": "2", "Pergunta": "3", "Respostas": "4", "correct": "false", "consequencia": "O juiz aponta que o argumento é fantasioso e sem base legal."},
+	
 	# Pergunta 4
-	{"Caso": "2", "Pergunta": "4", "Respostas": "1", "correct": "true", "consequencia": "O juiz aprova a abordagem técnica. A defesa avança com clareza jurídica."},
-	{"Caso": "2", "Pergunta": "4", "Respostas": "2", "correct": "false", "consequencia": "O juiz critica a falta de análise dos impactos. Defesa enfraquece."},
-	{"Caso": "2", "Pergunta": "4", "Respostas": "3", "correct": "false", "consequencia": "O juiz explica que proporcionalidade não admite decisões automáticas. A defesa é mal vista."},
-	{"Caso": "2", "Pergunta": "4", "Respostas": "4", "correct": "false", "consequencia": "O juiz afirma que nenhum direito tem prioridade automática. A defesa perde espaço."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "1", "correct": "false", "consequencia": "O juiz critica a falta de análise dos impactos."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "2", "correct": "false", "consequencia": "O juiz explica que proporcionalidade não admite decisões automáticas."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "3", "correct": "false", "consequencia": "O juiz afirma que nenhum direito tem prioridade automática."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "4", "correct": "true", "consequencia": "O juiz aprova a abordagem técnica."},
 
 	# Pergunta 5
 	{"Caso": "2", "Pergunta": "5", "Respostas": "1", "correct": "true", "consequencia": "O juiz considera a resposta equilibrada e adequada. Defesa ganha força."},

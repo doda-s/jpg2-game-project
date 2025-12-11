@@ -1,11 +1,11 @@
 [gd_scene load_steps=19 format=4 uid="uid://bwxf7aetwxcu4"]
 
-[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_1epf8"]
+[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_1epf8"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_3mua7"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="2_5vk2n"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_lc1e8"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="3_lc1e8"]
-[ext_resource type="PackedScene" uid="uid://dyc8cgwtpuok7" path="res://resources/entities/boss_npc.tscn" id="4_5vk2n"]
+[ext_resource type="PackedScene" path="res://resources/entities/boss_npc.tscn" id="4_5vk2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1epf8"]
 texture = ExtResource("1_3mua7")
