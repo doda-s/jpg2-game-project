@@ -1,17 +1,17 @@
-[gd_scene load_steps=20 format=4 uid="uid://cvjom5uhtp7kv"]
+[gd_scene load_steps=20 format=4 uid="uid://f8f6oxffydhh"]
 
-[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_2llmh"]
-[ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_wix67"]
-[ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_cjrjo"]
-[ext_resource type="Texture2D" uid="uid://d2s8j83vs8cxm" path="res://assets/mp_house_interiors_tileset_pack/kitchen.png" id="3_jm4j2"]
-[ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="4_2llmh"]
-[ext_resource type="PackedScene" uid="uid://k831fo4rioya" path="res://resources/entities/barista_npc.tscn" id="5_gcmcv"]
-[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="6_jm4j2"]
-[ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_phxc1"]
-[ext_resource type="Script" uid="uid://cds7gtk0cfdg0" path="res://scripts/components/dialog_provider.gd" id="7_2llmh"]
+[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_s3l20"]
+[ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_fwe4a"]
+[ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="3_xc8hj"]
+[ext_resource type="Texture2D" uid="uid://d2s8j83vs8cxm" path="res://assets/mp_house_interiors_tileset_pack/kitchen.png" id="4_kgink"]
+[ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="5_515b2"]
+[ext_resource type="PackedScene" uid="uid://k831fo4rioya" path="res://resources/entities/barista_npc.tscn" id="6_syore"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="7_ku53w"]
+[ext_resource type="Script" uid="uid://cds7gtk0cfdg0" path="res://scripts/components/dialog_provider.gd" id="8_a8u7e"]
+[ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="9_mxf00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa1hb"]
-texture = ExtResource("1_wix67")
+texture = ExtResource("2_fwe4a")
 10:1/0 = 0
 11:1/0 = 0
 12:1/0 = 0
@@ -479,7 +479,7 @@ texture = ExtResource("1_wix67")
 19:28/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6xsx"]
-texture = ExtResource("2_cjrjo")
+texture = ExtResource("3_xc8hj")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kigl5"]
@@ -487,7 +487,7 @@ sources/0 = SubResource("TileSetAtlasSource_sa1hb")
 sources/1 = SubResource("TileSetAtlasSource_d6xsx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5n5bh"]
-texture = ExtResource("2_cjrjo")
+texture = ExtResource("3_xc8hj")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -496,7 +496,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5n5bh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6e1hg"]
-texture = ExtResource("3_jm4j2")
+texture = ExtResource("4_kgink")
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -648,7 +648,7 @@ texture = ExtResource("3_jm4j2")
 18:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4by20"]
-texture = ExtResource("4_2llmh")
+texture = ExtResource("5_515b2")
 3:4/0 = 0
 3:5/0 = 0
 4:5/0 = 0
@@ -666,7 +666,7 @@ texture = ExtResource("4_2llmh")
 8:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w231a"]
-texture = ExtResource("1_wix67")
+texture = ExtResource("2_fwe4a")
 6:21/0 = 0
 6:22/0 = 0
 6:23/0 = 0
@@ -694,7 +694,7 @@ size = Vector2(80, 36)
 
 [node name="Cafeteria" type="Node2D"]
 
-[node name="PlayerHud" parent="." instance=ExtResource("1_2llmh")]
+[node name="PlayerHud" parent="." instance=ExtResource("1_s3l20")]
 
 [node name="Landscape" type="Node2D" parent="."]
 
@@ -711,12 +711,12 @@ z_index = 2
 tile_map_data = PackedByteArray("AAD8////AAAJAAYAAAD9////AAAKAAYAAAD7////AAALAAYAAAD+////AAALAAYAAAAAAP//AAALAAYAAAABAP//AAAJAAYAAAACAP//AAAKAAYAAAADAP//AAALAAYAAAD6//3/AQADAAQAAAAFAPz/AQADAAUAAAAFAP3/AQAEAAYAAAAHAP//AAABAAQAAAAIAP//AAACAAQAAAAJAP//AAACAAQAAAAKAP//AAACAAQAAAALAP//AAADAAQAAAACAP7/AAAQAAcAAAD9//7/AAAPAAQAAAABAP7/AAAOAAQAAAANAP3/AgAGABUAAAANAP7/AgAGABYAAAANAP//AgAGABcAAAAOAP3/AgAHABUAAAAOAP7/AgAHABYAAAAOAP//AgAHABcAAAAIAPv/AgADABUAAAAJAPv/AgAEABUAAAAKAPv/AgAFABUAAAD+//v/AgADABUAAAD///v/AgAEABUAAAAAAPv/AgAFABUAAAAHAP3/AQAGAAAAAAAHAP7/AQAGAAEAAAALAP7/AQAIAAEAAAAIAPz/AQABAAQAAAAIAP3/AQABAAUAAAAJAPz/AQACAAQAAAAJAP3/AQACAAUAAAD4//3/AgAJABUAAAD4//7/AgAJABYAAAD4////AgAJABcAAAA=")
 tile_set = SubResource("TileSet_d6xsx")
 
-[node name="BaristaNPC" parent="." instance=ExtResource("5_gcmcv")]
+[node name="BaristaNPC" parent="." instance=ExtResource("6_syore")]
 z_index = 1
 position = Vector2(145, -1)
 
 [node name="InteractableComponent" type="Node2D" parent="BaristaNPC"]
-script = ExtResource("6_jm4j2")
+script = ExtResource("7_ku53w")
 metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
 
 [node name="Area2D" type="Area2D" parent="BaristaNPC/InteractableComponent"]
@@ -726,10 +726,10 @@ position = Vector2(7, -19)
 shape = SubResource("RectangleShape2D_gcmcv")
 
 [node name="DialogProvider" type="Node2D" parent="BaristaNPC"]
-script = ExtResource("7_2llmh")
-dialog_json_file = "res://assets/dialogs/source/cafeteria/cafeteria_D1T.json"
-context = "first-day-afternoon"
+script = ExtResource("8_a8u7e")
+dialog_json_file = "res://assets/dialogs/source/cafeteria/cafeteria_D2T.json"
+context = "end-of-day-two"
 metadata/_custom_type_script = "uid://cds7gtk0cfdg0"
 
-[node name="Player" parent="." instance=ExtResource("6_phxc1")]
+[node name="Player" parent="." instance=ExtResource("9_mxf00")]
 z_index = 3
