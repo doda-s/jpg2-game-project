@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://ott6g6uf41xq"]
+[gd_scene load_steps=27 format=4 uid="uid://ott6g6uf41xq"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_i25ge"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_baxhe"]
@@ -1420,9 +1420,6 @@ texture = ExtResource("3_343e2")
 [sub_resource type="TileSet" id="TileSet_wklvq"]
 sources/0 = SubResource("TileSetAtlasSource_o50fj")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n26dm"]
-size = Vector2(33, 38)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugjv4"]
 size = Vector2(34, 42)
 
@@ -1445,7 +1442,6 @@ tile_map_data = PackedByteArray("AAAAAP7/AAABAAEAAAAAAP//AAABAAIAAAABAP7/AAACAAE
 tile_set = SubResource("TileSet_7es3i")
 
 [node name="RoomFornitureFront" type="TileMapLayer" parent="Landscape"]
-tile_map_data = PackedByteArray("AADq//7/AQAFAAEAAAA=")
 tile_set = SubResource("TileSet_475jc")
 
 [node name="Shadows" type="TileMapLayer" parent="Landscape"]
@@ -1454,23 +1450,6 @@ tile_set = SubResource("TileSet_wklvq")
 
 [node name="Player" parent="." instance=ExtResource("7_fg2md")]
 z_index = 1
-
-[node name="MomLetter" type="Node2D" parent="."]
-position = Vector2(-343, -23)
-
-[node name="InteractableComponent" type="Node2D" parent="MomLetter"]
-script = ExtResource("8_8wpph")
-metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
-
-[node name="Area2D" type="Area2D" parent="MomLetter/InteractableComponent"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MomLetter/InteractableComponent/Area2D"]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_n26dm")
-
-[node name="DialogProvider" parent="MomLetter" instance=ExtResource("9_cr25x")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "dialog-demonstration-1"
 
 [node name="BathroomDoor" type="Node2D" parent="."]
 
@@ -1485,8 +1464,8 @@ metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
 shape = SubResource("RectangleShape2D_ugjv4")
 
 [node name="DialogProvider" parent="BathroomDoor" instance=ExtResource("9_cr25x")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "dialog-demonstration-1"
+dialog_json_file = "res://assets/dialogs/source/player_living_room/player_living_room_D1M.json"
+context = "bathroom-door"
 
 [node name="OutSideDoor" parent="." groups=["doors"] instance=ExtResource("10_baxhe")]
 position = Vector2(-608, -28)

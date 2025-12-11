@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://butgb641x210v"]
+[gd_scene load_steps=24 format=4 uid="uid://butgb641x210v"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_w3gwf"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_0fltd"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="4_s85b6"]
 [ext_resource type="Texture2D" uid="uid://d2s8j83vs8cxm" path="res://assets/mp_house_interiors_tileset_pack/kitchen.png" id="5_imlio"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_oqbrm"]
-[ext_resource type="PackedScene" uid="uid://c41rbxojnqp6d" path="res://resources/entities/mother_npc.tscn" id="7_r24xi"]
-[ext_resource type="PackedScene" uid="uid://dbcd02dvpuy70" path="res://resources/components/interactable_component.tscn" id="8_nn7as"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_60j4q"]
 [ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="10_d75t8"]
 [ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="11_0fltd"]
@@ -1411,9 +1409,6 @@ texture = ExtResource("3_ubdgm")
 [sub_resource type="TileSet" id="TileSet_kekn6"]
 sources/0 = SubResource("TileSetAtlasSource_iaf5o")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r61gk"]
-size = Vector2(52, 36)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b52dl"]
 size = Vector2(30, 44)
 
@@ -1444,21 +1439,6 @@ tile_set = SubResource("TileSet_kekn6")
 
 [node name="Player" parent="." instance=ExtResource("6_oqbrm")]
 z_index = 1
-
-[node name="MotherNPC" parent="." instance=ExtResource("7_r24xi")]
-position = Vector2(-529, 0)
-
-[node name="InteractableComponent" parent="MotherNPC" instance=ExtResource("8_nn7as")]
-
-[node name="Area2D" type="Area2D" parent="MotherNPC/InteractableComponent"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MotherNPC/InteractableComponent/Area2D"]
-position = Vector2(-1, -18)
-shape = SubResource("RectangleShape2D_r61gk")
-
-[node name="DialogProvider" parent="MotherNPC" instance=ExtResource("9_60j4q")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "dialog-demonstration-1"
 
 [node name="BathroomDoor" type="Node2D" parent="."]
 position = Vector2(-48, -22)
