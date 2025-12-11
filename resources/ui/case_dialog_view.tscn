@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba682s7i27q8j"]
+
+[ext_resource type="Script" uid="uid://cfdpr1030wb6d" path="res://scripts/ui/dialog_view.gd" id="1_rl68i"]
+[ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="2_614vd"]
+
+[node name="CaseDialogView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.964878, 0.988374)
+script = ExtResource("1_rl68i")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 185.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 717.0
+offset_bottom = 188.0
+scale = Vector2(0.521626, 0.511839)
+
+[node name="Title" type="RichTextLabel" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_614vd")
+theme_override_fonts/mono_font = ExtResource("2_614vd")
+theme_override_fonts/italics_font = ExtResource("2_614vd")
+theme_override_fonts/bold_italics_font = ExtResource("2_614vd")
+theme_override_fonts/bold_font = ExtResource("2_614vd")
+theme_override_font_sizes/normal_font_size = 25
+text = "
+"
+fit_content = true
+
+[node name="Text" type="RichTextLabel" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_614vd")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "
+"
+fit_content = true
+
+[node name="Options" type="VBoxContainer" parent="Background/VBoxContainer"]
+layout_mode = 2

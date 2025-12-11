@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="5_xydvn"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="6_ugjv4"]
 [ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="8_b5m8d"]
-[ext_resource type="PackedScene" path="res://resources/components/dialog_provider.tscn" id="9_882ho"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_882ho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wmaw"]
 texture = ExtResource("1_176wk")

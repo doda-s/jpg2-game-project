@@ -61,6 +61,250 @@
 					]
 				}
 			]
+		},
+		{
+		  "Name": "caso-um",
+		  "StartIn": "primeiro-dialogo-caso-um",
+		  "EndIn": "quinto-dialogo-caso-um",
+		  "DialogNodes": [
+			{
+			  "ID": "primeiro-dialogo-caso-um",
+			  "Title": "Conflito de Normas",
+			  "Text": "Sobre o alvará de construção que Joana obteve em 2018, qual afirmação é adequada?",
+			  "Options": [
+				{
+				  "Placeholder": "Ele garante a Joana o direito permanente de construir, mesmo contra leis futuras.",
+				  "Goes": "segundo-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ele impede completamente qualquer fiscalização ambiental posterior.",
+				  "Goes": "segundo-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ele foi válido quando emitido, mas sua eficácia futura pode ser limitada por normas ambientais superiores criadas depois.",
+				  "Goes": "segundo-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ele perde automaticamente toda validade após 12 meses, mesmo que a obra tenha sido iniciada dentro do prazo.",
+				  "Goes": "segundo-dialogo-caso-um"
+				}
+			  ]
+			},
+			{
+			  "ID": "segundo-dialogo-caso-um",
+			  "Title": "Conflito de Normas",
+			  "Text": "A lei estadual de 2023 proibiu aterros em lagoas naturais. Considerando a teoria da vigência da lei, essa norma:",
+			  "Options": [
+				{
+				  "Placeholder": "Aplica-se apenas a fatos ocorridos antes de 2018.",
+				  "Goes": "terceiro-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Vale exclusivamente para obras iniciadas depois de 2025.",
+				  "Goes": "terceiro-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Passa a valer imediatamente e regula apenas fatos ocorridos após sua entrada em vigor.",
+				  "Goes": "terceiro-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Afeta retroativamente todas as obras concluídas antes de 2023.",
+				  "Goes": "terceiro-dialogo-caso-um"
+				}
+			  ]
+			},
+			{
+			  "ID": "terceiro-dialogo-caso-um",
+			  "Title": "Conlito de Normas",
+			  "Text": "Joana alegou 'direito adquirido' para continuar a obra. Qual é o entendimento jurídico mais aceito?",
+			  "Options": [
+				{
+				  "Placeholder": "Sempre há direito adquirido quando existe um alvará antigo.",
+				  "Goes": "quarto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Não existe direito adquirido para desrespeitar normas ambientais posteriores.",
+				  "Goes": "quarto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "O direito adquirido sempre prevalece sobre qualquer lei ambiental nova.",
+				  "Goes": "quarto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Proprietários rurais mantêm todos os seus direitos independentemente de alterações legais.",
+				  "Goes": "quarto-dialogo-caso-um"
+				}
+			  ]
+			},
+			{
+			  "ID": "quarto-dialogo-caso-um",
+			  "Title": "Conflito de Normas",
+			  "Text": "Considerando a hierarquia das normas, como se relacionam a lei estadual ambiental de 2023 e o alvará municipal de 2018?",
+			  "Options": [
+				{
+				  "Placeholder": "O alvará municipal é superior à lei estadual.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "A lei estadual prevalece, especialmente por tratar de proteção ambiental.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ambos têm hierarquia igual e a norma mais antiga deve prevalecer.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Prevalece o alvará porque ele foi emitido antes.",
+				  "Goes": "quinto-dialogo-caso-um"
+				}
+			  ]
+			},
+			{
+			  "ID": "quinto-dialogo-caso-um",
+			  "Title": "Teoria da Vigencia",
+			  "Text": "Considerando os fatos e a legislação, qual é a avaliação jurídica mais adequada sobre a posição de Joana?",
+			  "Options": [
+				{
+				  "Placeholder": "Ela poderia continuar porque o alvará é superior à lei estadual.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ela não precisava cumprir a lei nova porque planejou antes de 2018.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "A lei estadual de 2023 limitou a autorização municipal, tornando a obra irregular.",
+				  "Goes": "quinto-dialogo-caso-um"
+				},
+				{
+				  "Placeholder": "Ela tinha direito adquirido absoluto para concluir a obra, mesmo contra a lei nova.",
+				  "Goes": "quinto-dialogo-caso-um"
+				}
+			  ]
+			},
+		  ]
+		},
+		{
+		"Name": "caso-dois",
+		  "StartIn": "primeiro-dialogo-caso-dois",
+		  "EndIn": "quinto-dialogo-caso-dois",
+		  "DialogNodes": [
+			{
+			  "ID": "primeiro-dialogo-caso-dois",
+			  "Title": "Conflito de Normas",
+			  "Text": "O que torna esse caso tão difícil de resolver?",
+			  "Options": [
+				{
+				  "Placeholder": "Porque basta identificar qual direito aparece primeiro na Constituição para saber qual deve prevalecer.",
+				  "Goes": "segundo-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Se torna difícil resolver esse caso por ter um conflito de normas constitucionais-princípio.",
+				  "Goes": "segundo-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Porque quando dois direitos entram em conflito, um deles deve ser ignorado para evitar dúvidas no processo.",
+				  "Goes": "segundo-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Porque envolve princípios constitucionais que precisam ser ponderados, mas nesse caso a solução deve favorecer automaticamente o direito mais forte.",
+				  "Goes": "segundo-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "segundo-dialogo-caso-dois",
+			  "Title": "Divulgação da Imagem",
+			  "Text": "A divulgação da imagem de Miguel algemado viola algum direito?",
+			  "Options": [
+				{
+				  "Placeholder": "Sim, viola o direito de honra, imagem e vida privada.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Não, se tratando de um contexto onde a imagem serve como benéfica à comunidade não viola nenhum direito.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Sim, viola o direito LXXII onde fala que o acusado só será culpado se ele for preso.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Sim, viola o direito de propriedade.",
+				  "Goes": "terceiro-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "terceiro-dialogo-caso-dois",
+			  "Title": "Presunção de Inocência",
+			  "Text": "Após ter lido o caso, o que o princípio da presunção de inocência garante?",
+			  "Options": [
+				{
+				  "Placeholder": "Ele garante que ninguém é culpado até que seja preso.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que ninguém será considerado culpado antes de uma sentença condenatória definitiva.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que ninguém é inocente até que se prove o contrário.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Ele garante que investigados não podem ser comentados pela imprensa até perderem seus direitos de cidadão.",
+				  "Goes": "quarto-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "quarto-dialogo-caso-dois",
+			  "Title": "Princípio da Proporcionalidade",
+			  "Text": "No caso de proporcionalidade, esse caso deve tomar o seguinte pensamento:",
+			  "Options": [
+				{
+				  "Placeholder": "Analisar apenas se era possível tomar qualquer medida, independentemente do impacto.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Favorecer automaticamente a vítima quando houver conflito entre direitos.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Aplicar sempre o direito mais favorável à imprensa, porque ela tem prioridade social.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Analisar se a medida usada (a divulgação da foto) era adequada, necessária e proporcional ao objetivo de informar.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				}
+			  ]
+			},
+			{
+			  "ID": "quinto-dialogo-caso-dois",
+			  "Title": "Difamação e Punição à Imprensa",
+			  "Text": "Seguindo a ideia de prejudicar a imprensa por difamar, qual caminho se deve tomar para aplicar uma punição?",
+			  "Options": [
+				{
+				  "Placeholder": "Aplicar sanções proporcionais ao dano causado, observando a legislação vigente.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Suspender imediatamente o veículo de imprensa envolvido, independentemente da gravidade do caso.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Priorizar o interesse individual do ofendido e aplicar a pena máxima prevista, sem necessidade de análise aprofundada.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				},
+				{
+				  "Placeholder": "Considerar que qualquer crítica publicada pela imprensa pode ser tratada como difamação, permitindo punição mais ampla.",
+				  "Goes": "quinto-dialogo-caso-dois"
+				}
+			  ]
+			}
+		  ]
 		}
 	]
 }

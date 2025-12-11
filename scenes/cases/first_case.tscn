@@ -1,282 +1,218 @@
-[gd_scene load_steps=18 format=4 uid="uid://c2tu6ahdq5vl4"]
+[gd_scene load_steps=11 format=3 uid="uid://c2tu6ahdq5vl4"]
 
-[ext_resource type="Texture2D" uid="uid://m7pdmgqugy0h" path="res://assets/kitchen assets/kitchen assets/Island/Island3.png" id="1_0lq4y"]
 [ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="1_1g8ti"]
 [ext_resource type="Script" uid="uid://cpsu05qcfiv4d" path="res://scripts/cases/first_case.gd" id="1_42o0s"]
+[ext_resource type="Texture2D" uid="uid://b2h7bbpy5fmyy" path="res://assets/desk.jpg" id="2_one6m"]
 [ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="2_uq2ah"]
 [ext_resource type="Texture2D" uid="uid://ph50784k8u2t" path="res://assets/large-paper.png" id="4_0lq4y"]
-[ext_resource type="Script" path="res://scripts/components/relevant_area_pressed.gd" id="4_a7jp4"]
-[ext_resource type="Script" uid="uid://dg6yu7ai3wkou" path="res://scripts/cases/open_note_pad.gd" id="4_uq2ah"]
-[ext_resource type="PackedScene" uid="uid://ckuoxphavmbuf" path="res://resources/grabbable_itens/pencil.tscn" id="6_a7jp4"]
-[ext_resource type="PackedScene" uid="uid://bo670a1t8erqd" path="res://resources/components/relevant_area/relevant_area_highlighter.tscn" id="9_1hi2x"]
-[ext_resource type="Texture2D" uid="uid://snqeqgovlnv2" path="res://icon.svg" id="9_k1im2"]
-[ext_resource type="Script" uid="uid://7lqo4qe6lfa4" path="res://scripts/cases/response_list.gd" id="9_one6m"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqk4k"]
-texture = ExtResource("1_0lq4y")
-0:0/0 = 0
-0:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_42o0s"]
-sources/0 = SubResource("TileSetAtlasSource_hqk4k")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42o0s"]
+[ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="4_a7jp4"]
+[ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="8_one6m"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_k1im2"]
+[ext_resource type="PackedScene" uid="uid://ba682s7i27q8j" path="res://resources/ui/case_dialog_view.tscn" id="10_1hi2x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g8ti"]
-size = Vector2(226, 326)
-
-[sub_resource type="LabelSettings" id="LabelSettings_42o0s"]
-line_spacing = 0.0
-font_size = 11
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1hi2x"]
-font_size = 12
+size = Vector2(107.794, 173.607)
 
 [node name="FirstCase" type="Node2D"]
 script = ExtResource("1_42o0s")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-scale = Vector2(1.004, 1.01445)
-tile_map_data = PackedByteArray("AAAAABgAAAAAAAEAAAABABgAAAAAAAEAAAACABgAAAAAAAEAAAADABgAAAAAAAEAAAAEABgAAAAAAAEAAAAFABgAAAAAAAEAAAAGABgAAAAAAAEAAAAHABgAAAAAAAEAAAAIABgAAAAAAAEAAAAJABgAAAAAAAEAAAAKABgAAAAAAAEAAAALABgAAAAAAAEAAAAMABgAAAAAAAEAAAANABgAAAAAAAEAAAAOABgAAAAAAAEAAAAPABgAAAAAAAEAAAAQABgAAAAAAAEAAAARABgAAAAAAAEAAAASABgAAAAAAAEAAAATABgAAAAAAAEAAAAUABgAAAAAAAEAAAAVABgAAAAAAAEAAAAWABgAAAAAAAEAAAAXABgAAAAAAAEAAAAYABgAAAAAAAEAAAAYABcAAAAAAAEAAAAXABcAAAAAAAEAAAAWABcAAAAAAAEAAAAVABcAAAAAAAEAAAAUABcAAAAAAAEAAAATABcAAAAAAAEAAAASABcAAAAAAAEAAAARABcAAAAAAAEAAAAQABcAAAAAAAEAAAAPABcAAAAAAAEAAAAOABcAAAAAAAEAAAANABcAAAAAAAEAAAAMABcAAAAAAAEAAAALABcAAAAAAAEAAAAKABcAAAAAAAEAAAAKABYAAAAAAAEAAAAJABYAAAAAAAEAAAAIABYAAAAAAAEAAAAHABYAAAAAAAEAAAAGABYAAAAAAAEAAAAFABYAAAAAAAEAAAAFABcAAAAAAAEAAAAGABcAAAAAAAEAAAAHABcAAAAAAAEAAAAIABcAAAAAAAEAAAAJABcAAAAAAAEAAAAEABcAAAAAAAEAAAADABcAAAAAAAEAAAACABcAAAAAAAEAAAABABcAAAAAAAEAAAABABYAAAAAAAEAAAAAABYAAAAAAAEAAAAAABcAAAAAAAEAAAACABYAAAAAAAEAAAADABYAAAAAAAEAAAAEABYAAAAAAAEAAAALABYAAAAAAAEAAAAMABYAAAAAAAEAAAANABYAAAAAAAEAAAAOABYAAAAAAAEAAAAPABYAAAAAAAEAAAAQABYAAAAAAAEAAAARABYAAAAAAAEAAAASABYAAAAAAAEAAAATABYAAAAAAAEAAAAUABYAAAAAAAEAAAAVABYAAAAAAAEAAAAWABYAAAAAAAEAAAAXABYAAAAAAAEAAAAYABYAAAAAAAEAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAABEAAAAAAAAAAAAAABIAAAAAAAAAAAAAABMAAAAAAAAAAAAAABQAAAAAAAAAAAAAABUAAAAAAAAAAAABAAoAAAAAAAAAAAABAAsAAAAAAAAAAAABAAwAAAAAAAAAAAABAA0AAAAAAAAAAAABAA4AAAAAAAAAAAABAA8AAAAAAAAAAAABABAAAAAAAAAAAAABABEAAAAAAAAAAAABABIAAAAAAAAAAAABABMAAAAAAAAAAAABABQAAAAAAAAAAAABABUAAAAAAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAACAA0AAAAAAAAAAAACAA4AAAAAAAAAAAACAA8AAAAAAAAAAAACABAAAAAAAAAAAAACABEAAAAAAAAAAAACABIAAAAAAAAAAAACABMAAAAAAAAAAAACABQAAAAAAAAAAAACABUAAAAAAAAAAAADAAoAAAAAAAAAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAADAA0AAAAAAAAAAAADAA4AAAAAAAAAAAADAA8AAAAAAAAAAAADABAAAAAAAAAAAAADABEAAAAAAAAAAAADABIAAAAAAAAAAAADABMAAAAAAAAAAAADABQAAAAAAAAAAAADABUAAAAAAAAAAAAEAAoAAAAAAAAAAAAEAAsAAAAAAAAAAAAEAAwAAAAAAAAAAAAEAA0AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA8AAAAAAAAAAAAEABAAAAAAAAAAAAAEABEAAAAAAAAAAAAEABIAAAAAAAAAAAAEABMAAAAAAAAAAAAEABQAAAAAAAAAAAAEABUAAAAAAAAAAAAFAAoAAAAAAAAAAAAFAAsAAAAAAAAAAAAFAAwAAAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAFAA8AAAAAAAAAAAAFABAAAAAAAAAAAAAFABEAAAAAAAAAAAAFABIAAAAAAAAAAAAFABMAAAAAAAAAAAAFABQAAAAAAAAAAAAFABUAAAAAAAAAAAAGAAoAAAAAAAAAAAAGAAsAAAAAAAAAAAAGAAwAAAAAAAAAAAAGAA0AAAAAAAAAAAAGAA4AAAAAAAAAAAAGAA8AAAAAAAAAAAAGABAAAAAAAAAAAAAGABEAAAAAAAAAAAAGABIAAAAAAAAAAAAGABMAAAAAAAAAAAAGABQAAAAAAAAAAAAGABUAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAwAAAAAAAAAAAAHAA0AAAAAAAAAAAAHAA4AAAAAAAAAAAAHAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAHABEAAAAAAAAAAAAHABIAAAAAAAAAAAAHABMAAAAAAAAAAAAHABQAAAAAAAAAAAAHABUAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAAwAAAAAAAAAAAAIAA0AAAAAAAAAAAAIAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAIABAAAAAAAAAAAAAIABEAAAAAAAAAAAAIABIAAAAAAAAAAAAIABMAAAAAAAAAAAAIABQAAAAAAAAAAAAIABUAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAJAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAJAA8AAAAAAAAAAAAJABAAAAAAAAAAAAAJABEAAAAAAAAAAAAJABIAAAAAAAAAAAAJABMAAAAAAAAAAAAJABQAAAAAAAAAAAAJABUAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAKAA4AAAAAAAAAAAAKAA8AAAAAAAAAAAAKABAAAAAAAAAAAAAKABEAAAAAAAAAAAAKABIAAAAAAAAAAAAKABMAAAAAAAAAAAAKABQAAAAAAAAAAAAKABUAAAAAAAAAAAALAAoAAAAAAAAAAAALAAsAAAAAAAAAAAALAAwAAAAAAAAAAAALAA0AAAAAAAAAAAALAA4AAAAAAAAAAAALAA8AAAAAAAAAAAALABAAAAAAAAAAAAALABEAAAAAAAAAAAALABIAAAAAAAAAAAALABMAAAAAAAAAAAALABQAAAAAAAAAAAALABUAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAwAAAAAAAAAAAAMAA0AAAAAAAAAAAAMAA4AAAAAAAAAAAAMAA8AAAAAAAAAAAAMABAAAAAAAAAAAAAMABEAAAAAAAAAAAAMABIAAAAAAAAAAAAMABMAAAAAAAAAAAAMABQAAAAAAAAAAAAMABUAAAAAAAAAAAANAAoAAAAAAAAAAAANAAsAAAAAAAAAAAANAAwAAAAAAAAAAAANAA0AAAAAAAAAAAANAA4AAAAAAAAAAAANAA8AAAAAAAAAAAANABAAAAAAAAAAAAANABEAAAAAAAAAAAANABIAAAAAAAAAAAANABMAAAAAAAAAAAANABQAAAAAAAAAAAANABUAAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAAOAA8AAAAAAAAAAAAOABAAAAAAAAAAAAAOABEAAAAAAAAAAAAOABIAAAAAAAAAAAAOABMAAAAAAAAAAAAOABQAAAAAAAAAAAAOABUAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAAAAAAPAA8AAAAAAAAAAAAPABAAAAAAAAAAAAAPABEAAAAAAAAAAAAPABIAAAAAAAAAAAAPABMAAAAAAAAAAAAPABQAAAAAAAAAAAAPABUAAAAAAAAAAAAQAAoAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAAQAA8AAAAAAAAAAAAQABAAAAAAAAAAAAAQABEAAAAAAAAAAAAQABIAAAAAAAAAAAAQABMAAAAAAAAAAAAQABQAAAAAAAAAAAAQABUAAAAAAAAAAAARAAoAAAAAAAAAAAARAAsAAAAAAAAAAAARAAwAAAAAAAAAAAARAA0AAAAAAAAAAAARAA4AAAAAAAAAAAARAA8AAAAAAAAAAAARABAAAAAAAAAAAAARABEAAAAAAAAAAAARABIAAAAAAAAAAAARABMAAAAAAAAAAAARABQAAAAAAAAAAAARABUAAAAAAAAAAAASAAoAAAAAAAAAAAASAAsAAAAAAAAAAAASAAwAAAAAAAAAAAASAA0AAAAAAAAAAAASAA4AAAAAAAAAAAASAA8AAAAAAAAAAAASABAAAAAAAAAAAAASABEAAAAAAAAAAAASABIAAAAAAAAAAAASABMAAAAAAAAAAAASABQAAAAAAAAAAAASABUAAAAAAAAAAAATAAoAAAAAAAAAAAATAAsAAAAAAAAAAAATAAwAAAAAAAAAAAATAA0AAAAAAAAAAAATAA4AAAAAAAAAAAATAA8AAAAAAAAAAAATABAAAAAAAAAAAAATABEAAAAAAAAAAAATABIAAAAAAAAAAAATABMAAAAAAAAAAAATABQAAAAAAAAAAAATABUAAAAAAAAAAAAUAAoAAAAAAAAAAAAUAAsAAAAAAAAAAAAUAAwAAAAAAAAAAAAUAA0AAAAAAAAAAAAUAA4AAAAAAAAAAAAUAA8AAAAAAAAAAAAUABAAAAAAAAAAAAAUABEAAAAAAAAAAAAUABIAAAAAAAAAAAAUABMAAAAAAAAAAAAUABQAAAAAAAAAAAAUABUAAAAAAAAAAAAVAAoAAAAAAAAAAAAVAAsAAAAAAAAAAAAVAAwAAAAAAAAAAAAVAA0AAAAAAAAAAAAVAA4AAAAAAAAAAAAVAA8AAAAAAAAAAAAVABAAAAAAAAAAAAAVABEAAAAAAAAAAAAVABIAAAAAAAAAAAAVABMAAAAAAAAAAAAVABQAAAAAAAAAAAAVABUAAAAAAAAAAAAWAAoAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAwAAAAAAAAAAAAWAA0AAAAAAAAAAAAWAA4AAAAAAAAAAAAWAA8AAAAAAAAAAAAWABAAAAAAAAAAAAAWABEAAAAAAAAAAAAWABIAAAAAAAAAAAAWABMAAAAAAAAAAAAWABQAAAAAAAAAAAAWABUAAAAAAAAAAAAXAAoAAAAAAAAAAAAXAAsAAAAAAAAAAAAXAAwAAAAAAAAAAAAXAA0AAAAAAAAAAAAXAA4AAAAAAAAAAAAXAA8AAAAAAAAAAAAXABAAAAAAAAAAAAAXABEAAAAAAAAAAAAXABIAAAAAAAAAAAAXABMAAAAAAAAAAAAXABQAAAAAAAAAAAAXABUAAAAAAAAAAAAYAAoAAAAAAAAAAAAYAAsAAAAAAAAAAAAYAAwAAAAAAAAAAAAYAA0AAAAAAAAAAAAYAA4AAAAAAAAAAAAYAA8AAAAAAAAAAAAYABAAAAAAAAAAAAAYABEAAAAAAAAAAAAYABIAAAAAAAAAAAAYABMAAAAAAAAAAAAYABQAAAAAAAAAAAAYABUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAABAAkAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAANAAgAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAARAAkAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAATAAYAAAAAAAAAAAATAAcAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAcAAAAAAAAAAAAUAAgAAAAAAAAAAAAUAAkAAAAAAAAAAAAVAAYAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAgAAAAAAAAAAAAVAAkAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAAAAAAXAAYAAAAAAAAAAAAXAAcAAAAAAAAAAAAXAAgAAAAAAAAAAAAXAAkAAAAAAAAAAAAYAAYAAAAAAAAAAAAYAAcAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAkAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_42o0s")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(201, 193)
+scale = Vector2(0.87044, 0.842798)
+texture = ExtResource("2_one6m")
 
 [node name="DragAndDrop" parent="." instance=ExtResource("1_1g8ti")]
-
-[node name="GrabbablePencil" type="CharacterBody2D" parent="DragAndDrop"]
-position = Vector2(-22, -22)
-collision_mask = 2
-input_pickable = true
-script = ExtResource("2_uq2ah")
-metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/GrabbablePencil"]
-position = Vector2(42, 164)
-scale = Vector2(-0.882835, 3.13554)
-shape = SubResource("RectangleShape2D_42o0s")
-disabled = true
-
-[node name="Pencil" parent="DragAndDrop/GrabbablePencil" instance=ExtResource("6_a7jp4")]
-position = Vector2(42, 164)
 
 [node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
 script = ExtResource("4_a7jp4")
 
-[node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(331, 242)
-scale = Vector2(0.4, 0.52)
+[node name="Doc_4" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(305, 138)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
-[node name="LargePaper2" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("4_0lq4y")
 
-[node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
-position = Vector2(-70, -84.6154)
-scale = Vector2(-1.62915, 0.298444)
-area_group = "1"
-correct_answer_msg = "- KKKKK d+"
-wrong_answer_msg = "- Debadsasd"
-
-[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2" instance=ExtResource("9_1hi2x")]
-position = Vector2(-2.5, -103.846)
-scale = Vector2(4.96396, 0.284879)
-area_group = "1"
-
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
-offset_left = -101.0
-offset_top = -110.0
-offset_right = 101.0
-offset_bottom = 128.0
-scale = Vector2(1, 1.00588)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 11
-text = "asdasdasdasdasdasdasdasdasdasdasdasdasdasd"
-autowrap_mode = 3
-text_overrun_behavior = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1/LargePaper2"]
-offset_left = -111.0
-offset_top = -136.0
-offset_right = 111.0
-offset_bottom = -113.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "asdasdasd"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
 light_mask = 2
+position = Vector2(0, 12)
+scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
-[node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(336, 247)
-scale = Vector2(0.4, 0.52)
-collision_mask = 2
-input_pickable = true
-script = ExtResource("2_uq2ah")
-metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
-
-[node name="LargePaper3" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
-texture = ExtResource("4_0lq4y")
-
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper3"]
-offset_left = -101.0
-offset_top = -110.0
-offset_right = 101.0
-offset_bottom = 128.0
-scale = Vector2(1, 1.00588)
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 11
-text = "asdasdasd"
-autowrap_mode = 3
-text_overrun_behavior = 4
-metadata/_edit_use_anchors_ = true
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 5
+text = "Diante da autuação, Joana, por meio de seu advogado, ajuizou uma ação anulatória do auto de infração, com pedido de tutela de urgência para suspender o embargo e a multa aplicada. Na petição inicial, ela alegou em síntese: (i) ter agido de boa-fé, confiando na validade do alvará municipal que lhe fora concedido para a obra; (ii) tratar-se de um ato jurídico perfeito e haver um direito adquirido de construir, já que o alvará fora emitido antes da nova lei ambiental; e (iii) a inexistência de dano ambiental significativo, pois o aterro planejado era mínimo e de baixo impacto. Essas alegações buscavam demonstrar que a conduta de Joana estaria protegida pelo ordenamento anterior e que a nova lei não poderia atingi-la retroativamente. Em resposta, a defesa do órgão ambiental sustentou a legalidade do auto de infração e do embargo, argumentando que a obra de Joana estava sim sujeita à lei ambiental superveniente de 2023, não havendo direito adquirido para descumprir norma de proteção ambiental. "
+autowrap_mode = 2
 
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper3"]
-offset_left = -111.0
-offset_top = -136.0
-offset_right = 111.0
-offset_bottom = -113.0
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "asdasdasd"
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 4"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_2/LargePaper3" instance=ExtResource("9_1hi2x")]
-position = Vector2(-72.5, -103.846)
-scale = Vector2(-1.44356, 0.244996)
-area_group = "2"
-correct_answer_msg = "- janeiro"
-wrong_answer_msg = "- janheiro"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
-light_mask = 2
-shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
+uppercase = true
 
 [node name="Doc_3" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(341, 252)
-scale = Vector2(0.4, 0.52)
+position = Vector2(303, 136)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("4_0lq4y")
-
-[node name="RelevantAreaHighlighter" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
-position = Vector2(17.5, -5.76923)
-scale = Vector2(3.66164, -0.278924)
-area_group = "3"
-
-[node name="RelevantAreaHighlighter2" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1" instance=ExtResource("9_1hi2x")]
-position = Vector2(-90, 9.61548)
-rotation = 3.14159
-scale = Vector2(0.741599, -0.256004)
-area_group = "3"
-correct_answer_msg = "- domingo top"
-wrong_answer_msg = "- segunda top"
-
-[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
-offset_left = -101.0
-offset_top = -110.0
-offset_right = 101.0
-offset_bottom = 128.0
-scale = Vector2(1, 1.0126)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 11
-text = "	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Outro espaço com texto imporatante blandit quis, posuere ut massa. Morbi quis odio vel ligula porttitor hendrerit. Mauris interdum in justo a egestas. testando o component que criei. Sed condimentum euismod mauris a egestas. Nulla ultrices ante porttitor velit dictum feugiat. Morbi nec elit porta, malesuada erat id, scelerisque erat. Nulla vestibulum bibendum eleifend. Nullam id posuere odio. Nulla venenatis.
-
-"
-label_settings = SubResource("LabelSettings_42o0s")
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3/LargePaper1"]
-offset_left = -111.0
-offset_top = -136.0
-offset_right = 111.0
-offset_bottom = -113.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "asdasdasd"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
 light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
-[node name="Check" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
-position = Vector2(82.5, -140.385)
-scale = Vector2(0.285829, 0.215261)
-texture = ExtResource("9_k1im2")
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 5
+text = "Contudo, poucos dias depois (24/11/2023), fiscais estaduais, acompanhados de agentes do Ibama, autuaram Joana em flagrante e embargaram a obra, sob o entendimento de que o aterro afetava uma Área de Preservação Permanente (APP) às margens da lagoa. Joana viu seu projeto imediatamente paralisado e já contabilizava um investimento de aproximadamente R$ 18 mil em materiais e serviços iniciais. Ela sentiu profunda frustração e ansiedade diante da possibilidade de perder a área de lazer planejada para sua família, percebendo-se em meio a um embate entre seu direito de proprietária e as rigorosas normas ambientais supervenientes. "
+autowrap_mode = 2
 
-[node name="List" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
-position = Vector2(56, 263)
-scale = Vector2(0.4, 0.52)
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -90.0
+offset_top = -97.0
+offset_right = 90.0
+offset_bottom = -74.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 3"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(301, 134)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
-[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/List"]
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("4_0lq4y")
 
-[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1"]
-offset_left = -111.0
-offset_top = -136.0
-offset_right = 111.0
-offset_bottom = -113.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Pontos Importantes"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="ResponseList" type="Node2D" parent="DragAndDrop/RelevantAreaController/List/LargePaper1"]
-script = ExtResource("9_one6m")
-
-[node name="Label" type="Label" parent="DragAndDrop/RelevantAreaController/List/LargePaper1/ResponseList"]
-offset_left = -100.0
-offset_top = -113.0
-offset_right = 98.0
-offset_bottom = 124.0
-text = "
-"
-label_settings = SubResource("LabelSettings_1hi2x")
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/List"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
 light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
 shape = SubResource("RectangleShape2D_1g8ti")
-disabled = true
 
-[node name="OpenNotePad" type="Button" parent="."]
-z_index = 100
-z_as_relative = false
-offset_left = 357.0
-offset_top = 137.0
-offset_right = 449.0
-offset_bottom = 168.0
-scale = Vector2(0.4, 0.52)
-text = "Note_pad
-"
-script = ExtResource("4_uq2ah")
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 5
+text = "Em outubro de 2023, quando Joana se preparava para finalmente executar o projeto após anos de adiamento, foi publicada uma lei estadual ambiental proibindo o aterramento de qualquer lagoa natural ou córrego em área rural, prevendo sanções de multa e embargo para quem descumprisse. Essa mudança gerou angústia em Joana, que havia retomado os investimentos e os preparativos para a obra. Buscando segurança jurídica, em novembro de 2023 Joana consultou um advogado, Dr. Álvaro, sobre a viabilidade de iniciar a construção. Confiando na autorização municipal que obtivera anos antes e acreditando que seu direito de construir ali estava resguardado, Joana decidiu começar a obra: em 20/11/2023 deu início à concretagem da base do depósito de canoas. "
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_exited"]
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 2"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(298, 131)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("2_uq2ah")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("4_0lq4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_1g8ti")
+
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 5
+text = "Joana, 42 anos, professora municipal em Jaraguá do Sul (SC), possui um sítio com uma lagoa natural herdada da família. Em janeiro de 2018, ela obteve do Município um alvará de construção, com validade de 12 meses (até janeiro de 2019), autorizando erguer um pequeno depósito de canoas à margem da lagoa. O projeto previa uma base de concreto de 18 m² e um aterro lateral de apenas 30 cm de altura para acesso. Contudo, por motivos pessoais e financeiros, Joana não conseguiu iniciar a obra dentro do prazo de vigência do alvará. Nos meses seguintes, ela enfrentou dificuldades para custear a construção e, a partir de 2020, a pandemia de COVID-19 trouxe incertezas que a obrigaram a adiar indefinidamente seus planos. Ainda assim, o sítio permaneceu sendo um sonho de lazer para Joana e seus familiares, carregando forte valor afetivo durante todos esses anos de espera. "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_one6m")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 1"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogView" parent="." instance=ExtResource("10_1hi2x")]
+z_index = 10
+offset_left = 207.0
+offset_top = 434.0
+offset_right = 207.0
+offset_bottom = 434.0
+scale = Vector2(0.994096, 1.00483)
+opt_button_scene = "res://resources/ui/case_option_button.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogProvider" parent="." instance=ExtResource("9_k1im2")]
+dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
+context = "caso-um"
+
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/List" to="DragAndDrop/RelevantAreaController/List" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/List" to="DragAndDrop/RelevantAreaController/List" method="_on_mouse_exited"]
-[connection signal="button_down" from="OpenNotePad" to="OpenNotePad" method="_on_button_down"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_exited"]

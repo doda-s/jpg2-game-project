@@ -5,10 +5,10 @@ var player: CharacterBody2D
 @export var sprite: AnimatedSprite2D
 
 func _ready() -> void:
-	if sprite ==  null:
+	if sprite == null:
 		push_error("Missing sprite reference...")
 
-	player = get_tree().current_scene.get_node("Player")
+	player = SceneSwitcher.current_scene.get_node("Player")
 	if player == null:
 		push_error("Missing player reference...")
 		return

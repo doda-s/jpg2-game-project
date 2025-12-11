@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4apbcjjpyi1h"]
+[gd_scene load_steps=8 format=3 uid="uid://dyc8cgwtpuok7"]
 
 [ext_resource type="Texture2D" uid="uid://ciww12dyxdrdl" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_01.png" id="1_1c2cu"]
 [ext_resource type="Texture2D" uid="uid://cbwp8udbtp63u" path="res://assets/npcs/IDLE/CHEFE/CHEFE_IDLE_02.png" id="2_n1pcj"]
