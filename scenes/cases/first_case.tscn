@@ -196,17 +196,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogView" parent="." instance=ExtResource("10_1hi2x")]
 z_index = 10
-offset_left = 207.0
-offset_top = 434.0
-offset_right = 207.0
-offset_bottom = 434.0
+offset_left = 209.0
+offset_top = 388.0
+offset_right = 209.0
+offset_bottom = 388.0
 scale = Vector2(0.994096, 1.00483)
 opt_button_scene = "res://resources/ui/case_option_button.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogProvider" parent="." instance=ExtResource("9_k1im2")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "caso-um"
+dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
+context = "perguntas-augusto"
 
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]

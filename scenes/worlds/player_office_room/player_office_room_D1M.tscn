@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=4 uid="uid://dycfund0p6tdf"]
+[gd_scene load_steps=21 format=4 uid="uid://dycfund0p6tdf"]
 
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_5gutt"]
-[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_18syf"]
+[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_18syf"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_qias2"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="2_qias2"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="3_18syf"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="6_mfdq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18syf"]
 texture = ExtResource("1_qias2")
@@ -1293,3 +1294,9 @@ tile_map_data = PackedByteArray("AADz//3/AAADABgAAADz//7/AAAEABkAAADz////AAAEABk
 tile_set = SubResource("TileSet_18syf")
 
 [node name="Player" parent="." instance=ExtResource("3_18syf")]
+
+[node name="Door" parent="." groups=["doors"] instance=ExtResource("6_mfdq2")]
+position = Vector2(0, -28)
+door_id = "1"
+target_id = "2"
+target_scene_path = "res://scenes/worlds/office_main_hall/office_main_hall_D1M.tscn"

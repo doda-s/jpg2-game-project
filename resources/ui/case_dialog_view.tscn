@@ -23,7 +23,7 @@ anchor_bottom = 1.0
 offset_left = -200.0
 offset_top = -150.0
 offset_right = 185.0
-offset_bottom = -42.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -32,7 +32,7 @@ layout_mode = 0
 offset_left = 7.0
 offset_top = 8.0
 offset_right = 717.0
-offset_bottom = 188.0
+offset_bottom = 285.0
 scale = Vector2(0.521626, 0.511839)
 
 [node name="Title" type="RichTextLabel" parent="Background/VBoxContainer"]

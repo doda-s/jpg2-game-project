@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=4 uid="uid://cvqeycvoybfss"]
+[gd_scene load_steps=20 format=4 uid="uid://cvqeycvoybfss"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_8mlw2"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_lubfn"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="3_0dtis"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="4_c2u64"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="5_hftgn"]
-[ext_resource type="PackedScene" uid="uid://4apbcjjpyi1h" path="res://resources/entities/boss_npc.tscn" id="6_dkswh"]
+[ext_resource type="PackedScene" uid="uid://dyc8cgwtpuok7" path="res://resources/entities/boss_npc.tscn" id="6_dkswh"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="7_lubfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1epf8"]
 texture = ExtResource("2_lubfn")
@@ -1277,3 +1278,9 @@ z_index = 1
 
 [node name="BossNPC" parent="." instance=ExtResource("6_dkswh")]
 position = Vector2(72, 0)
+
+[node name="Door" parent="." groups=["doors"] instance=ExtResource("7_lubfn")]
+position = Vector2(-16, -28)
+door_id = "1"
+target_id = "3"
+target_scene_path = "res://scenes/worlds/office_main_hall/office_main_hall_D1T.tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://wfr7f07bljn"]
+[gd_scene load_steps=22 format=4 uid="uid://wfr7f07bljn"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_i8mja"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_etjwb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="5_qerow"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_6emt6"]
 [ext_resource type="PackedScene" uid="uid://dcma5d5hoxtd7" path="res://resources/entities/secretary_npc.tscn" id="7_0nenq"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="8_etjwb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqxst"]
 texture = ExtResource("2_etjwb")
@@ -1203,3 +1204,19 @@ z_index = 1
 
 [node name="SecretaryNPC" parent="." instance=ExtResource("7_0nenq")]
 position = Vector2(84, 0)
+
+[node name="PlayerOfficeDoor" parent="." groups=["doors"] instance=ExtResource("8_etjwb")]
+position = Vector2(48, -28)
+door_id = "2"
+target_scene_path = "res://scenes/worlds/player_office_room/player_office_room_D2M.tscn"
+
+[node name="BossDoor" parent="." groups=["doors"] instance=ExtResource("8_etjwb")]
+position = Vector2(-160, -28)
+door_id = "3"
+target_scene_path = "res://scenes/worlds/boss_office_room/boss_office_room_D2M.tscn"
+
+[node name="OutsideDoor" parent="." groups=["doors"] instance=ExtResource("8_etjwb")]
+position = Vector2(192, -28)
+door_id = "1"
+target_id = "3"
+target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"

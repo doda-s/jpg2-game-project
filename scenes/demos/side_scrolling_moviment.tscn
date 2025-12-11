@@ -32,13 +32,13 @@ position = Vector2(-0.5, 6)
 shape = SubResource("RectangleShape2D_sqeqr")
 
 [node name="Door" parent="." groups=["doors"] instance=ExtResource("2_jdho2")]
-position = Vector2(96, 409)
+position = Vector2(95, 453)
 door_id = "1"
 target_id = "2"
 target_scene_path = "res://scenes/demos/side_scrolling_moviment.tscn"
 
 [node name="Door2" parent="." groups=["doors"] instance=ExtResource("2_jdho2")]
-position = Vector2(1053, 409)
+position = Vector2(1055, 457)
 door_id = "2"
 target_id = "3"
 target_scene_path = "res://scenes/demos/teste.tscn"
@@ -51,7 +51,7 @@ offset_right = 426.0
 offset_bottom = 544.0
 
 [node name="MotherNPC" parent="." instance=ExtResource("5_mhb5f")]
-position = Vector2(196, 470)
+position = Vector2(195, 477)
 
 [node name="InteractableComponent" type="Node2D" parent="MotherNPC"]
 position = Vector2(4, -9)
@@ -66,8 +66,8 @@ shape = SubResource("RectangleShape2D_er8t5")
 
 [node name="DialogProvider" parent="MotherNPC" instance=ExtResource("7_a7nyn")]
 position = Vector2(4, -10)
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "caso-dois"
+dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
+context = "cena2-augusto-e-case"
 
 [node name="Player" parent="." instance=ExtResource("1_xfaor")]
 position = Vector2(192, 352)

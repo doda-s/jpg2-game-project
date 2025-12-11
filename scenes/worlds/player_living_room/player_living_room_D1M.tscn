@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://n3gxf6olmyw2"]
+[gd_scene load_steps=28 format=4 uid="uid://n3gxf6olmyw2"]
 
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_176wk"]
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_ugjv4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="6_ugjv4"]
 [ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="8_b5m8d"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_882ho"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="10_0bp6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wmaw"]
 texture = ExtResource("1_176wk")
