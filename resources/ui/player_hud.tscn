@@ -12,3 +12,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 offset_top = 0.0
 grow_vertical = 0
+
+[node name="InteractionHint" type="RichTextLabel" parent="."]
+visible = false
+offset_top = 230.0
+offset_right = 400.0
+offset_bottom = 249.0
+theme_override_font_sizes/normal_font_size = 8
+text = "Pressione E para interagir"
+horizontal_alignment = 1
+vertical_alignment = 1
