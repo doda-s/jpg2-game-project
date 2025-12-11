@@ -9,7 +9,7 @@ func _on_start_button_down():
 	#TODO:tela de carregamento
 	#TODO: levar jogador para tela inicial
 	#TODO:load informações do jogador
-	SceneSwitcher.switch_scene("res://scenes/demos/side_scrolling_moviment.tscn")
+	SceneSwitcher.switch_scene("res://scenes/worlds/player_room_map/player_room_map_D1M.tscn")
 
 func _on_options_button_down():
 	#TODO: Levar para tela de opções
