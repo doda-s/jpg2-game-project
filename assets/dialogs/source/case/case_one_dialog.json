@@ -199,7 +199,7 @@
 			]
 		},
 		{
-			"Name": "perguntas-augusto",
+			"Name": "caso-um",
 			"StartIn": "p1_question",
 			"EndIn": "p4_question",
 			"DialogNodes": [
@@ -282,7 +282,7 @@
 							"Goes": "p4_question"
 						},
 						{
-							"Placeholder": "R2 — Lei estadual limita o que o alvará legitima. (✔)",
+							"Placeholder": "R2 — Lei estadual limita o que o alvará legitima.",
 							"Goes": "p4_question"
 						},
 						{
