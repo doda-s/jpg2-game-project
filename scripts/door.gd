@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var door_id : String
-@export var target_id : String = '1'
-@export var target_scene_path: String 
+@export var door_id: String
+@export var target_id: String = '1'
+@export var target_scene_path: String
 var player_can_interact = false
 
 func _on_area_2d_body_entered(body):
@@ -14,6 +14,7 @@ func _on_area_2d_body_exited(body):
 		player_can_interact = false
 
 func _ready():
+	add_to_group("door")
 	Globals.transport_to_target()
 		
 func _process(delta):

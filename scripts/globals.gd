@@ -16,9 +16,8 @@ func transport_to_target():
 	var doors = get_tree().get_nodes_in_group("doors")
 	for d in doors:
 		if d is Node2D and d.door_id == target_door_id:
-			player.global_position = d.global_position + Vector2(0, 50)
+			player.global_position = d.global_position + Vector2(0, 26)
 			return
-
 
 
 var stack: Array = []
