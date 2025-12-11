@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://6ws8je47y3l4"]
+[gd_scene load_steps=19 format=4 uid="uid://d33528kbb6e0r"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_dfh5k"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_5424u"]

@@ -1467,10 +1467,11 @@ shape = SubResource("RectangleShape2D_ugjv4")
 dialog_json_file = "res://assets/dialogs/source/player_living_room/player_living_room_D1M.json"
 context = "bathroom-door"
 
-[node name="OutSideDoor" parent="." groups=["doors"] instance=ExtResource("10_baxhe")]
+[node name="OutSideDoor" parent="." instance=ExtResource("10_baxhe")]
 position = Vector2(-608, -28)
 door_id = "3"
-target_scene_path = "res://scenes/worlds/main_city/main_city_D1T.tscn"
+target_id = ""
+target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
 
 [node name="PlayerRoomDoor" parent="." groups=["doors"] instance=ExtResource("10_baxhe")]
 position = Vector2(112, -28)
