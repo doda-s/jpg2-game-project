@@ -4,6 +4,7 @@ var arr = {}
 var responseQuestion = []
 var correctResponses = []
 var responseScore: int = 0
+var returnScene = ""
 
 func _ready() -> void:
 	if not DialogHandler.dialog_ended_signal.is_connected(player_choice_map):
@@ -26,10 +27,13 @@ func tratamentIndexed() -> void:
 
 	var perguntas = arr["DialogNodes"]
 
-	if arr["Name"] == "caso-um":
+	if arr["Name"] == "perguntas-vasconcelos-1":
 		caso = "1"
-	elif arr["Name"] == "caso-dois":
+		returnScene = "res://scenes/worlds/boss_office_room/boss_office_room_D1T.tscn"
+		
+	elif arr["Name"] == "cena3-caso-miguel":
 		caso = "2"
+		returnScene = "res://scenes/worlds/boss_office_room/boss_office_room_D2T.tscn"
 
 	for i in range(responseQuestion.size()):
 		var pergunta_index = i
@@ -89,7 +93,6 @@ func buscar_consequencia(caso: String, pergunta: int, resposta: int) -> String:
 func buscar_resposta_correta(caso: String, pergunta: int) -> String:
 	for item in consequencia:
 		if item["Caso"] == caso and item["Pergunta"] == str(pergunta) and item["correct"] == "true":
-
 			return item["Respostas"]
 	return "-1"
 
@@ -101,7 +104,7 @@ func visibilityTrue(node):
 	tween.tween_property(node, "modulate:a", 1.0, 0.5).as_relative()
 
 func _on_button_pressed():
-	SceneSwitcher.switch_scene("res://scenes/worlds/boss_office_room.tscn")
+	SceneSwitcher.switch_scene(returnScene)
 
 
 func player_choice_map(arr_choice_map):
@@ -177,11 +180,11 @@ Isso toca na reputação política e pessoal, muito além de vida íntima."},
 O fato de ele ser ex-deputado aumenta o interesse público, não diminui direitos fundamentais."},
 
 	# Pergunta 2
-	{"Caso": "2", "Pergunta": "2", "Respostas": "1", "correct": "true", "consequencia": "Então, bastou a operação começar e já está liberado tratar o investigado como se estivesse com a culpa sacramentada?
-A presunção de inocência justamente tenta conter essa pressa em transformar investigação em veredito público."},
-	{"Caso": "2", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "Essa abordagem é mais fina.
+	{"Caso": "2", "Pergunta": "2", "Respostas": "1", "correct": "true", "consequencia": "Essa abordagem é mais fina.
 Você não manda calar a imprensa, mas lembra que existe diferença entre dizer ‘ex-deputado é investigado em operação de corrupção’ e apresentar a manchete como se a participação dele já estivesse definida.
 A presunção de inocência entra bem aí."},
+	{"Caso": "2", "Pergunta": "2", "Respostas": "2", "correct": "false", "consequencia": "Então, bastou a operação começar e já está liberado tratar o investigado como se estivesse com a culpa sacramentada?
+A presunção de inocência justamente tenta conter essa pressa em transformar investigação em veredito público."},
 	{"Caso": "2", "Pergunta": "2", "Respostas": "3", "correct": "false", "consequencia": "Se fosse só processual, o sujeito seria inocente perante o juiz e condenado diariamente nas manchetes.
 O sistema não lida bem com essa esquizofrenia.
 A forma de noticiar também sofre influência desse princípio."},
@@ -207,14 +210,14 @@ Liberdade de imprensa existe, mas não é licença pra expor alguém algemado, n
 	# Pergunta 4
 	{"Caso": "2", "Pergunta": "4", "Respostas": "1", "correct": "false", "consequencia": "‘Dever de usar linguagem dura’ é um conceito que não costuma aparecer nos códigos.
 Informar com firmeza é uma coisa; transformar o sujeito em protagonista de um escândalo ainda em apuração é outra história."},
-	{"Caso": "2", "Pergunta": "4", "Respostas": "2", "correct": "false", "consequencia": "Essa conclusão entrega o que o juiz precisa ler.
-Você reconhece o lado da imprensa – a operação é relevante – mas mostra que o blog cruzou a linha quando tratou o Miguel como se a participação dele no esquema já estivesse definida.
-É aí que entram direito de resposta e a conversa sobre indenização."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "2", "correct": "false", "consequencia": "Chamar isso de ‘só mau gosto’ é ignorar o peso que uma manchete dessas tem na vida real.
+Pra quem vive de reputação – seja na política, seja fora dela – ser associado a uma ‘operação milionária de corrupção’ não é detalhe estético."},
 	{"Caso": "2", "Pergunta": "4", "Respostas": "3", "correct": "false", "consequencia": "Se toda vez que alguém é ex-agente político tiver que engolir qualquer manchete sem reagir, a mensagem é simples:
 ‘vire político e perca a proteção jurídica’.
 Não é essa a lógica do sistema."},
-	{"Caso": "2", "Pergunta": "4", "Respostas": "4", "correct": "true", "consequencia": "Chamar isso de ‘só mau gosto’ é ignorar o peso que uma manchete dessas tem na vida real.
-Pra quem vive de reputação – seja na política, seja fora dela – ser associado a uma ‘operação milionária de corrupção’ não é detalhe estético."},
+	{"Caso": "2", "Pergunta": "4", "Respostas": "4", "correct": "true", "consequencia": "Essa conclusão entrega o que o juiz precisa ler.
+Você reconhece o lado da imprensa – a operação é relevante – mas mostra que o blog cruzou a linha quando tratou o Miguel como se a participação dele no esquema já estivesse definida.
+É aí que entram direito de resposta e a conversa sobre indenização."},
 
 	## Pergunta 5
 	#{"Caso": "2", "Pergunta": "5", "Respostas": "1", "correct": "true", "consequencia": "O juiz considera a resposta equilibrada e adequada. Defesa ganha força."},

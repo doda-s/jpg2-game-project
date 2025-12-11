@@ -1,12 +1,14 @@
-[gd_scene load_steps=19 format=4 uid="uid://dd8vimhvgoywm"]
+[gd_scene load_steps=22 format=4 uid="uid://dja8y3uw7p01n"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_cgfh6"]
+[ext_resource type="Script" uid="uid://5vb61qlr0xwt" path="res://scenes/worlds/player_room_map/player_room_map_d_2t.gd" id="1_vneua"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_5w8ol"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="3_fvboc"]
 [ext_resource type="Texture2D" uid="uid://dyyumjyrixk4n" path="res://assets/mp_house_interiors_tileset_pack/parents_room.png" id="4_vneua"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="5_bx180"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_y8js2"]
 [ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="7_5w8ol"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="8_fvboc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b03l5"]
 texture = ExtResource("2_5w8ol")
@@ -1249,7 +1251,12 @@ texture = ExtResource("5_bx180")
 [sub_resource type="TileSet" id="TileSet_uj7oo"]
 sources/0 = SubResource("TileSetAtlasSource_2axrc")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vneua"]
+size = Vector2(61.25, 61)
+
 [node name="PlayerRoomMap" type="Node2D"]
+script = ExtResource("1_vneua")
+scene = "res://scenes/credits/credits_scene.tscn"
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_cgfh6")]
 
@@ -1279,3 +1286,17 @@ position = Vector2(0, -28)
 door_id = "1"
 target_id = "2"
 target_scene_path = "res://scenes/worlds/player_living_room/player_living_room_D2T.tscn"
+
+[node name="InteractableComponent" type="Node2D" parent="."]
+position = Vector2(59, -9)
+scale = Vector2(0.680001, 1)
+script = ExtResource("8_fvboc")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent/Area2D"]
+position = Vector2(-3, -22)
+shape = SubResource("RectangleShape2D_vneua")
+
+[connection signal="interaction_emitter" from="InteractableComponent" to="." method="_on_interactable_component_interaction_emitter"]

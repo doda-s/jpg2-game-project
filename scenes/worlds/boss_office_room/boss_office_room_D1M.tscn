@@ -1,12 +1,15 @@
-[gd_scene load_steps=20 format=4 uid="uid://bwxf7aetwxcu4"]
+[gd_scene load_steps=24 format=4 uid="uid://bwxf7aetwxcu4"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_1epf8"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_3mua7"]
+[ext_resource type="Script" uid="uid://c1sqiqodqmkq8" path="res://scenes/worlds/boss_office_room/boss_office_room_d_1m.gd" id="1_csp12"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="2_5vk2n"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_lc1e8"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="3_lc1e8"]
-[ext_resource type="PackedScene" uid="uid://4apbcjjpyi1h" path="res://resources/entities/boss_npc.tscn" id="4_5vk2n"]
+[ext_resource type="PackedScene" uid="uid://dyc8cgwtpuok7" path="res://resources/entities/boss_npc.tscn" id="4_5vk2n"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="7_u86f6"]
 [ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="7_wnufv"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="8_csp12"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1epf8"]
 texture = ExtResource("1_3mua7")
@@ -1247,7 +1250,11 @@ texture = ExtResource("2_5vk2n")
 [sub_resource type="TileSet" id="TileSet_a2nc8"]
 sources/0 = SubResource("TileSetAtlasSource_m0sy4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rtq2"]
+size = Vector2(61.25, 61)
+
 [node name="BossOfficeRoom" type="Node2D"]
+script = ExtResource("1_csp12")
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_1epf8")]
 
@@ -1278,6 +1285,22 @@ z_index = 1
 
 [node name="BossNPC" parent="." instance=ExtResource("4_5vk2n")]
 position = Vector2(72, 0)
+
+[node name="InteractableComponent" type="Node2D" parent="BossNPC"]
+position = Vector2(4, -9)
+script = ExtResource("7_u86f6")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="BossNPC/InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossNPC/InteractableComponent/Area2D"]
+position = Vector2(-3, -22)
+shape = SubResource("RectangleShape2D_7rtq2")
+
+[node name="DialogProvider" parent="BossNPC" instance=ExtResource("8_csp12")]
+position = Vector2(4, -10)
+dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
+context = "cena2-vasconcelos-e-case"
 
 [node name="Door" parent="." groups=["doors"] instance=ExtResource("7_wnufv")]
 position = Vector2(-16, -28)

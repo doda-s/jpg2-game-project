@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b56823nrapcnq"]
+[gd_scene load_steps=12 format=3 uid="uid://b56823nrapcnq"]
 
 [ext_resource type="Script" uid="uid://dee4am8sc5qos" path="res://scenes/cases/second_case.gd" id="1_1yr3k"]
 [ext_resource type="Texture2D" uid="uid://b2h7bbpy5fmyy" path="res://assets/desk.jpg" id="1_4p6r4"]
@@ -7,11 +7,12 @@
 [ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="4_j4d82"]
 [ext_resource type="Texture2D" uid="uid://ph50784k8u2t" path="res://assets/large-paper.png" id="5_ociyq"]
 [ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="6_vxejt"]
+[ext_resource type="Texture2D" uid="uid://dixkmqslhy2to" path="res://assets/AI_tribunal/hetero-rico.jpg" id="7_4p6r4"]
 [ext_resource type="PackedScene" uid="uid://ba682s7i27q8j" path="res://resources/ui/case_dialog_view.tscn" id="9_8wvqs"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="10_psjvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfux"]
-size = Vector2(107.794, 173.607)
+size = Vector2(109.176, 174.393)
 
 [node name="SecondCase" type="Node2D"]
 script = ExtResource("1_1yr3k")
@@ -25,6 +26,29 @@ texture = ExtResource("1_4p6r4")
 
 [node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
 script = ExtResource("3_0lqxb")
+
+[node name="Doc_4" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(100, 125)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("4_j4d82")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("5_ociyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4/LargePaper1"]
+position = Vector2(-7.42674e-05, -10.2793)
+scale = Vector2(0.391356, 0.363332)
+texture = ExtResource("7_4p6r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+light_mask = 2
+position = Vector2(-0.000137329, 12)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
 
 [node name="Doc_3" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
 position = Vector2(306, 133)
@@ -157,18 +181,20 @@ shape = SubResource("RectangleShape2D_7mfux")
 
 [node name="DialogView" parent="." instance=ExtResource("9_8wvqs")]
 z_index = 10
-offset_left = 206.0
-offset_top = 434.0
-offset_right = 206.0
-offset_bottom = 434.0
+offset_left = 207.0
+offset_top = 388.0
+offset_right = 207.0
+offset_bottom = 388.0
 scale = Vector2(0.994096, 1.00483)
 opt_button_scene = "res://resources/ui/case_option_button.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogProvider" parent="." instance=ExtResource("10_psjvf")]
-dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
-context = "caso-dois"
+dialog_json_file = "res://assets/dialogs/source/case/case_two_dialog.json"
+context = "cena3-caso-miguel"
 
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_entered"]
