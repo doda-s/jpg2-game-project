@@ -1,11 +1,12 @@
-[gd_scene load_steps=18 format=4 uid="uid://b40k6efnw8cvj"]
+[gd_scene load_steps=19 format=4 uid="uid://b40k6efnw8cvj"]
 
-[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_7nq4g"]
+[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_7nq4g"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_36mdb"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_7nq4g"]
 [ext_resource type="Texture2D" uid="uid://dyyumjyrixk4n" path="res://assets/mp_house_interiors_tileset_pack/parents_room.png" id="3_clenk"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="4_d16u4"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="5_myjni"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="7_uw71w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b03l5"]
 texture = ExtResource("1_36mdb")
@@ -1272,3 +1273,9 @@ tile_set = SubResource("TileSet_uj7oo")
 
 [node name="Player" parent="." instance=ExtResource("5_myjni")]
 position = Vector2(89, 0)
+
+[node name="HouseDoor" parent="." groups=["doors"] instance=ExtResource("7_uw71w")]
+position = Vector2(0, -28)
+door_id = "1"
+target_id = "2"
+target_scene_path = "res://scenes/worlds/player_living_room/player_living_room_D1T.tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://butgb641x210v"]
+[gd_scene load_steps=27 format=4 uid="uid://butgb641x210v"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_w3gwf"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_0fltd"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dbcd02dvpuy70" path="res://resources/components/interactable_component.tscn" id="8_nn7as"]
 [ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_60j4q"]
 [ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="10_d75t8"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="11_0fltd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wmaw"]
 texture = ExtResource("2_0fltd")
@@ -1417,7 +1418,6 @@ size = Vector2(52, 36)
 size = Vector2(30, 44)
 
 [node name="PlayerLivingRoom" type="Node2D"]
-position = Vector2(-23, 0)
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_w3gwf")]
 
@@ -1475,3 +1475,14 @@ shape = SubResource("RectangleShape2D_b52dl")
 [node name="DialogProvider" parent="BathroomDoor" instance=ExtResource("9_60j4q")]
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
 context = "dialog-demonstration-1"
+
+[node name="OutSideDoor" parent="." instance=ExtResource("11_0fltd")]
+position = Vector2(-608, -28)
+door_id = "3"
+target_id = ""
+target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
+
+[node name="PlayerRoomDoor" parent="." groups=["doors"] instance=ExtResource("11_0fltd")]
+position = Vector2(112, -28)
+door_id = "2"
+target_scene_path = "res://scenes/worlds/player_room_map/player_room_map_D2T.tscnE"
