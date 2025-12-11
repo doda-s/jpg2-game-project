@@ -1,0 +1,114 @@
+context:
+  - name: first-day-coffee
+    start_in: barista-greeting
+    end_in: leaving-cafe
+    dialog_nodes:
+      - id: barista-greeting
+        title: Melissa
+        text: Opa! Bom dia! Meu nome é Melissa. Você tem cara de quem ainda tá descobrindo onde fica a própria sombra. Primeira vez por aqui?
+        options:
+          - placeholder: É… sou novo na cidade. Ainda estou tentando entender até como atravessa a rua.
+            goes: new-in-town
+          - placeholder: Se eu disser que me perdi três vezes pra chegar, você não julga?
+            goes: lost-while-walking
+          - placeholder: Na verdade sim. Começo meu estágio hoje e preciso de café pra sobreviver.
+            goes: first-day-vibes
+
+      - id: new-in-town
+        title: Melissa
+        text: Ahh, novato na selva urbana! Relaxa, todo mundo passa por isso. Eu mesma já me perdi dentro do mercado uma vez.
+        options:
+          - placeholder: Sério? Isso me deixa menos desesperado.
+            goes: small-talk-why-here
+
+      - id: lost-while-walking
+        title: Melissa
+        text: Julgar? Jamais! Eu só riria um pouco por dentro. Mas olha… se você chegou até aqui, já venceu metade da batalha.
+        options:
+          - placeholder: Obrigado pela motivação… eu acho?
+            goes: small-talk-why-here
+
+      - id: first-day-vibes
+        title: Melissa
+        text: Ahhh, primeiro dia de estágio! O famoso “não faço ideia do que tô fazendo, mas vamos fingindo até dar certo”.
+        options:
+          - placeholder: Exatamente! Você descreveu perfeitamente.
+            goes: small-talk-why-here
+
+      - id: small-talk-why-here
+        title: Melissa
+        text: Mas e aí… o que te trouxe pra cidade? Trabalho, fuga, crise existencial?
+        options:
+          - placeholder: Trabalho. Começo hoje numa advocacia aqui perto.
+            goes: lawyer-reaction
+          - placeholder: Digamos que… eu e minha antiga cidade não nos dávamos muito bem.
+            goes: dramatic-backstory
+          - placeholder: Crise existencial me trouxe, o estágio só veio no combo.
+            goes: combo-existential
+
+      - id: lawyer-reaction
+        title: Melissa
+        text: Advocacia? Olha, impressionante! Promete que, se eu for presa por acidente um dia, você me defende?
+        options:
+          - placeholder: Só se você me der café grátis pro resto da vida.
+            goes: coffee-bargain
+          - placeholder: Depende… você costuma cometer crimes?
+            goes: joking-about-crimes
+
+      - id: dramatic-backstory
+        title: Melissa
+        text: Nossa, adorei o clima misterioso. Parece até abertura de série. Vai ver essa cidade é seu reboot.
+        options:
+          - placeholder: Tomara… reboots às vezes são melhores.
+            goes: lawyer-reaction
+
+      - id: combo-existential
+        title: Melissa
+        text: Hahaha! Então você já chegou no nível avançado da vida adulta. Parabéns, poucos alcançam.
+        options:
+          - placeholder: Eu queria um nível mais fácil, sinceramente.
+            goes: lawyer-reaction
+
+      - id: coffee-bargain
+        title: Melissa
+        text: Café grátis pro resto da vida? Aí você quer falir a cafeteria e me deixar desempregada!
+        options:
+          - placeholder: Tá bom, então só até eu virar advogado de verdade.
+            goes: almost-ready-drink
+
+      - id: joking-about-crimes
+        title: Melissa
+        text: Só crimes leves… tipo atravessar fora da faixa e matar plantas sem querer.
+        options:
+          - placeholder: Ok, acho que posso defender esse nível de periculosidade.
+            goes: almost-ready-drink
+
+      - id: almost-ready-drink
+        title: Melissa
+        text: Certo, futuro advogado! E qual vai ser? Capuccino, latte, ou algo forte o suficiente pra acordar até fantasma?
+        options:
+          - placeholder: Algo forte. Muito forte. Fortíssimo.
+            goes: strong-coffee
+          - placeholder: Capuccino tá ótimo, obrigado.
+            goes: classic-choice
+
+      - id: strong-coffee
+        title: Melissa
+        text: Beleza… vou preparar um “Acorda que o boleto vence amanhã”. Segura firme.
+        options:
+          - placeholder: Esse nome me assusta e anima ao mesmo tempo.
+            goes: leaving-cafe
+
+      - id: classic-choice
+        title: Melissa
+        text: Capuccino! Elegante. Gosto assim. Quem pede capuccino costuma ter boa alma… ou tá tentando impressionar alguém.
+        options:
+          - placeholder: Só tentando sobreviver mesmo.
+            goes: leaving-cafe
+
+      - id: leaving-cafe
+        title: Melissa
+        text: Ta aí! Boa sorte no primeiro dia, novato. E se sobreviver, volta aqui e me conta.
+        options:
+          - placeholder: Pode deixar! Obrigado pelo café e pela conversa.
+            goes: leaving-cafe

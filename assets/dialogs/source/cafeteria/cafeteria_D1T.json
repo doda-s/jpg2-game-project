@@ -1,0 +1,189 @@
+{
+	"Context": [
+		{
+			"Name": "first-day-afternoon",
+			"StartIn": "barista-sees-him-again",
+			"EndIn": "leaving-again",
+			"DialogNodes": [
+				{
+					"ID": "barista-sees-him-again",
+					"Title": "Barista",
+					"Text": "Olha só quem voltou vivo! Sobreviveu ao primeiro dia ou esse é seu espírito vagando por aí?",
+					"Options": [
+						{
+							"Placeholder": "Sobrevivi! Eu acho. Não confirmaram se ainda tenho alma.",
+							"Goes": "reaction-survived"
+						},
+						{
+							"Placeholder": "Considerando tudo o que aconteceu… tô surpreso de estar em pé.",
+							"Goes": "reaction-tired"
+						},
+						{
+							"Placeholder": "Se eu disser que quase fugi no almoço, você promete não rir?",
+							"Goes": "reaction-ran-away"
+						}
+					]
+				},
+				{
+					"ID": "reaction-survived",
+					"Title": "Barista",
+					"Text": "Boa! Trago boas notícias então, se você ainda tá sentindo dor nas costas, provavelmente continua vivo.",
+					"Options": [
+						{
+							"Placeholder": "Isso explica muita coisa.",
+							"Goes": "how-was-day-question"
+						}
+					]
+				},
+				{
+					"ID": "reaction-tired",
+					"Title": "Barista",
+					"Text": "Aí sim, clima de série jurídica raiz. Falta só uma trilha sonora dramática quando você entra na sala.",
+					"Options": [
+						{
+							"Placeholder": "Eu ouvi trilha sonora na minha cabeça, conta?",
+							"Goes": "how-was-day-question"
+						}
+					]
+				},
+				{
+					"ID": "reaction-ran-away",
+					"Title": "Barista",
+					"Text": "Prometo nada! Mas, olha, fugir no almoço é tradição milenar do estagiário moderno.",
+					"Options": [
+						{
+							"Placeholder": "Acho que participei dessa tradição sem querer.",
+							"Goes": "how-was-day-question"
+						}
+					]
+				},
+				{
+					"ID": "how-was-day-question",
+					"Title": "Barista",
+					"Text": "Mas me conta… como foi afinal? O escritório é tão assustador quanto parece?",
+					"Options": [
+						{
+							"Placeholder": "Assustador eu não sei… mas me deram mais papéis que um concurso público.",
+							"Goes": "too-many-docs"
+						},
+						{
+							"Placeholder": "Tive que fingir confiança mais vezes do que eu gostaria de admitir.",
+							"Goes": "pretending-confidence"
+						},
+						{
+							"Placeholder": "Meu chefe falou comigo três vezes e eu tive mini infartos nas três.",
+							"Goes": "boss-mini-heart-attacks"
+						}
+					]
+				},
+				{
+					"ID": "too-many-docs",
+					"Title": "Barista",
+					"Text": "Clássico! Escritório jurídico só funciona porque árvores fazem pacto com entidades místicas pra não acabar.",
+					"Options": [
+						{
+							"Placeholder": "Me senti engolido por um tsunami de papel.",
+							"Goes": "talking-energy"
+						}
+					]
+				},
+				{
+					"ID": "pretending-confidence",
+					"Title": "Barista",
+					"Text": "Hahaha! O famoso “cara de quem sabe o que tá fazendo”. Eu sou mestre nisso.",
+					"Options": [
+						{
+							"Placeholder": "Acho que você faria sucesso como estagiária então.",
+							"Goes": "talking-energy"
+						}
+					]
+				},
+				{
+					"ID": "boss-mini-heart-attacks",
+					"Title": "Barista",
+					"Text": "Mini infarto é de praxe. Se o chefe abre a boca, o estagiário perde um ano de vida.",
+					"Options": [
+						{
+							"Placeholder": "Então eu já tô devendo uns cinco anos.",
+							"Goes": "talking-energy"
+						}
+					]
+				},
+				{
+					"ID": "talking-energy",
+					"Title": "Barista",
+					"Text": "Tá com cara de quem precisa de café. Muito café. Quer o mesmo de manhã ou um nível acima?",
+					"Options": [
+						{
+							"Placeholder": "Um nível acima, por favor. O dia foi longo.",
+							"Goes": "level-up-coffee"
+						},
+						{
+							"Placeholder": "O mesmo já resolve. Eu só preciso acordar de novo.",
+							"Goes": "same-drink"
+						}
+					]
+				},
+				{
+					"ID": "level-up-coffee",
+					"Title": "Barista",
+					"Text": "Beleza, vou preparar um “Eu disse que trabalhava, não que sofria”. É potente.",
+					"Options": [
+						{
+							"Placeholder": "Acho que é exatamente isso que eu preciso.",
+							"Goes": "casual-ending"
+						}
+					]
+				},
+				{
+					"ID": "same-drink",
+					"Title": "Barista",
+					"Text": "Capuccino clássico, então. Elegante, consistente… igual alguém tentando parecer que teve um dia normal.",
+					"Options": [
+						{
+							"Placeholder": "Me entregou sem dó agora.",
+							"Goes": "casual-ending"
+						}
+					]
+				},
+				{
+					"ID": "casual-ending",
+					"Title": "Barista",
+					"Text": "Pronto! E aí? Vai voltar amanhã ou já pensou em largar tudo e virar barista também?",
+					"Options": [
+						{
+							"Placeholder": "Vou voltar sim… acho que dá pra sobreviver.",
+							"Goes": "leaving-again"
+						},
+						{
+							"Placeholder": "Se eu largar tudo, você me ensina a fazer café?",
+							"Goes": "barista-teaches"
+						}
+					]
+				},
+				{
+					"ID": "barista-teaches",
+					"Title": "Barista",
+					"Text": "Ensinar eu ensino! Só não prometo que você vai sobreviver ao primeiro turno.",
+					"Options": [
+						{
+							"Placeholder": "Justo. Acho que vou continuar na advocacia mesmo.",
+							"Goes": "leaving-again"
+						}
+					]
+				},
+				{
+					"ID": "leaving-again",
+					"Title": "Barista",
+					"Text": "Beleza, novato. Vai descansar que amanhã tem mais. E lembra, se sobreviver, você me conta tudo de novo.",
+					"Options": [
+						{
+							"Placeholder": "Fechado! Até amanhã.",
+							"Goes": "leaving-again"
+						}
+					]
+				}
+			]
+		}
+	]
+}
