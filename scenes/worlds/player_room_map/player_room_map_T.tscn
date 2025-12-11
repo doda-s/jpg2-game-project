@@ -1,22 +1,21 @@
-[gd_scene load_steps=19 format=4 uid="uid://dd8vimhvgoywm"]
+[gd_scene load_steps=18 format=4 uid="uid://drhcym6nuj6u1"]
 
-[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_cgfh6"]
-[ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_5w8ol"]
-[ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="3_fvboc"]
-[ext_resource type="Texture2D" uid="uid://dyyumjyrixk4n" path="res://assets/mp_house_interiors_tileset_pack/parents_room.png" id="4_vneua"]
-[ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="5_bx180"]
-[ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_y8js2"]
-[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="7_5w8ol"]
+[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_7nq4g"]
+[ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="1_36mdb"]
+[ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_7nq4g"]
+[ext_resource type="Texture2D" uid="uid://dyyumjyrixk4n" path="res://assets/mp_house_interiors_tileset_pack/parents_room.png" id="3_clenk"]
+[ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="4_d16u4"]
+[ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="5_myjni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b03l5"]
-texture = ExtResource("2_5w8ol")
+texture = ExtResource("1_36mdb")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pg0yq"]
 sources/0 = SubResource("TileSetAtlasSource_b03l5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfn43"]
-texture = ExtResource("3_fvboc")
+texture = ExtResource("2_7nq4g")
 10:1/0 = 0
 11:1/0 = 0
 12:1/0 = 0
@@ -484,7 +483,7 @@ texture = ExtResource("3_fvboc")
 19:28/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqy00"]
-texture = ExtResource("2_5w8ol")
+texture = ExtResource("1_36mdb")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -494,7 +493,7 @@ sources/0 = SubResource("TileSetAtlasSource_qfn43")
 sources/1 = SubResource("TileSetAtlasSource_yqy00")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkgl6"]
-texture = ExtResource("3_fvboc")
+texture = ExtResource("2_7nq4g")
 10:1/0 = 0
 11:1/0 = 0
 12:1/0 = 0
@@ -962,7 +961,7 @@ texture = ExtResource("3_fvboc")
 19:28/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rv5yy"]
-texture = ExtResource("4_vneua")
+texture = ExtResource("3_clenk")
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -1058,7 +1057,7 @@ texture = ExtResource("4_vneua")
 14:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mnv7k"]
-texture = ExtResource("5_bx180")
+texture = ExtResource("4_d16u4")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -1155,7 +1154,7 @@ sources/1 = SubResource("TileSetAtlasSource_rv5yy")
 sources/2 = SubResource("TileSetAtlasSource_mnv7k")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2axrc"]
-texture = ExtResource("5_bx180")
+texture = ExtResource("4_d16u4")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -1251,7 +1250,7 @@ sources/0 = SubResource("TileSetAtlasSource_2axrc")
 
 [node name="PlayerRoomMap" type="Node2D"]
 
-[node name="PlayerHud" parent="." instance=ExtResource("1_cgfh6")]
+[node name="PlayerHud" parent="." instance=ExtResource("1_7nq4g")]
 
 [node name="Landscape" type="Node2D" parent="."]
 
@@ -1271,11 +1270,5 @@ tile_set = SubResource("TileSet_7ja6h")
 tile_map_data = PackedByteArray("AAAHAP7/AAAJAAcAAAAHAP//AAAJAAgAAAA=")
 tile_set = SubResource("TileSet_uj7oo")
 
-[node name="Player" parent="." instance=ExtResource("6_y8js2")]
+[node name="Player" parent="." instance=ExtResource("5_myjni")]
 position = Vector2(89, 0)
-
-[node name="HouseDoor" parent="." groups=["doors"] instance=ExtResource("7_5w8ol")]
-position = Vector2(0, -28)
-door_id = "1"
-target_id = "2"
-target_scene_path = "res://scenes/worlds/player_living_room/player_living_room_D2T.tscn"
