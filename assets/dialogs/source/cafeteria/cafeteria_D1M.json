@@ -1,0 +1,189 @@
+{
+	"Context": [
+		{
+			"Name": "first-day-coffee",
+			"StartIn": "barista-greeting",
+			"EndIn": "leaving-cafe",
+			"DialogNodes": [
+				{
+					"ID": "barista-greeting",
+					"Title": "Melissa",
+					"Text": "Opa! Bom dia! Meu nome é Melissa. Você tem cara de quem ainda tá descobrindo onde fica a própria sombra. Primeira vez por aqui?",
+					"Options": [
+						{
+							"Placeholder": "É… sou novo na cidade. Ainda estou tentando entender até como atravessa a rua.",
+							"Goes": "new-in-town"
+						},
+						{
+							"Placeholder": "Se eu disser que me perdi três vezes pra chegar, você não julga?",
+							"Goes": "lost-while-walking"
+						},
+						{
+							"Placeholder": "Na verdade sim. Começo meu estágio hoje e preciso de café pra sobreviver.",
+							"Goes": "first-day-vibes"
+						}
+					]
+				},
+				{
+					"ID": "new-in-town",
+					"Title": "Melissa",
+					"Text": "Ahh, novato na selva urbana! Relaxa, todo mundo passa por isso. Eu mesma já me perdi dentro do mercado uma vez.",
+					"Options": [
+						{
+							"Placeholder": "Sério? Isso me deixa menos desesperado.",
+							"Goes": "small-talk-why-here"
+						}
+					]
+				},
+				{
+					"ID": "lost-while-walking",
+					"Title": "Melissa",
+					"Text": "Julgar? Jamais! Eu só riria um pouco por dentro. Mas olha… se você chegou até aqui, já venceu metade da batalha.",
+					"Options": [
+						{
+							"Placeholder": "Obrigado pela motivação… eu acho?",
+							"Goes": "small-talk-why-here"
+						}
+					]
+				},
+				{
+					"ID": "first-day-vibes",
+					"Title": "Melissa",
+					"Text": "Ahhh, primeiro dia de estágio! O famoso “não faço ideia do que tô fazendo, mas vamos fingindo até dar certo”.",
+					"Options": [
+						{
+							"Placeholder": "Exatamente! Você descreveu perfeitamente.",
+							"Goes": "small-talk-why-here"
+						}
+					]
+				},
+				{
+					"ID": "small-talk-why-here",
+					"Title": "Melissa",
+					"Text": "Mas e aí… o que te trouxe pra cidade? Trabalho, fuga, crise existencial?",
+					"Options": [
+						{
+							"Placeholder": "Trabalho. Começo hoje numa advocacia aqui perto.",
+							"Goes": "lawyer-reaction"
+						},
+						{
+							"Placeholder": "Digamos que… eu e minha antiga cidade não nos dávamos muito bem.",
+							"Goes": "dramatic-backstory"
+						},
+						{
+							"Placeholder": "Crise existencial me trouxe, o estágio só veio no combo.",
+							"Goes": "combo-existential"
+						}
+					]
+				},
+				{
+					"ID": "lawyer-reaction",
+					"Title": "Melissa",
+					"Text": "Advocacia? Olha, impressionante! Promete que, se eu for presa por acidente um dia, você me defende?",
+					"Options": [
+						{
+							"Placeholder": "Só se você me der café grátis pro resto da vida.",
+							"Goes": "coffee-bargain"
+						},
+						{
+							"Placeholder": "Depende… você costuma cometer crimes?",
+							"Goes": "joking-about-crimes"
+						}
+					]
+				},
+				{
+					"ID": "dramatic-backstory",
+					"Title": "Melissa",
+					"Text": "Nossa, adorei o clima misterioso. Parece até abertura de série. Vai ver essa cidade é seu reboot.",
+					"Options": [
+						{
+							"Placeholder": "Tomara… reboots às vezes são melhores.",
+							"Goes": "almost-ready-drink"
+						}
+					]
+				},
+				{
+					"ID": "combo-existential",
+					"Title": "Melissa",
+					"Text": "Hahaha! Então você já chegou no nível avançado da vida adulta. Parabéns, poucos alcançam.",
+					"Options": [
+						{
+							"Placeholder": "Eu queria um nível mais fácil, sinceramente.",
+							"Goes": "almost-ready-drink"
+						}
+					]
+				},
+				{
+					"ID": "coffee-bargain",
+					"Title": "Melissa",
+					"Text": "Café grátis pro resto da vida? Aí você quer falir a cafeteria e me deixar desempregada!",
+					"Options": [
+						{
+							"Placeholder": "Tá bom, então só até eu virar advogado de verdade.",
+							"Goes": "almost-ready-drink"
+						}
+					]
+				},
+				{
+					"ID": "joking-about-crimes",
+					"Title": "Melissa",
+					"Text": "Só crimes leves… tipo atravessar fora da faixa e matar plantas sem querer.",
+					"Options": [
+						{
+							"Placeholder": "Ok, acho que posso defender esse nível de periculosidade.",
+							"Goes": "almost-ready-drink"
+						}
+					]
+				},
+				{
+					"ID": "almost-ready-drink",
+					"Title": "Melissa",
+					"Text": "Certo, futuro advogado! E qual vai ser? Capuccino, latte, ou algo forte o suficiente pra acordar até fantasma?",
+					"Options": [
+						{
+							"Placeholder": "Algo forte. Muito forte. Fortíssimo.",
+							"Goes": "strong-coffee"
+						},
+						{
+							"Placeholder": "Capuccino tá ótimo, obrigado.",
+							"Goes": "classic-choice"
+						}
+					]
+				},
+				{
+					"ID": "strong-coffee",
+					"Title": "Melissa",
+					"Text": "Beleza… vou preparar um “Acorda que o boleto vence amanhã”. Segura firme.",
+					"Options": [
+						{
+							"Placeholder": "Esse nome me assusta e anima ao mesmo tempo.",
+							"Goes": "leaving-cafe"
+						}
+					]
+				},
+				{
+					"ID": "classic-choice",
+					"Title": "Melissa",
+					"Text": "Capuccino! Elegante. Gosto assim. Quem pede capuccino costuma ter boa alma… ou tá tentando impressionar alguém.",
+					"Options": [
+						{
+							"Placeholder": "Só tentando sobreviver mesmo.",
+							"Goes": "leaving-cafe"
+						}
+					]
+				},
+				{
+					"ID": "leaving-cafe",
+					"Title": "Melissa",
+					"Text": "Ta aí! Boa sorte no primeiro dia, novato. E se sobreviver, volta aqui e me conta.",
+					"Options": [
+						{
+							"Placeholder": "Pode deixar! Obrigado pelo café e pela conversa.",
+							"Goes": "leaving-cafe"
+						}
+					]
+				}
+			]
+		}
+	]
+}

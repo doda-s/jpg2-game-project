@@ -11,21 +11,21 @@ context:
 			goes: what-i-can-do
 		  - placeholder: Shut up bro.
 			goes: farewell
-	  
+
 	  - id: what-i-can-do
 		title: The Demonstration
 		text: Well, you can choose an answer option... And continue the dialogue.
 		options:
 		  - placeholder: Got it.
 			goes: farewell
-		
+
 	  - id: farewell
 		title: The Demonstration
 		text: If I can help again, please contact me again.
 		options:
 		  - placeholder: ...
 			goes: farewell
-  
+
   - name: sign-demonstration
 	start_in: message-demonstration
 	end_in: message-demonstration

@@ -1,0 +1,292 @@
+context:
+  - name: reception_dialog
+    start_in: hello_sabrina
+    end_in: farewell
+    dialog_nodes:
+      # =========================
+      # CENA 1 – RECEPÇÃO (LAURA)
+      # =========================
+      - id: hello_sabrina
+        title: Sabrina Belmonte
+        text: |
+          Oi! Você deve ser o novo estagiário. Parabéns — começar aqui não é comum. E você tem cara de quem está pronto para algo grande (sorriso no rosto).
+        options:
+          - placeholder: Eu vim preparado.
+            goes: im_ready
+          - placeholder: Um pouco nervoso, mas animado.
+            goes: im_nervous_reply
+          - placeholder: Depende… o chefinho é muito sério?
+            goes: sus_reply
+
+      - id: im_ready
+        title: Sabrina Belmonte
+        text: |
+          Ótimo. O Doutor Vasconcelos gosta de gente que chega sabendo o que quer. E você… parece saber.
+        options:
+          - placeholder: ...
+            goes: farewell
+
+      - id: im_nervous_reply
+        title: Sabrina Belmonte
+        text: |
+          Normal. A animação compensa o nervoso. E o Doutor Vasconcelos vê valor nisso. Pode entrar — ele está esperando.
+        options:
+          - placeholder: ...
+            goes: farewell
+
+      - id: sus_reply
+        title: Sabrina Belmonte
+        text: |
+          “Chefinho”, né? Corajoso você. Ele é sério… quando quer. Mas vai com fé, acho que ele vai gostar de você.
+        options:
+          - placeholder: ...
+            goes: farewell
+
+      - id: farewell
+        title: Sabrina Belmonte
+        text: Boa sorte!
+        options:
+          - placeholder: ...
+            goes: farewell
+
+  - name: cena2-vasconcelos-e-case
+    start_in: go_to_vasconcelos
+    end_in: case_intro3
+    dialog_nodes:
+      # =========================
+      # CENA 2 – DR. AUGUSTO
+      # =========================
+      - id: go_to_vasconcelos
+        title: Dr. Vasconcelos
+        text: Se você estiver aqui para fazer o básico… já pode voltar. Eu não treino pessoas comuns.
+        options:
+          - placeholder: ...
+            goes: go_to_vasconcelos1
+
+      - id: go_to_vasconcelos1
+        title: Dr. Vasconcelos
+        text: ...
+        options:
+          - placeholder: ...
+            goes: vasconcelos_intro
+
+      - id: vasconcelos_intro
+        title: Dr. Vasconcelos
+        text: Bem-vindo. Sou o Doutor Vasconcelos. Metade mentor, metade enigma — você decide qual metade descobrir primeiro.
+        options:
+          - placeholder: "..."
+            goes: vasconcelos_seat
+
+      - id: vasconcelos_seat
+        title: Dr. Vasconcelos
+        text: Antes de você dizer qualquer coisa… três detalhes sobre você já me chamaram atenção. Não vou te dizer quais. Pessoas inteligentes descobrem sozinhas.
+        options:
+          - placeholder: ...
+            goes: vasconcelos_relax
+
+      - id: vasconcelos_relax
+        title: Dr. Vasconcelos
+        text: Relaxe, eu só pareço bravo. Na verdade, sou uma ótima pessoa… pelo menos até a hora do almoço.
+        options:
+          - placeholder: ...
+            goes: case_intro
+
+      # =========================
+      # CENA 3 – APRESENTAÇÃO DO CASO
+      # =========================
+      - id: case_intro0
+        title: Dr. Vasconcelos
+        text: (Abre pasta e retira documento)
+        options:
+          - placeholder: ...
+            goes: case_intro
+
+      - id: case_intro
+        title: Dr. Vasconcelos
+        text: "Pronto. Seu primeiro desafio. Cliente: Joana. Professora. Recebeu um alvará municipal em 2018 para construir um depósito de canoas. Simples, direto, nada demais."
+        options:
+          - placeholder: ...
+            goes: case_intro1
+
+      - id: case_intro1
+        title: Dr. Vasconcelos
+        text: E qual é o problema? Problema? Ela demorou só… cinco anos para começar.
+        options:
+          - placeholder: ...
+            goes: case_intro2
+
+      - id: case_intro2
+        title: Dr. Vasconcelos
+        text: Em 2023, o Estado lançou uma lei proibindo aterro em lagoas naturais. E quando ela resolve começar a obra… Ibama, fiscais, embargo imediato.
+        options:
+          - placeholder: ...
+            goes: case_intro3
+
+      - id: case_intro3
+        title: Dr. Vasconcelos
+        text: "Agora vamos ver: como você avaliaria este caso?"
+        options:
+          - placeholder: ...
+            goes: case_intro3
+
+  - name: perguntas-vasconcelos-1
+    start_in: p1_question
+    end_in: p4_question
+    dialog_nodes:
+      # =========================
+      # P1
+      # =========================
+      - id: p1_question
+        title: Dr. Vasconcelos
+        text: Na audiência, o advogado da Joana construiu a defesa inteira em cima do alvará de construção concedido pela Prefeitura em 2018. Ele tratou aquele papel como se fosse a peça central da defesa. Se você estivesse revisando essa tese comigo, antes da sessão, qual linha de raciocínio daria mais sustentação jurídica?
+        options:
+          - placeholder: R1 — O alvará municipal, concedido antes da lei estadual de 2023, assegura à Joana o direito de concluir a obra como planejado, ainda que a legislação ambiental tenha se tornado mais restritiva depois.
+            goes: p2_question
+          - placeholder: R2 — Como o alvará municipal foi emitido quando ainda não existia a proibição estadual, a obra de Joana não pode ser afetada pelas normas ambientais novas, que só valem para autorizações futuras.
+            goes: p2_question
+          - placeholder: R3 — O alvará municipal foi válido quando emitido, mas a continuidade da obra precisa ser compatibilizada com a legislação ambiental posterior, inclusive com a lei estadual de 2023 que passou a restringir intervenções na lagoa.
+            goes: p2_question
+          - placeholder: R4 — O alvará municipal demonstra que a Prefeitura avaliou o projeto previamente, de modo que, em respeito à segurança jurídica, a fiscalização ambiental não deveria mais impor novos limites à obra de Joana.
+            goes: p2_question
+
+      # =========================
+      # P2
+      # =========================
+      - id: p2_question
+        title: Dr. Vasconcelos
+        text: Depois que a obra já caminhava, entrou em vigor a lei estadual ambiental de 2023, proibindo aterros em lagoas naturais. O advogado da Joana tentou tratar essa lei quase como um ‘aviso para obras futuras’, distante do caso concreto. Se você tivesse que explicar o papel dessa lei no processo, como enquadraria a situação da Joana?
+        options:
+          - placeholder: R1 — A lei estadual de 2023 incide principalmente sobre situações constituídas antes de 2018, para corrigir projetos antigos que não consideravam a proteção adequada da lagoa.
+            goes: p3_question
+          - placeholder: R2 — A lei estadual de 2023 só pode alcançar obras cuja análise e aprovação ainda estejam pendentes, permanecendo neutra em relação às intervenções já autorizadas pela Prefeitura.
+            goes: p3_question
+          - placeholder: R3 — A lei estadual de 2023 entra em vigor e passa a disciplinar os efeitos que ainda se projetam no tempo, de modo que obras em andamento na lagoa, como a de Joana, devem se ajustar às novas exigências ambientais.
+            goes: p3_question
+          - placeholder: R4 — A lei estadual de 2023 afeta apenas novos pedidos de alvará, sem qualquer reflexo sobre construções que já contavam com autorização municipal anterior.
+            goes: p3_question
+
+      # =========================
+      # P3
+      # =========================
+      - id: p3_question
+        title: Dr. Vasconcelos
+        text: Em certo momento, o advogado da Joana puxou o argumento de direito adquirido. Ele somou o planejamento da obra, o alvará municipal anterior e concluiu que nada do que veio depois poderia atingir a situação da cliente. Se você estivesse do meu lado, avaliando essa tese, como responderia a esse raciocínio em chave ambiental?
+        options:
+          - placeholder: R1 — O planejamento da obra, somado ao alvará municipal anterior à lei estadual, configura direito adquirido de Joana de concluir a intervenção na lagoa nos exatos termos inicialmente aprovados.
+            goes: p4_question
+          - placeholder: R2 — Mesmo com o alvará municipal anterior e com o planejamento feito antes de 2023, não se reconhece direito adquirido para manter situação que, à luz da lei estadual ambiental posterior, passa a ser vista como potencialmente lesiva à lagoa.
+            goes: p4_question
+          - placeholder: R3 — A existência de aprovação municipal anterior impede o reconhecimento de qualquer limitação posterior, de modo que a lei estadual não pode alterar o direito adquirido de Joana sobre o uso do terreno.
+            goes: p4_question
+          - placeholder: R4 — O direito adquirido de Joana decorre do fato de ser proprietária do imóvel, de forma que alterações na legislação ambiental não podem interferir nas escolhas privadas sobre o destino de sua área.
+            goes: p4_question
+
+      # =========================
+      # P4
+      # =========================
+      - id: p4_question
+        title: Dr. Vasconcelos
+        text: "Chegando ao fim, o processo da Joana tem duas peças centrais na mesa: de um lado, o alvará de construção dado pela Prefeitura em 2018; de outro, a lei estadual ambiental de 2023, que passou a vedar aterros em lagoas como a dela. Se eu te pedisse um parecer curto, qual leitura você adotaria sobre o futuro da obra?"
+        options:
+          - placeholder: R1 — Por ter sido emitido antes, o alvará municipal se torna parâmetro principal, e a lei estadual posterior deve ser interpretada de forma a não afetar a autorização já concedida à obra de Joana.
+            goes: p4_question
+          - placeholder: R2 — A lei estadual ambiental, ao estabelecer novas restrições para intervenções em lagoas, passa a limitar o que o alvará municipal de 2018 ainda pode legitimar, tornando irregular a continuidade da obra se ela contrariar essas exigências.
+            goes: p4_question
+          - placeholder: R3 — Como o Município participou da concessão inicial, o alvará municipal e a lei estadual se equilibram, cabendo ao intérprete preservar a situação mais favorável à proprietária.
+            goes: p4_question
+          - placeholder: R4 — O fato de a Prefeitura ter autorizado a construção na lagoa em 2018 impede que a lei estadual posterior seja utilizada para embargar a obra de Joana.
+            goes: p4_question
+
+  - name: vasconcelos_pos_questions
+    start_in: vasconcelos_final0
+    end_in: vasconcelos_final3
+    dialog_nodes:
+      - id: vasconcelos_final0
+        title: Dr. Vasconcelos
+        text: Hm. Interessante. Você respondeu com convicção — isso já me diz mais do que os acertos em si.
+        options:
+          - placeholder: ...
+            goes: vasconcelos_final1
+
+      - id: vasconcelos_final1
+        title: Dr. Vasconcelos
+        text: "No direito ambiental, não existe zona morta. Cada detalhe respira consequência. E você… parece ter percebido isso."
+        options:
+          - placeholder: Certo.
+            goes: vasconcelos_final2
+          - placeholder: Acho que deu pra sentir um pouco.
+            goes: vasconcelos_final2
+
+      - id: vasconcelos_final2
+        title: Dr. Vasconcelos
+        text: "Agora, vou ser sincero: eu esperava que você errasse mais. Não porque eu queira — mas porque eu gosto de saber onde meus estagiários quebram."
+        options:
+          - placeholder: Então… fui bem?
+            goes: vasconcelos_final2_1
+          - placeholder: Que bom que não decepcionei.
+            goes: vasconcelos_final2_2
+
+      - id: vasconcelos_final2_1
+        title: Dr. s
+        text: "Foi bem, sim. Bem o bastante para eu te dar o próximo caso."
+        options:
+          - placeholder: ...
+            goes: vasconcelos_final3
+
+      - id: vasconcelos_final2_2
+        title: Dr. Vasconcelos
+        text: "Não mesmo. Foi bem o bastante para eu te dar o próximo caso."
+        options:
+          - placeholder: ...
+            goes: vasconcelos_final3
+
+      - id: vasconcelos_final3
+        title: Dr. Vasconcelos
+        text: "Mas não se anime demais: esse foi o fácil."
+        options:
+          - placeholder: ...
+            goes: vasconcelos_final3
+
+  - name: pos_caso_sabrina
+    start_in: sabrina_after_case0
+    end_in: sabrina_after_case3
+    dialog_nodes:
+      - id: sabrina_after_case0
+        title: Sabrina Belmonte
+        text: Oi! Vi que você terminou lá com o Doutor Vasconcelos. Como foi?
+        options:
+          - placeholder: Acho que fui bem.
+            goes: sabrina_after_case1
+          - placeholder: Foi intenso, mas deu certo.
+            goes: sabrina_after_case1
+          - placeholder: Sobrevivi, eu acho.
+            goes: sabrina_after_case1
+
+      - id: sabrina_after_case1
+        title: Sabrina Belmonte
+        text: Que bom! Ele costuma ser direto, mas é porque leva tudo muito a sério. Se você saiu de lá com feedback, já é um ótimo sinal.
+        options:
+          - placeholder: Ele me passou outro caso.
+            goes: sabrina_after_case2
+          - placeholder: Ele disse que eu fui bem.
+            goes: sabrina_after_case2
+          - placeholder: Acho que ganhei a confiança dele.
+            goes: sabrina_after_case2
+
+      - id: sabrina_after_case2
+        title: Sabrina Belmonte
+        text: Isso confirma o que eu suspeitava. Se ele está te dando continuidade, é porque enxergou potencial. Ele não faz isso com todo mundo.
+        options:
+          - placeholder: Fico aliviado de ouvir isso.
+            goes: sabrina_after_case3
+          - placeholder: Bom saber que estou no caminho certo.
+            goes: sabrina_after_case3
+          - placeholder: Valeu pela força.
+            goes: sabrina_after_case3
+
+      - id: sabrina_after_case3
+        title: Sabrina Belmonte
+        text: Qualquer coisa que você precisar — orientação, dúvidas, até achar documentos — é só me chamar. Estou por aqui para ajudar no que for possível.
+        options:
+          - placeholder: ...
+            goes: sabrina_after_case3

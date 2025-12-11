@@ -1,0 +1,174 @@
+{
+	"Context": [
+		{
+			"Name": "second-morning-coffee",
+			"StartIn": "morning-greeting",
+			"EndIn": "leaving-to-work",
+			"DialogNodes": [
+				{
+					"ID": "morning-greeting",
+					"Title": "Melissa",
+					"Text": "Bom dia, novato! Olha você aqui de novo… então quer dizer que não largou a advocacia durante a madrugada?",
+					"Options": [
+						{
+							"Placeholder": "Pensei, mas desisti. Aparentemente, boletos ainda existem.",
+							"Goes": "reaction-bills"
+						},
+						{
+							"Placeholder": "Não larguei… mas considerei virar barista por uns 30 minutos.",
+							"Goes": "reaction-barista-interest"
+						},
+						{
+							"Placeholder": "Se eu voltasse aqui sem trabalhar antes, ia parecer fuga. Então cá estou.",
+							"Goes": "reaction-not-fleeing"
+						}
+					]
+				},
+				{
+					"ID": "reaction-bills",
+					"Title": "Melissa",
+					"Text": "Boletos têm esse superpoder, né? São tipo vilões que nunca morrem.",
+					"Options": [
+						{
+							"Placeholder": "Não tem como lutar contra eles.",
+							"Goes": "how-are-you-today"
+						}
+					]
+				},
+				{
+					"ID": "reaction-barista-interest",
+					"Title": "Melissa",
+					"Text": "Opa, calma aí! Concurso para meu posto só se souber fazer café igual ou melhor que eu.",
+					"Options": [
+						{
+							"Placeholder": "Ok, nunca mais pensei nisso então.",
+							"Goes": "how-are-you-today"
+						}
+					]
+				},
+				{
+					"ID": "reaction-not-fleeing",
+					"Title": "Melissa",
+					"Text": "Ah, então você voltou por honra profissional. Chique.",
+					"Options": [
+						{
+							"Placeholder": "Honra e medo de ser demitido no segundo dia.",
+							"Goes": "how-are-you-today"
+						}
+					]
+				},
+				{
+					"ID": "how-are-you-today",
+					"Title": "Melissa",
+					"Text": "E aí, como você tá hoje? Mais descansado ou veio no modo “zumbi jurídico”?",
+					"Options": [
+						{
+							"Placeholder": "Diria que estou 70% vivo. Melhor que ontem.",
+							"Goes": "reaction-70-percent"
+						},
+						{
+							"Placeholder": "Zumbi jurídico descreve perfeitamente.",
+							"Goes": "reaction-zombie"
+						},
+						{
+							"Placeholder": "Nem sei… acordei e já estava cansado.",
+							"Goes": "reaction-tired-again"
+						}
+					]
+				},
+				{
+					"ID": "reaction-70-percent",
+					"Title": "Melissa",
+					"Text": "Olha só! 70% vivo é quase uma vitória. Com café, você chega fácil aos 85%.",
+					"Options": [
+						{
+							"Placeholder": "Então manda bala no café.",
+							"Goes": "ask-what-drink"
+						}
+					]
+				},
+				{
+					"ID": "reaction-zombie",
+					"Title": "Melissa",
+					"Text": "Eu sabia! O segundo dia sempre bate mais forte. Vou providenciar um café que acorda até advogado veterano.",
+					"Options": [
+						{
+							"Placeholder": "Por favor, força máxima.",
+							"Goes": "ask-what-drink"
+						}
+					]
+				},
+				{
+					"ID": "reaction-tired-again",
+					"Title": "Melissa",
+					"Text": "Hahaha! Isso significa que você já está se tornando um profissional da área. Parabéns?",
+					"Options": [
+						{
+							"Placeholder": "Acho que parabéns encaixa… de algum jeito.",
+							"Goes": "ask-what-drink"
+						}
+					]
+				},
+				{
+					"ID": "ask-what-drink",
+					"Title": "Melissa",
+					"Text": "Vai querer o de ontem ou quer experimentar algo novo? Posso criar um café exclusivo “Estagiário 2.0”.",
+					"Options": [
+						{
+							"Placeholder": "Manda o mesmo de ontem, não quero arriscar minha saúde mental.",
+							"Goes": "same-drink-today"
+						},
+						{
+							"Placeholder": "Estagiário 2.0 parece perigoso, mas vamos nessa.",
+							"Goes": "new-drink-today"
+						}
+					]
+				},
+				{
+					"ID": "same-drink-today",
+					"Title": "Melissa",
+					"Text": "Capuccino clássico! O café da estabilidade emocional.",
+					"Options": [
+						{
+							"Placeholder": "Exatamente o que eu preciso.",
+							"Goes": "casual-ending-morning"
+						}
+					]
+				},
+				{
+					"ID": "new-drink-today",
+					"Title": "Melissa",
+					"Text": "Beleza! Vou preparar um café “Confiança Temporária”. Dura uns 40 minutos, mas já ajuda a começar o dia.",
+					"Options": [
+						{
+							"Placeholder": "40 minutos é mais do que eu esperava, na verdade.",
+							"Goes": "casual-ending-morning"
+						}
+					]
+				},
+				{
+					"ID": "casual-ending-morning",
+					"Title": "Melissa",
+					"Text": "Tá aí! Mas ó… hoje tenta não ter três mini infartos, ok? Você precisa sobreviver até sexta.",
+					"Options": [
+						{
+							"Placeholder": "Vou tentar. Sem promessas.",
+							"Goes": "leaving-to-work"
+						}
+					]
+				},
+				{
+					"ID": "leaving-to-work",
+					"Title": "Melissa",
+					"Text": "Boa sorte no segundo dia, novato! E lembra, se sobreviver, passa aqui pra fofocar depois.",
+					"Options": [
+						{
+							"Placeholder": "Pode deixar. Até mais!",
+							"Goes": "leaving-to-work"
+						}
+					]
+				}
+			]
+		}
+	]
+}

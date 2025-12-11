@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckuoxphavmbuf"]
+
+[ext_resource type="Script" uid="uid://cvf0w3wlttihd" path="res://resources/grabbable_itens/pencil.gd" id="1_x7auv"]
+[ext_resource type="Texture2D" uid="uid://16ow4yuq8f3e" path="res://scripts/components/assets/sprites/player/player_design.png" id="2_x7auv"]
+
+[sub_resource type="GDScript" id="GDScript_x7auv"]
+script/source = "extends Area2D
+
+var mouse_in: bool
+
+func _process(delta):
+	if !mouse_in:
+		return
+
+	if int(Input.is_action_just_pressed(\"mouse_right_click\")):
+		print(\"clicou\")
+
+
+func _on_mouse_entered():
+	mouse_in = true
+
+
+func _on_mouse_exited():
+	mouse_in = false
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t21v7"]
+
+[node name="Pencil" type="Sprite2D"]
+scale = Vector2(0.390468, 3.3443)
+texture = ExtResource("2_x7auv")
+script = ExtResource("1_x7auv")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource("GDScript_x7auv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2.03121, 0.937408)
+shape = SubResource("RectangleShape2D_t21v7")
+
+[node name="WriteButtom" type="Button" parent="."]
+offset_left = 23.0492
+offset_top = -8.67147
+offset_right = 104.049
+offset_bottom = 22.3285
+scale = Vector2(0.953154, 0.112348)
+text = "escrever?"
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="button_down" from="WriteButtom" to="." method="_on_write_buttom_button_down"]

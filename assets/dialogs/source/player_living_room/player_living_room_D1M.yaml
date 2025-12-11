@@ -1,0 +1,22 @@
+context:
+  - name: bathroom-door
+    start_in: bathroom-door-locked
+    end_in: bathroom-door-locked
+    dialog_nodes:
+      - id: bathroom-door-locked
+        title: Você
+        text: Esse é o banheiro. Não preciso utilizar ele no momento.
+        options:
+          - placeholder: ...
+            goes: bathroom-door-locked
+
+  - name: letter-from-mom
+    start_in: letter-content
+    end_in: letter-content
+    dialog_nodes:
+      - id: letter-content
+        title: Carta da Mamãe
+        text: Bom dia filho! Desculpa por não poder te dar bom dia hoje, eu tive que sair na pressa. Preparado para seu primeiro dia? Espero que dê tudo certo... Mantenha a calma, e dê o seu melhor! Com amor, MAMÃE.
+        options:
+          - placeholder: ...
+            goes: letter-content

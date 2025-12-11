@@ -1,0 +1,203 @@
+[gd_scene load_steps=12 format=3 uid="uid://b56823nrapcnq"]
+
+[ext_resource type="Script" uid="uid://dee4am8sc5qos" path="res://scenes/cases/second_case.gd" id="1_1yr3k"]
+[ext_resource type="Texture2D" uid="uid://b2h7bbpy5fmyy" path="res://assets/desk.jpg" id="1_4p6r4"]
+[ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="2_4w0do"]
+[ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="3_0lqxb"]
+[ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="4_j4d82"]
+[ext_resource type="Texture2D" uid="uid://ph50784k8u2t" path="res://assets/large-paper.png" id="5_ociyq"]
+[ext_resource type="FontFile" uid="uid://p8vy2mcgm83w" path="res://OpenSans-VariableFont_wdth,wght.ttf" id="6_vxejt"]
+[ext_resource type="Texture2D" uid="uid://dixkmqslhy2to" path="res://assets/AI_tribunal/hetero-rico.jpg" id="7_4p6r4"]
+[ext_resource type="PackedScene" uid="uid://ba682s7i27q8j" path="res://resources/ui/case_dialog_view.tscn" id="9_8wvqs"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="10_psjvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfux"]
+size = Vector2(109.176, 174.393)
+
+[node name="SecondCase" type="Node2D"]
+script = ExtResource("1_1yr3k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(201, 193)
+scale = Vector2(0.87044, 0.842798)
+texture = ExtResource("1_4p6r4")
+
+[node name="DragAndDrop" parent="." instance=ExtResource("2_4w0do")]
+
+[node name="RelevantAreaController" type="Node2D" parent="DragAndDrop"]
+script = ExtResource("3_0lqxb")
+
+[node name="Doc_4" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(100, 125)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("4_j4d82")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("5_ociyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_4/LargePaper1"]
+position = Vector2(-7.42674e-05, -10.2793)
+scale = Vector2(0.391356, 0.363332)
+texture = ExtResource("7_4p6r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_4"]
+light_mask = 2
+position = Vector2(-0.000137329, 12)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
+
+[node name="Doc_3" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(306, 133)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("4_j4d82")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("5_ociyq")
+
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 5
+text = "Carlos, por sua vez, defendeu-se invocando a liberdade de informar e o interesse público na divulgação de fatos relacionados a figuras políticas e à corrupção, sustentando que apenas cumprira seu dever jornalístico de manter a sociedade informada sobre assuntos de relevância pública. Formou-se, assim, um conflito direto entre direitos fundamentais: de um lado, Miguel clamando por tutela à sua imagem, honra e presunção de inocência; de outro, Carlos escudando-se na liberdade de imprensa e no direito da sociedade à informação. Essa tensão entre preservar a reputação individual e garantir a transparência jornalística logo se tornou evidente, permeando tanto o processo judicial quanto o debate público que se seguiu ao caso."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 3"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
+
+[node name="Doc_2" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(304, 131)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("4_j4d82")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("5_ociyq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
+
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 5
+text = "Em casa, a situação tornou-se angustiante – sua esposa tentou ampará-lo enquanto consolava a filha de 9 anos do casal, que passou a sofrer bullying na escola em razão da exposição do pai naquela situação humilhante. Nas redes sociais, Miguel virou alvo de comentários mordazes e piadas cruéis, e o nome da família foi exposto ao ridículo em grupos de discussão locais. Sentindo-se injustiçado e com a dignidade em frangalhos, Miguel vivenciou o efeito de uma condenação pública antecipada, mesmo antes de qualquer julgamento formal. Decidido a reparar esse dano, Miguel ajuizou contra Carlos uma ação de indenização por danos morais e uso indevido de imagem. Ele argumentou que a publicação da foto o expôs ao vexame público e violou seus direitos à imagem, à privacidade e à honra, além de afrontar a garantia constitucional de que ninguém será considerado culpado antes do trânsito em julgado. "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_2"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 2"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Doc_1" type="CharacterBody2D" parent="DragAndDrop/RelevantAreaController"]
+position = Vector2(302, 128)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("4_j4d82")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+position = Vector2(6.00815e-05, 12)
+scale = Vector2(0.699115, 0.680982)
+texture = ExtResource("5_ociyq")
+
+[node name="Content" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -70.0
+offset_top = -78.0
+offset_right = 72.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 5
+text = "Carlos, jornalista investigativo respeitado em sua comunidade, publicou em seu site de notícias uma matéria sobre uma grande operação policial de combate à corrupção supostamente envolvendo o ex-deputado federal Miguel. Junto à reportagem textual, Carlos divulgou uma fotografia de Miguel algemado, tirada no corredor da delegacia logo após o depoimento de Miguel à polícia. Vale frisar que Miguel estava em prisão preventiva, apenas suspeito de lavagem de dinheiro, sem qualquer condenação judicial. A imagem espalhou-se rapidamente e teve um impacto devastador na vida de Miguel. Assim que viu sua foto exposta publicamente, Miguel sentiu uma mistura de vergonha e desespero. Em poucas horas, ele viu sua reputação ser profundamente abalada: colegas de profissão e até alguns familiares passaram a evitá-lo, receosos de serem associados a um “criminoso” estampado nos noticiários. "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+offset_left = -90.0
+offset_top = -96.0
+offset_right = 90.0
+offset_bottom = -73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vxejt")
+theme_override_font_sizes/font_size = 12
+text = "Relato dos Fatos: 1"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/RelevantAreaController/Doc_1"]
+light_mask = 2
+position = Vector2(0, 11.5)
+scale = Vector2(1.44721, 1.27299)
+shape = SubResource("RectangleShape2D_7mfux")
+
+[node name="DialogView" parent="." instance=ExtResource("9_8wvqs")]
+z_index = 10
+offset_left = 207.0
+offset_top = 388.0
+offset_right = 207.0
+offset_bottom = 388.0
+scale = Vector2(0.994096, 1.00483)
+opt_button_scene = "res://resources/ui/case_option_button.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogProvider" parent="." instance=ExtResource("10_psjvf")]
+dialog_json_file = "res://assets/dialogs/source/case/case_two_dialog.json"
+context = "cena3-caso-miguel"
+
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_3" to="DragAndDrop/RelevantAreaController/Doc_3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_2" to="DragAndDrop/RelevantAreaController/Doc_2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_1" to="DragAndDrop/RelevantAreaController/Doc_1" method="_on_mouse_exited"]

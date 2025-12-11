@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4073f3w8ee6l"]
+
+[ext_resource type="Script" uid="uid://cwnwd6i3jfob0" path="res://scripts/components/relevant_area_pressed.gd" id="1_mfel0"]
+[ext_resource type="Script" uid="uid://dqyl0phu8s5p5" path="res://scenes/demos/relevant_area.gd" id="2_ir6kf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfel0"]
+size = Vector2(54, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir6kf"]
+size = Vector2(31, 27)
+
+[node name="RelevantAreaPressedDemo" type="Node2D"]
+script = ExtResource("1_mfel0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 85.0
+offset_right = 291.0
+offset_bottom = 108.0
+scale = Vector2(0.4416, 0.705044)
+text = "asd"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+script = ExtResource("2_ir6kf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(153, 91)
+shape = SubResource("RectangleShape2D_mfel0")
+
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+visible = false
+offset_left = 133.0
+offset_top = 72.0
+offset_right = 173.0
+offset_bottom = 112.0
+
+[node name="RelevantArea" type="Area2D" parent="."]
+position = Vector2(251, 91)
+script = ExtResource("2_ir6kf")
+metadata/_custom_type_script = "uid://dqyl0phu8s5p5"
+
+[node name="ColorRect" type="ColorRect" parent="RelevantArea"]
+visible = false
+offset_left = -4.5
+offset_top = -6.5
+offset_right = 35.5
+offset_bottom = 33.5
+scale = Vector2(0.499573, 0.499792)
+color = Color(0.180392, 0.407843, 1, 0.384314)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RelevantArea"]
+visible = false
+position = Vector2(5.5, 3.5)
+shape = SubResource("RectangleShape2D_ir6kf")

@@ -6,11 +6,10 @@ var grab_object_stack = []
 
 # exemplo de como poderam ser inicializados
 func _ready():
-	var objects = get_children()
-	# spawna 2 objetos baseado na cena instanciada
-	for obj in objects:
-		if obj.get_class() == "CharacterBody2D":
-			add_grab_object(obj)
+	var grabable_object_list = get_tree().get_nodes_in_group("grabbable_objects_group")
+	# adiciona items grabable na lista de ordenação
+	for obj in grabable_object_list:
+		add_grab_object(obj)
 
 func add_grab_object(grab_object):
 	grab_object_stack.append(grab_object)

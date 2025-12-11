@@ -1,0 +1,106 @@
+context:
+  - name: second-morning-coffee
+    start_in: morning-greeting
+    end_in: leaving-to-work
+    dialog_nodes:
+      - id: morning-greeting
+        title: Melissa
+        text: Bom dia, novato! Olha você aqui de novo… então quer dizer que não largou a advocacia durante a madrugada?
+        options:
+          - placeholder: Pensei, mas desisti. Aparentemente, boletos ainda existem.
+            goes: reaction-bills
+          - placeholder: Não larguei… mas considerei virar barista por uns 30 minutos.
+            goes: reaction-barista-interest
+          - placeholder: Se eu voltasse aqui sem trabalhar antes, ia parecer fuga. Então cá estou.
+            goes: reaction-not-fleeing
+
+      - id: reaction-bills
+        title: Melissa
+        text: Boletos têm esse superpoder, né? São tipo vilões que nunca morrem.
+        options:
+          - placeholder: Não tem como lutar contra eles.
+            goes: how-are-you-today
+
+      - id: reaction-barista-interest
+        title: Melissa
+        text: Opa, calma aí! Concurso para meu posto só se souber fazer café igual ou melhor que eu.
+        options:
+          - placeholder: Ok, nunca mais pensei nisso então.
+            goes: how-are-you-today
+
+      - id: reaction-not-fleeing
+        title: Melissa
+        text: Ah, então você voltou por honra profissional. Chique.
+        options:
+          - placeholder: Honra e medo de ser demitido no segundo dia.
+            goes: how-are-you-today
+
+      - id: how-are-you-today
+        title: Melissa
+        text: E aí, como você tá hoje? Mais descansado ou veio no modo “zumbi jurídico”?
+        options:
+          - placeholder: Diria que estou 70% vivo. Melhor que ontem.
+            goes: reaction-70-percent
+          - placeholder: Zumbi jurídico descreve perfeitamente.
+            goes: reaction-zombie
+          - placeholder: Nem sei… acordei e já estava cansado.
+            goes: reaction-tired-again
+
+      - id: reaction-70-percent
+        title: Melissa
+        text: Olha só! 70% vivo é quase uma vitória. Com café, você chega fácil aos 85%.
+        options:
+          - placeholder: Então manda bala no café.
+            goes: ask-what-drink
+
+      - id: reaction-zombie
+        title: Melissa
+        text: Eu sabia! O segundo dia sempre bate mais forte. Vou providenciar um café que acorda até advogado veterano.
+        options:
+          - placeholder: Por favor, força máxima.
+            goes: ask-what-drink
+
+      - id: reaction-tired-again
+        title: Melissa
+        text: Hahaha! Isso significa que você já está se tornando um profissional da área. Parabéns?
+        options:
+          - placeholder: Acho que parabéns encaixa… de algum jeito.
+            goes: ask-what-drink
+
+      - id: ask-what-drink
+        title: Melissa
+        text: Vai querer o de ontem ou quer experimentar algo novo? Posso criar um café exclusivo “Estagiário 2.0”.
+        options:
+          - placeholder: Manda o mesmo de ontem, não quero arriscar minha saúde mental.
+            goes: same-drink-today
+          - placeholder: Estagiário 2.0 parece perigoso, mas vamos nessa.
+            goes: new-drink-today
+
+      - id: same-drink-today
+        title: Melissa
+        text: Capuccino clássico! O café da estabilidade emocional.
+        options:
+          - placeholder: Exatamente o que eu preciso.
+            goes: casual-ending-morning
+
+      - id: new-drink-today
+        title: Melissa
+        text: Beleza! Vou preparar um café “Confiança Temporária”.
+          Dura uns 40 minutos, mas já ajuda a começar o dia.
+        options:
+          - placeholder: 40 minutos é mais do que eu esperava, na verdade.
+            goes: casual-ending-morning
+
+      - id: casual-ending-morning
+        title: Melissa
+        text: Tá aí! Mas ó… hoje tenta não ter três mini infartos, ok? Você precisa sobreviver até sexta.
+        options:
+          - placeholder: Vou tentar. Sem promessas.
+            goes: leaving-to-work
+
+      - id: leaving-to-work
+        title: Melissa
+        text: Boa sorte no segundo dia, novato! E lembra, se sobreviver, passa aqui pra fofocar depois.
+        options:
+          - placeholder: Pode deixar. Até mais!
+            goes: leaving-to-work

@@ -1,0 +1,296 @@
+context:
+  - name: cena1-recepcao
+    start_in: recepcao-inicio
+    end_in: recepcao-fim
+    dialog_nodes:
+      - id: recepcao-inicio
+        title: Sabrina Belmonte
+        text: "Olha quem voltou vivo do primeiro caso… Boa notícia: o Doutor Vasconcelos pediu pra te chamarem direto. Má notícia: foi ele mesmo que pediu."
+        options:
+          - placeholder: "Se ele pediu, eu tô mais preocupado do que lisonjeado."
+            goes: recepcao-op1
+          - placeholder: "Isso significa que eu passei no teste da lagoa?"
+            goes: recepcao-op2
+          - placeholder: "Se tiver café e ar-condicionado, eu enfrento rsrsrsrsrs."
+            goes: recepcao-op3
+
+      - id: recepcao-op1
+        title: Sabrina Belmonte
+        text: "Preocupado é bom, mantém a mente afiada. Mas relaxa: ele gosta de gente que pensa… e sobrevive à primeira rodada."
+        options:
+          - placeholder: "..."
+            goes: recepcao-fim
+
+      - id: recepcao-op2
+        title: Sabrina Belmonte
+        text: "Digamos que você não afundou com a obra. Pra ele, isso já é um avanço. Vai lá, antes que ele resolva testar outro estagiário."
+        options:
+          - placeholder: "..."
+            goes: recepcao-fim
+
+      - id: recepcao-op3
+        title: Sabrina Belmonte
+        text: "Então hoje você está pronto pra vida real de advogado. Café tem. Ar-condicionado… quando o prédio colabora. Vai lá, o ‘chefinho’ está te esperando."
+        options:
+          - placeholder: "..."
+            goes: recepcao-fim
+
+      - id: recepcao-fim
+        title: Sabrina Belmonte
+        text: "Boa sorte!"
+        options:
+          - placeholder: "..."
+            goes: recepcao-fim
+
+  - name: cena2-vasconcelos
+    start_in: vasconcelos-inicio
+    end_in: vasconcelos-fim
+    dialog_nodes:
+      - id: vasconcelos-inicio
+        title: Dr. Vasconcelos
+        text: "Bom, pelo menos você voltou. Já é mais do que posso dizer de alguns advogados depois de uma decisão difícil. Então, estagiário… pronto para o próximo nível ou quer voltar para a lagoa da Joana?"
+        options:
+          - placeholder: "Depois da lagoa, eu aguento até a ONU."
+            goes: vasconcelos-op1
+          - placeholder: "Depende. Nesse caso também tem gente querendo ‘direito adquirido’?"
+            goes: vasconcelos-op2
+          - placeholder: "Dependendo dos honorários, acho que dou conta."
+            goes: vasconcelos-op3
+
+      - id: vasconcelos-op1
+        title: Dr. Vasconcelos
+        text: "Calma, embaixador. Antes da ONU vem a mesa de audiência, o juiz mal-humorado e a petição sem errar o básico. Se sobreviver a isso, a gente conversa."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-op4
+
+      - id: vasconcelos-op2
+        title: Dr. Vasconcelos
+        text: "Boa. Já aprendeu que ‘direito adquirido’ é o guarda-chuva favorito de quem está encurralado. Você mesmo vai perceber isso lendo o caso."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-op4
+
+      - id: vasconcelos-op3
+        title: Dr. Vasconcelos
+        text: "Finalmente alguém sincero. Primeiro entender o caso, depois merecer os honorários. Advogado que pensa só em dinheiro vira exemplo nas aulas de ética."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-op4
+
+      - id: vasconcelos-op4
+        title: Dr. Vasconcelos
+        text: "Certo, vamos para o caso..."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-op5
+
+      - id: vasconcelos-op5
+        title: Dr. Vasconcelos
+        text: "Cliente: Miguel. Ex-deputado. Nome conhecido, passado barulhento, futuro… em aberto."
+        options:
+          - placeholder: "Ele é o alvo dessa manchete?"
+            goes: vasconcelos-op6
+
+      - id: vasconcelos-op6
+        title: Dr. Vasconcelos
+        text: "Exatamente. Operação ainda em fase de investigação, nenhuma condenação, nada de sentença, nada transitado em julgado. Mas, no tribunal da internet, isso aqui foi o suficiente."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-fim
+
+      - id: vasconcelos-fim
+        title: Dr. Vasconcelos
+        text: "Agora é a parte que me interessa: quero ver como você se vira com isso à luz do Direito e se você enxerga além do barulho."
+        options:
+          - placeholder: "..."
+            goes: vasconcelos-fim
+
+  - name: cena3-caso-miguel
+    start_in: p1
+    end_in: p4
+    dialog_nodes:
+      # =========================
+      # P1 – Conflitos jurídicos
+      # =========================
+      - id: p1
+        title: Dr. Vasconcelos
+        text: "Manchete no site do Jornalista - ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO! Olhando pra peça, que conflitos você enxerga?"
+        options:
+          - placeholder: "O direito exclusivo de Carlos explorar economicamente o seu blog, sem qualquer interferência, já que se trata de propriedade privada na esfera digital."
+            goes: p2
+          - placeholder: "De um lado, a liberdade de informação e de expressão exercida por Carlos em seu blog; de outro, a proteção da honra e da imagem de Miguel, especialmente diante da forma como ele foi apresentado na manchete e na matéria."
+            goes: p2
+          - placeholder: "Apenas o direito de Miguel à intimidade, já que a honra e a imagem não são relevantes quando se trata de ex-agente político."
+            goes: p2
+          - placeholder: "Somente a liberdade de expressão de Carlos, pois, na condição de ex-deputado, Miguel deveria aceitar qualquer exposição como parte da vida pública."
+            goes: p2
+
+      # =========================
+      # P2 – Presunção de inocência
+      # =========================
+      - id: p2
+        title: Dr. Vasconcelos
+        text: "A operação ainda estava em fase de investigação, sem condenação. Mesmo assim, a manchete do blog cravou na tela: ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO!’. Avaliando esse detalhe, qual linha de raciocínio você enxerga como alinhadas com o Direito?"
+        options:
+          - placeholder: "Defenderia que a presunção de inocência impede que Miguel seja apresentado como se já estivesse comprovadamente envolvido em esquema de corrupção, de modo que Carlos poderia noticiar a operação, mas com linguagem que deixasse claro o caráter ainda investigativo dos fatos."
+            goes: p3
+          - placeholder: "Sustentaria que, uma vez deflagrada operação policial, a presunção de inocência perde força no campo social, permitindo manchetes que já associem o ex-deputado de forma categórica a esquemas de corrupção."
+            goes: p3
+          - placeholder: "Argumentaria que a presunção de inocência é um conceito restrito ao processo penal, sem relevância para a forma como a imprensa formula manchetes sobre operações policiais."
+            goes: p3
+          - placeholder: "Alegaria que, por ser ex-deputado, Miguel não pode invocar a presunção de inocência contra manchetes jornalísticas, pois esse princípio só protege cidadãos comuns."
+            goes: p3
+
+      # =========================
+      # P3 – Foto algemado + narrativa de culpa
+      # =========================
+      - id: p3
+        title: Dr. Vasconcelos
+        text: "A matéria não ficou só na manchete. Carlos foi sem dó na imagem: escolheu uma foto do Miguel algemado, cercado por agentes, tirada no calor da operação, e colocou isso logo abaixo de ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO!’. O advogado de Miguel questionou esse uso da foto, dizendo que aquilo não era apenas ‘ilustrar a notícia’, mas jogar contra a honra dele. Se você estivesse ajudando a montar essa parte da tese, que leitura jurídica faria?"
+        options:
+          - placeholder: "Afirmar que, por se tratar de imagem vinculada a fato de interesse público, não há discussão jurídica relevante sobre a forma como ela é utilizada na matéria."
+            goes: p4
+          - placeholder: "Sustentar que a imagem de Miguel algemado até poderia ser usada para ilustrar a existência da operação, mas que, combinada com a manchete e o texto que o vinculam à ‘operação milionária de corrupção’ como se sua participação já estivesse definida, ela reforça a ideia de culpa e agrava o dano à sua imagem."
+            goes: p4
+          - placeholder: "Defender que a utilização da imagem é um detalhe secundário, pois o que realmente importa é apenas o conteúdo textual da notícia."
+            goes: p4
+          - placeholder: "Alegar que qualquer restrição ao uso de imagens relacionadas a operações policiais violaria a liberdade de imprensa."
+            goes: p4
+
+      # =========================
+      # P4 – Conclusão final
+      # =========================
+      - id: p4
+        title: Dr. Vasconcelos
+        text: "Juntando tudo: ex-deputado, operação ainda em fase investigativa, manchete em tom de escândalo, e escolha de imagem que o coloca no centro da cena. O advogado de Miguel precisa entregar pro juiz uma conclusão clara sobre o comportamento de Carlos. Se essa peça estivesse na sua mão, como você fecharia o raciocínio?"
+        options:
+          - placeholder: "Que Carlos exerceu de forma plena e regular sua liberdade de imprensa, já que, em casos de corrupção, a imprensa tem o dever de usar linguagem dura para sensibilizar a opinião pública."
+            goes: p4
+          - placeholder: "Que a situação se resume a um episódio de mau gosto comunicacional, sem repercussão relevante na esfera jurídica."
+            goes: p4
+          - placeholder: "Que, diante da condição de ex-deputado, Miguel deveria suportar qualquer tipo de exposição midiática, inclusive manchetes que o retratem como personagem central da corrupção, sem possibilidade de reparação."
+            goes: p4
+          - placeholder: "Que Carlos tinha o direito de informar sobre a operação envolvendo Miguel, mas extrapolou ao apresentá-lo como se já estivesse envolvido em esquema milionário de corrupção, combinando texto e imagem de modo a atingir sua honra e sua imagem, o que pode justificar direito de resposta e indenização."
+            goes: p4
+
+  - name: after_caso_miguel
+    start_in: p1
+    end_in: p6
+    dialog_nodes:
+      - id: p1
+        title: Dr. Vasconcelos
+        text: "Se você prestou atenção, esse caso não era só sobre um blog barulhento. Era sobre como se equilibra microfone e reputação dentro da Constituição."
+        options:
+          - placeholder: "..."
+            goes: p2
+
+      - id: p2
+        title: Dr. Vasconcelos
+        text: "Você viu: liberdade de informar não é licença pra condenar alguém na manchete; honra e imagem não servem de escudo pra esconder tudo o que é de interesse público; e a tal presunção de inocência não vive só no processo penal, ela sangra pra fora, na forma como a sociedade enxerga a pessoa."
+        options:
+          - placeholder: "..."
+            goes: p3
+
+      - id: p3
+        title: Dr. Vasconcelos
+        text: "No fim das contas, o juiz não está escolhendo um lado bonzinho contra um lado malvado. Ele está tentando impedir duas catástrofes diferentes: a censura de um lado... e o linchamento moral do outro."
+        options:
+          - placeholder: "..."
+            goes: p4
+
+      - id: p4
+        title: Dr. Vasconcelos
+        text: "Agora a pergunta é: se esse processo estivesse na sua mesa, você saberia conduzir de uma forma que não virasse panfleto de nenhum dos dois? Porque advogado bom não entra na audiência como fã de ninguém. Entra como quem entendeu o caso melhor que todo mundo."
+        options:
+          - placeholder: "..."
+            goes: p5
+
+      - id: p5
+        title: Dr. Vasconcelos
+        text: "Mas calma, estagiário. Por enquanto, eu só preciso que você enxergue os conflitos certos e pare de achar que ‘é só uma notícia’. Quando chegar a hora de você assinar a petição… aí sim eu começo a ficar realmente exigente."
+        options:
+          - placeholder: "..."
+            goes: p6
+
+      - id: p6
+        title: Dr. Vasconcelos
+        text: "Vai tomar um café, respirar um pouco...porque o que espero de você é mais do que análises..."
+        options:
+          - placeholder: "..."
+            goes: p6
+
+  - name: cena4-pos-sabrina
+    start_in: pos_sabrina_inicio
+    end_in: pos_sabrina_fim
+    dialog_nodes:
+      - id: pos_sabrina_inicio
+        title: Sabrina Belmonte
+        text: "Olha só… saiu inteiro da sala do Doutor Vasconcelos. Isso já conta como vitória no currículo."
+        options:
+          - placeholder: "Ele pega pesado mesmo."
+            goes: pos_sabrina_op1
+          - placeholder: "Eu sobrevivi, mas não sei se com dignidade."
+            goes: pos_sabrina_op2
+          - placeholder: "Achei que ia ser pior, pra falar a verdade."
+            goes: pos_sabrina_op3
+
+      - id: pos_sabrina_op1
+        title: Sabrina Belmonte
+        text: "Pega, mas é o jeito dele de lapidar estagiário. Se você saiu andando, significa que ele viu potencial."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_op2
+        title: Sabrina Belmonte
+        text: "Dignidade é luxo nesse escritório. O importante é que ele não te mandou de volta pra recepção sem olhar na sua cara — isso é o selo dele de aprovação."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_op3
+        title: Sabrina Belmonte
+        text: "Calma que ainda é cedo pra comemorar. O pior de Vasconcelos é quando ele resolve dizer que você ‘tem futuro’… aí sim o trabalho triplica."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_meio
+        title: Sabrina Belmonte
+        text: "E aí? Como foi o caso? Cara de quem levou um choque de Constituição misturado com café forte."
+        options:
+          - placeholder: "Foi mais complexo do que eu esperava."
+            goes: pos_sabrina_op4
+          - placeholder: "A Constituição deu o choque, o café só ajudou a manter a consciência."
+            goes: pos_sabrina_op5
+          - placeholder: "Nem sei explicar. Só sei que ele me desmonta e monta de novo."
+            goes: pos_sabrina_op6
+
+      - id: pos_sabrina_op4
+        title: Sabrina Belmonte
+        text: "Normal. Aqui nada é simples. Se fosse, o Vasconcelos não teria pego o caso."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_op5
+        title: Sabrina Belmonte
+        text: "Bem-vindo ao escritório. Aqui o café serve pra estabilizar o sistema depois dos sermões dele."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_op6
+        title: Sabrina Belmonte
+        text: "Sim, ele tem esse talento. Mas se ele investiu tempo em você… é porque já te imagina voltando da audiência com resultado."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_fim
+        title: Sabrina Belmonte
+        text: "Vai descansar um pouco. Esse foi só o começo — e você vai precisar de energia pro que vem depois."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
