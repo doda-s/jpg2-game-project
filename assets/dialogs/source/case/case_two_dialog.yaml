@@ -36,7 +36,7 @@ context:
             goes: recepcao-fim
 
       - id: recepcao-fim
-        title: Cena
+        title: Sabrina Belmonte
         text: "Boa sorte!"
         options:
           - placeholder: "..."
@@ -79,28 +79,28 @@ context:
             goes: vasconcelos-op4
 
       - id: vasconcelos-op4
-        title: Cena
+        title: Dr. Vasconcelos
         text: "Certo, vamos para o caso..."
         options:
           - placeholder: "..."
             goes: vasconcelos-op5
 
       - id: vasconcelos-op5
-        title: Cena
+        title: Dr. Vasconcelos
         text: "Cliente: Miguel. Ex-deputado. Nome conhecido, passado barulhento, futuro… em aberto."
         options:
           - placeholder: "Ele é o alvo dessa manchete?"
             goes: vasconcelos-op6
 
       - id: vasconcelos-op6
-        title: Cena
+        title: Dr. Vasconcelos
         text: "Exatamente. Operação ainda em fase de investigação, nenhuma condenação, nada de sentença, nada transitado em julgado. Mas, no tribunal da internet, isso aqui foi o suficiente."
         options:
           - placeholder: "..."
             goes: vasconcelos-fim
 
       - id: vasconcelos-fim
-        title: Cena
+        title: Dr. Vasconcelos
         text: "Agora é a parte que me interessa: quero ver como você se vira com isso à luz do Direito e se você enxerga além do barulho."
         options:
           - placeholder: "..."
@@ -219,3 +219,78 @@ context:
         options:
           - placeholder: "..."
             goes: p6
+
+  - name: cena4-pos-sabrina
+    start_in: pos_sabrina_inicio
+    end_in: pos_sabrina_fim
+    dialog_nodes:
+      - id: pos_sabrina_inicio
+        title: Sabrina Belmonte
+        text: "Olha só… saiu inteiro da sala do Doutor Vasconcelos. Isso já conta como vitória no currículo."
+        options:
+          - placeholder: "Ele pega pesado mesmo."
+            goes: pos_sabrina_op1
+          - placeholder: "Eu sobrevivi, mas não sei se com dignidade."
+            goes: pos_sabrina_op2
+          - placeholder: "Achei que ia ser pior, pra falar a verdade."
+            goes: pos_sabrina_op3
+
+      - id: pos_sabrina_op1
+        title: Sabrina Belmonte
+        text: "Pega, mas é o jeito dele de lapidar estagiário. Se você saiu andando, significa que ele viu potencial."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_op2
+        title: Sabrina Belmonte
+        text: "Dignidade é luxo nesse escritório. O importante é que ele não te mandou de volta pra recepção sem olhar na sua cara — isso é o selo dele de aprovação."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_op3
+        title: Sabrina Belmonte
+        text: "Calma que ainda é cedo pra comemorar. O pior de Vasconcelos é quando ele resolve dizer que você ‘tem futuro’… aí sim o trabalho triplica."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_meio
+
+      - id: pos_sabrina_meio
+        title: Sabrina Belmonte
+        text: "E aí? Como foi o caso? Cara de quem levou um choque de Constituição misturado com café forte."
+        options:
+          - placeholder: "Foi mais complexo do que eu esperava."
+            goes: pos_sabrina_op4
+          - placeholder: "A Constituição deu o choque, o café só ajudou a manter a consciência."
+            goes: pos_sabrina_op5
+          - placeholder: "Nem sei explicar. Só sei que ele me desmonta e monta de novo."
+            goes: pos_sabrina_op6
+
+      - id: pos_sabrina_op4
+        title: Sabrina Belmonte
+        text: "Normal. Aqui nada é simples. Se fosse, o Vasconcelos não teria pego o caso."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_op5
+        title: Sabrina Belmonte
+        text: "Bem-vindo ao escritório. Aqui o café serve pra estabilizar o sistema depois dos sermões dele."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_op6
+        title: Sabrina Belmonte
+        text: "Sim, ele tem esse talento. Mas se ele investiu tempo em você… é porque já te imagina voltando da audiência com resultado."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim
+
+      - id: pos_sabrina_fim
+        title: Sabrina Belmonte
+        text: "Vai descansar um pouco. Esse foi só o começo — e você vai precisar de energia pro que vem depois."
+        options:
+          - placeholder: "..."
+            goes: pos_sabrina_fim

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cdfvxvoo43mua"]
+[gd_scene load_steps=25 format=4 uid="uid://cdfvxvoo43mua"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_e3u5b"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="2_tsh3g"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="5_h3bgh"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_t4cf5"]
 [ext_resource type="PackedScene" uid="uid://dcma5d5hoxtd7" path="res://resources/entities/secretary_npc.tscn" id="7_trv54"]
+[ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="8_ob3g5"]
 [ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="8_tsh3g"]
+[ext_resource type="PackedScene" uid="uid://cqfmh3gsroshc" path="res://resources/components/dialog_provider.tscn" id="9_h3bgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqxst"]
 texture = ExtResource("2_tsh3g")
@@ -1173,6 +1175,9 @@ texture = ExtResource("2_tsh3g")
 [sub_resource type="TileSet" id="TileSet_o0cp8"]
 sources/0 = SubResource("TileSetAtlasSource_25bdk")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4cf5"]
+size = Vector2(61.25, 61)
+
 [node name="OfficeMainHall" type="Node2D"]
 
 [node name="PlayerHud" parent="." instance=ExtResource("1_e3u5b")]
@@ -1203,7 +1208,23 @@ tile_set = SubResource("TileSet_o0cp8")
 z_index = 1
 
 [node name="SecretaryNPC" parent="." instance=ExtResource("7_trv54")]
-position = Vector2(84, 0)
+position = Vector2(102, 0)
+
+[node name="InteractableComponent" type="Node2D" parent="SecretaryNPC"]
+position = Vector2(4, -9)
+script = ExtResource("8_ob3g5")
+metadata/_custom_type_script = "uid://bhgrv4p7l4u4n"
+
+[node name="Area2D" type="Area2D" parent="SecretaryNPC/InteractableComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecretaryNPC/InteractableComponent/Area2D"]
+position = Vector2(-3, -22)
+shape = SubResource("RectangleShape2D_t4cf5")
+
+[node name="DialogProvider" parent="SecretaryNPC" instance=ExtResource("9_h3bgh")]
+position = Vector2(4, -10)
+dialog_json_file = "res://assets/dialogs/source/case/case_two_dialog.json"
+context = "cena4-pos-sabrina"
 
 [node name="PlayerOfficeDoor" parent="." groups=["doors"] instance=ExtResource("8_tsh3g")]
 position = Vector2(48, -28)
@@ -1219,4 +1240,4 @@ target_scene_path = "res://scenes/worlds/boss_office_room/boss_office_room_D2T.t
 position = Vector2(192, -28)
 door_id = "1"
 target_id = "3"
-target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
+target_scene_path = "res://scenes/worlds/main_city/main_city_D2T.tscn"

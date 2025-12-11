@@ -1240,4 +1240,4 @@ target_scene_path = "res://scenes/worlds/boss_office_room/boss_office_room_D1T.t
 position = Vector2(192, -28)
 door_id = "1"
 target_id = "3"
-target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
+target_scene_path = "res://scenes/worlds/main_city/main_city_D1T.tscn"

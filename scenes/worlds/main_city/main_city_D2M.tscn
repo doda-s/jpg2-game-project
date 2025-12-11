@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://du5rw5npflpqs"]
+[gd_scene load_steps=44 format=4 uid="uid://sla4tgp7ixdb"]
 
 [ext_resource type="Texture2D" uid="uid://ym8e8j5ma4u3" path="res://assets/mp_city_street_tileset_pack/mp_cs_background.png" id="1_cu4lv"]
 [ext_resource type="Texture2D" uid="uid://bb8lmmfirg8jv" path="res://assets/mp_city_street_tileset_pack/mp_cs_buildings.png" id="2_hd3c0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0l6lw4721wh4" path="res://assets/mp_city_street_tileset_pack/mp_cs_props.png" id="7_c3q66"]
 [ext_resource type="Texture2D" uid="uid://bbb4vih32pjst" path="res://assets/mp_city_street_tileset_pack/mp_cs_shadows.png" id="8_3dvxd"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="9_30jg4"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="10_hd3c0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukb7g"]
 texture = ExtResource("1_cu4lv")
@@ -5343,3 +5344,19 @@ shape = SubResource("RectangleShape2D_mlhka")
 
 [node name="Player" parent="." instance=ExtResource("9_30jg4")]
 position = Vector2(29, -33)
+
+[node name="HouseDoor" parent="." groups=["doors"] instance=ExtResource("10_hd3c0")]
+position = Vector2(241, -43)
+door_id = "1"
+target_id = "3"
+target_scene_path = "res://scenes/worlds/player_living_room/player_living_room_D2M.tscn"
+
+[node name="CafeDoor" parent="." groups=["doors"] instance=ExtResource("10_hd3c0")]
+position = Vector2(656, -43)
+door_id = "2"
+target_scene_path = "res://scenes/worlds/cafeteria/cafeteria_D2M.tscn"
+
+[node name="OfficeDoor" parent="." groups=["doors"] instance=ExtResource("10_hd3c0")]
+position = Vector2(1728, -43)
+door_id = "3"
+target_scene_path = "res://scenes/worlds/office_main_hall/office_main_hall_D2M.tscn"

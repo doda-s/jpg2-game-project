@@ -59,7 +59,7 @@
 				},
 				{
 					"ID": "recepcao-fim",
-					"Title": "Cena",
+					"Title": "Sabrina Belmonte",
 					"Text": "Boa sorte!",
 					"Options": [
 						{
@@ -129,7 +129,7 @@
 				},
 				{
 					"ID": "vasconcelos-op4",
-					"Title": "Cena",
+					"Title": "Dr. Vasconcelos",
 					"Text": "Certo, vamos para o caso...",
 					"Options": [
 						{
@@ -140,7 +140,7 @@
 				},
 				{
 					"ID": "vasconcelos-op5",
-					"Title": "Cena",
+					"Title": "Dr. Vasconcelos",
 					"Text": "Cliente: Miguel. Ex-deputado. Nome conhecido, passado barulhento, futuro… em aberto.",
 					"Options": [
 						{
@@ -151,7 +151,7 @@
 				},
 				{
 					"ID": "vasconcelos-op6",
-					"Title": "Cena",
+					"Title": "Dr. Vasconcelos",
 					"Text": "Exatamente. Operação ainda em fase de investigação, nenhuma condenação, nada de sentença, nada transitado em julgado. Mas, no tribunal da internet, isso aqui foi o suficiente.",
 					"Options": [
 						{
@@ -162,7 +162,7 @@
 				},
 				{
 					"ID": "vasconcelos-fim",
-					"Title": "Cena",
+					"Title": "Dr. Vasconcelos",
 					"Text": "Agora é a parte que me interessa: quero ver como você se vira com isso à luz do Direito e se você enxerga além do barulho.",
 					"Options": [
 						{
@@ -340,6 +340,128 @@
 						{
 							"Placeholder": "...",
 							"Goes": "p6"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "cena4-pos-sabrina",
+			"StartIn": "pos_sabrina_inicio",
+			"EndIn": "pos_sabrina_fim",
+			"DialogNodes": [
+				{
+					"ID": "pos_sabrina_inicio",
+					"Title": "Sabrina Belmonte",
+					"Text": "Olha só… saiu inteiro da sala do Doutor Vasconcelos. Isso já conta como vitória no currículo.",
+					"Options": [
+						{
+							"Placeholder": "Ele pega pesado mesmo.",
+							"Goes": "pos_sabrina_op1"
+						},
+						{
+							"Placeholder": "Eu sobrevivi, mas não sei se com dignidade.",
+							"Goes": "pos_sabrina_op2"
+						},
+						{
+							"Placeholder": "Achei que ia ser pior, pra falar a verdade.",
+							"Goes": "pos_sabrina_op3"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op1",
+					"Title": "Sabrina Belmonte",
+					"Text": "Pega, mas é o jeito dele de lapidar estagiário. Se você saiu andando, significa que ele viu potencial.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_meio"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op2",
+					"Title": "Sabrina Belmonte",
+					"Text": "Dignidade é luxo nesse escritório. O importante é que ele não te mandou de volta pra recepção sem olhar na sua cara — isso é o selo dele de aprovação.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_meio"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op3",
+					"Title": "Sabrina Belmonte",
+					"Text": "Calma que ainda é cedo pra comemorar. O pior de Vasconcelos é quando ele resolve dizer que você ‘tem futuro’… aí sim o trabalho triplica.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_meio"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_meio",
+					"Title": "Sabrina Belmonte",
+					"Text": "E aí? Como foi o caso? Cara de quem levou um choque de Constituição misturado com café forte.",
+					"Options": [
+						{
+							"Placeholder": "Foi mais complexo do que eu esperava.",
+							"Goes": "pos_sabrina_op4"
+						},
+						{
+							"Placeholder": "A Constituição deu o choque, o café só ajudou a manter a consciência.",
+							"Goes": "pos_sabrina_op5"
+						},
+						{
+							"Placeholder": "Nem sei explicar. Só sei que ele me desmonta e monta de novo.",
+							"Goes": "pos_sabrina_op6"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op4",
+					"Title": "Sabrina Belmonte",
+					"Text": "Normal. Aqui nada é simples. Se fosse, o Vasconcelos não teria pego o caso.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_fim"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op5",
+					"Title": "Sabrina Belmonte",
+					"Text": "Bem-vindo ao escritório. Aqui o café serve pra estabilizar o sistema depois dos sermões dele.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_fim"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_op6",
+					"Title": "Sabrina Belmonte",
+					"Text": "Sim, ele tem esse talento. Mas se ele investiu tempo em você… é porque já te imagina voltando da audiência com resultado.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_fim"
+						}
+					]
+				},
+				{
+					"ID": "pos_sabrina_fim",
+					"Title": "Sabrina Belmonte",
+					"Text": "Vai descansar um pouco. Esse foi só o começo — e você vai precisar de energia pro que vem depois.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "pos_sabrina_fim"
 						}
 					]
 				}

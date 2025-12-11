@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cvjom5uhtp7kv"]
+[gd_scene load_steps=21 format=4 uid="uid://cvjom5uhtp7kv"]
 
 [ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_2llmh"]
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_wix67"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bhgrv4p7l4u4n" path="res://scripts/components/interactable_component.gd" id="6_jm4j2"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="6_phxc1"]
 [ext_resource type="Script" uid="uid://cds7gtk0cfdg0" path="res://scripts/components/dialog_provider.gd" id="7_2llmh"]
+[ext_resource type="PackedScene" uid="uid://j4u1feg5cjv6" path="res://scenes/demos/door.tscn" id="10_gcmcv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa1hb"]
 texture = ExtResource("1_wix67")
@@ -733,3 +734,9 @@ metadata/_custom_type_script = "uid://cds7gtk0cfdg0"
 
 [node name="Player" parent="." instance=ExtResource("6_phxc1")]
 z_index = 3
+
+[node name="Door" parent="." groups=["doors"] instance=ExtResource("10_gcmcv")]
+position = Vector2(-111, -28)
+door_id = "1"
+target_id = "2"
+target_scene_path = "res://scenes/worlds/main_city/main_city_D1T.tscn"
