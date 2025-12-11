@@ -1,0 +1,178 @@
+{
+	"Context": [
+		{
+			"Name": "end-of-day-two",
+			"StartIn": "barista-greets-again",
+			"EndIn": "leaving-cafe-day-two",
+			"DialogNodes": [
+				{
+					"ID": "barista-greets-again",
+					"Title": "Melissa",
+					"Text": "Olhaaa quem voltou! Sobreviveu ao segundo dia ou eu preciso chamar reforços médicos?",
+					"Options": [
+						{
+							"Placeholder": "Sobrevivi… mas foi por pouco.",
+							"Goes": "almost-died"
+						},
+						{
+							"Placeholder": "Eu acho que sim. Minha consciência ainda tá carregando.",
+							"Goes": "loading-consciousness"
+						},
+						{
+							"Placeholder": "Vim garantir que não fiquei maluco. Café ajuda com isso, né?",
+							"Goes": "sanity-coffee"
+						}
+					]
+				},
+				{
+					"ID": "almost-died",
+					"Title": "Melissa",
+					"Text": "Segundo dia é sempre assim, parece que o escritório quer testar sua força de vontade e sua sanidade.",
+					"Options": [
+						{
+							"Placeholder": "Ótimo, então tá funcionando mesmo.",
+							"Goes": "ask-how-was"
+						}
+					]
+				},
+				{
+					"ID": "loading-consciousness",
+					"Title": "Melissa",
+					"Text": "Entendo. Às vezes a alma atrasa pra chegar junto do corpo. Normal pra quem trabalha com advogado.",
+					"Options": [
+						{
+							"Placeholder": "Minha alma tá no ônibus errado, então.",
+							"Goes": "ask-how-was"
+						}
+					]
+				},
+				{
+					"ID": "sanity-coffee",
+					"Title": "Melissa",
+					"Text": "Ajuda sim! Café é tipo um antivírus emocional. Só não corrige bugs internos.",
+					"Options": [
+						{
+							"Placeholder": "Aí complicou, porque eu tenho vários bugs internos.",
+							"Goes": "ask-how-was"
+						}
+					]
+				},
+				{
+					"ID": "ask-how-was",
+					"Title": "Melissa",
+					"Text": "E aí… o dia foi melhor, pior, igual, ou uma sequência de cenas que você prefere esquecer?",
+					"Options": [
+						{
+							"Placeholder": "Foi melhor, na verdade. Menos sufoco, mais aprendizado.",
+							"Goes": "positive-day"
+						},
+						{
+							"Placeholder": "Pior. Me jogaram tarefas que eu nunca ouvi falar.",
+							"Goes": "overwhelming-day"
+						},
+						{
+							"Placeholder": "Igual. Um loop infinito de papéis e perguntas.",
+							"Goes": "endless-loop"
+						}
+					]
+				},
+				{
+					"ID": "positive-day",
+					"Title": "Melissa",
+					"Text": "Olha só! Crescimento pessoal acontecendo. Daqui a pouco você vira o estagiário que sabe tudo.",
+					"Options": [
+						{
+							"Placeholder": "Calma, calma. Vamos devagar com essa expectativa.",
+							"Goes": "what-drink-evening"
+						}
+					]
+				},
+				{
+					"ID": "overwhelming-day",
+					"Title": "Melissa",
+					"Text": "Isso aí é clássico também. Te dão coisas que ninguém quer fazer e chamam de “oportunidade”.",
+					"Options": [
+						{
+							"Placeholder": "Doeu porque é verdade.",
+							"Goes": "what-drink-evening"
+						}
+					]
+				},
+				{
+					"ID": "endless-loop",
+					"Title": "Melissa",
+					"Text": "Loop infinito é de lei. Se um processo acaba, cinco aparecem do nada. É tipo magia negra.",
+					"Options": [
+						{
+							"Placeholder": "Eu tô começando a acreditar nisso.",
+							"Goes": "what-drink-evening"
+						}
+					]
+				},
+				{
+					"ID": "what-drink-evening",
+					"Title": "Melissa",
+					"Text": "E então… o que vai ser hoje? Algo forte pra apagar a memória do dia ou algo doce pra enganar o cérebro?",
+					"Options": [
+						{
+							"Placeholder": "Algo forte, por favor. Bem forte.",
+							"Goes": "strong-drink"
+						},
+						{
+							"Placeholder": "Algo doce. Eu mereço um agrado.",
+							"Goes": "sweet-drink"
+						}
+					]
+				},
+				{
+					"ID": "strong-drink",
+					"Title": "Melissa",
+					"Text": "Beleza! Vou preparar um “Força Jurídica”. Desce queimando, mas te deixa funcional.",
+					"Options": [
+						{
+							"Placeholder": "Isso descreve exatamente o que eu preciso.",
+							"Goes": "ending-chat"
+						}
+					]
+				},
+				{
+					"ID": "sweet-drink",
+					"Title": "Melissa",
+					"Text": "Ótima escolha. Doce é tipo um abraço que não te pergunta sobre prazos.",
+					"Options": [
+						{
+							"Placeholder": "Acho que esse é o melhor tipo de abraço.",
+							"Goes": "ending-chat"
+						}
+					]
+				},
+				{
+					"ID": "ending-chat",
+					"Title": "Melissa",
+					"Text": "Tá aqui! Agora me diz… você volta amanhã ou vai pedir as contas e virar monge?",
+					"Options": [
+						{
+							"Placeholder": "Volto sim. Já aceitei o destino.",
+							"Goes": "leaving-cafe-day-two"
+						},
+						{
+							"Placeholder": "Virar monge parece tentador, mas acho que fico por aqui mesmo.",
+							"Goes": "leaving-cafe-day-two"
+						}
+					]
+				},
+				{
+					"ID": "leaving-cafe-day-two",
+					"Title": "Melissa",
+					"Text": "Então boa sorte, novato! E ó… se sobreviver ao terceiro dia, te dou um desconto simbólico.",
+					"Options": [
+						{
+							"Placeholder": "Fechado! Até amanhã.",
+							"Goes": "leaving-cafe-day-two"
+						}
+					]
+				}
+			]
+		}
+	]
+}

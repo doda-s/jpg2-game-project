@@ -60,14 +60,14 @@ context:
         text: Nossa, adorei o clima misterioso. Parece até abertura de série. Vai ver essa cidade é seu reboot.
         options:
           - placeholder: Tomara… reboots às vezes são melhores.
-            goes: lawyer-reaction
+            goes: almost-ready-drink
 
       - id: combo-existential
         title: Melissa
         text: Hahaha! Então você já chegou no nível avançado da vida adulta. Parabéns, poucos alcançam.
         options:
           - placeholder: Eu queria um nível mais fácil, sinceramente.
-            goes: lawyer-reaction
+            goes: almost-ready-drink
 
       - id: coffee-bargain
         title: Melissa
