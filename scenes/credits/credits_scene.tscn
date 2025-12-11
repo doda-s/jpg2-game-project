@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bsaqtstilin20"]
+
+[node name="CreditsScene" type="Node2D"]
+
+[node name="CreditsView" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CreditsView"]
+offset_right = 400.0
+offset_bottom = 400.0
+
+[node name="Title" type="RichTextLabel" parent="CreditsView/Panel"]
+layout_mode = 2
+offset_right = 400.0
+offset_bottom = 40.0
+text = "Créditos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsView/Panel"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 357.0
+theme_override_constants/margin_top = 15
+
+[node name="Credits" type="RichTextLabel" parent="CreditsView/Panel/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[wave][b]DESENVOLVIMENTO[/b][/wave]
+
+Jean Carlos Cunha Menezes
+João Pedro Sumi Beber
+Pedro Henrique Garcia Schuch
+Pedro Riva
+Gustavo Gabriel Paterno
+Gustavo Fontana Bertoldi
+
+
+[wave][b]CHARACTER DESIGN[/b][/wave]
+
+MChoice
+
+
+[wave][b]WORLD TILESETS[/b][/wave]
+
+Daniel Benítez"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CreditsView"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -37.0
+offset_right = 43.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Continuar"
