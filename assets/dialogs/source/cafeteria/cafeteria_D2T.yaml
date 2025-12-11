@@ -1,0 +1,107 @@
+context:
+  - name: end-of-day-two
+    start_in: barista-greets-again
+    end_in: leaving-cafe-day-two
+    dialog_nodes:
+      - id: barista-greets-again
+        title: Melissa
+        text: Olhaaa quem voltou! Sobreviveu ao segundo dia ou eu preciso chamar reforços médicos?
+        options:
+          - placeholder: Sobrevivi… mas foi por pouco.
+            goes: almost-died
+          - placeholder: Eu acho que sim. Minha consciência ainda tá carregando.
+            goes: loading-consciousness
+          - placeholder: Vim garantir que não fiquei maluco. Café ajuda com isso, né?
+            goes: sanity-coffee
+
+      - id: almost-died
+        title: Melissa
+        text: Segundo dia é sempre assim, parece que o escritório quer testar sua força de vontade e sua sanidade.
+        options:
+          - placeholder: Ótimo, então tá funcionando mesmo.
+            goes: ask-how-was
+
+      - id: loading-consciousness
+        title: Melissa
+        text: Entendo. Às vezes a alma atrasa pra chegar junto do corpo. Normal pra quem trabalha com advogado.
+        options:
+          - placeholder: Minha alma tá no ônibus errado, então.
+            goes: ask-how-was
+
+      - id: sanity-coffee
+        title: Melissa
+        text: Ajuda sim! Café é tipo um antivírus emocional. Só não corrige bugs internos.
+        options:
+          - placeholder: Aí complicou, porque eu tenho vários bugs internos.
+            goes: ask-how-was
+
+      - id: ask-how-was
+        title: Melissa
+        text: E aí… o dia foi melhor, pior, igual, ou uma sequência de cenas que você prefere esquecer?
+        options:
+          - placeholder: Foi melhor, na verdade. Menos sufoco, mais aprendizado.
+            goes: positive-day
+          - placeholder: Pior. Me jogaram tarefas que eu nunca ouvi falar.
+            goes: overwhelming-day
+          - placeholder: Igual. Um loop infinito de papéis e perguntas.
+            goes: endless-loop
+
+      - id: positive-day
+        title: Melissa
+        text: Olha só! Crescimento pessoal acontecendo. Daqui a pouco você vira o estagiário que sabe tudo.
+        options:
+          - placeholder: Calma, calma. Vamos devagar com essa expectativa.
+            goes: what-drink-evening
+
+      - id: overwhelming-day
+        title: Melissa
+        text: Isso aí é clássico também. Te dão coisas que ninguém quer fazer e chamam de “oportunidade”.
+        options:
+          - placeholder: Doeu porque é verdade.
+            goes: what-drink-evening
+
+      - id: endless-loop
+        title: Melissa
+        text: Loop infinito é de lei. Se um processo acaba, cinco aparecem do nada. É tipo magia negra.
+        options:
+          - placeholder: Eu tô começando a acreditar nisso.
+            goes: what-drink-evening
+
+      - id: what-drink-evening
+        title: Melissa
+        text: E então… o que vai ser hoje? Algo forte pra apagar a memória do dia ou algo doce pra enganar o cérebro?
+        options:
+          - placeholder: Algo forte, por favor. Bem forte.
+            goes: strong-drink
+          - placeholder: Algo doce. Eu mereço um agrado.
+            goes: sweet-drink
+
+      - id: strong-drink
+        title: Melissa
+        text: Beleza! Vou preparar um “Força Jurídica”. Desce queimando, mas te deixa funcional.
+        options:
+          - placeholder: Isso descreve exatamente o que eu preciso.
+            goes: ending-chat
+
+      - id: sweet-drink
+        title: Melissa
+        text: Ótima escolha. Doce é tipo um abraço que não te pergunta sobre prazos.
+        options:
+          - placeholder: Acho que esse é o melhor tipo de abraço.
+            goes: ending-chat
+
+      - id: ending-chat
+        title: Melissa
+        text: Tá aqui! Agora me diz… você volta amanhã ou vai pedir as contas e virar monge?
+        options:
+          - placeholder: Volto sim. Já aceitei o destino.
+            goes: leaving-cafe-day-two
+          - placeholder: Virar monge parece tentador, mas acho que fico por aqui mesmo.
+            goes: leaving-cafe-day-two
+
+      - id: leaving-cafe-day-two
+        title: Melissa
+        text: Então boa sorte, novato! E ó… se sobreviver ao terceiro dia, te dou um desconto simbólico.
+        options:
+          - placeholder: Fechado! Até amanhã.
+            goes: leaving-cafe-day-two
