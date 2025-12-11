@@ -1,0 +1,349 @@
+{
+	"Context": [
+		{
+			"Name": "cena1-recepcao",
+			"StartIn": "recepcao-inicio",
+			"EndIn": "recepcao-fim",
+			"DialogNodes": [
+				{
+					"ID": "recepcao-inicio",
+					"Title": "Sabrina Belmonte",
+					"Text": "Olha quem voltou vivo do primeiro caso… Boa notícia: o Doutor Vasconcelos pediu pra te chamarem direto. Má notícia: foi ele mesmo que pediu.",
+					"Options": [
+						{
+							"Placeholder": "Se ele pediu, eu tô mais preocupado do que lisonjeado.",
+							"Goes": "recepcao-op1"
+						},
+						{
+							"Placeholder": "Isso significa que eu passei no teste da lagoa?",
+							"Goes": "recepcao-op2"
+						},
+						{
+							"Placeholder": "Se tiver café e ar-condicionado, eu enfrento rsrsrsrsrs.",
+							"Goes": "recepcao-op3"
+						}
+					]
+				},
+				{
+					"ID": "recepcao-op1",
+					"Title": "Sabrina Belmonte",
+					"Text": "Preocupado é bom, mantém a mente afiada. Mas relaxa: ele gosta de gente que pensa… e sobrevive à primeira rodada.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "recepcao-fim"
+						}
+					]
+				},
+				{
+					"ID": "recepcao-op2",
+					"Title": "Sabrina Belmonte",
+					"Text": "Digamos que você não afundou com a obra. Pra ele, isso já é um avanço. Vai lá, antes que ele resolva testar outro estagiário.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "recepcao-fim"
+						}
+					]
+				},
+				{
+					"ID": "recepcao-op3",
+					"Title": "Sabrina Belmonte",
+					"Text": "Então hoje você está pronto pra vida real de advogado. Café tem. Ar-condicionado… quando o prédio colabora. Vai lá, o ‘chefinho’ está te esperando.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "recepcao-fim"
+						}
+					]
+				},
+				{
+					"ID": "recepcao-fim",
+					"Title": "Cena",
+					"Text": "Boa sorte!",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "recepcao-fim"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "cena2-vasconcelos",
+			"StartIn": "vasconcelos-inicio",
+			"EndIn": "vasconcelos-fim",
+			"DialogNodes": [
+				{
+					"ID": "vasconcelos-inicio",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Bom, pelo menos você voltou. Já é mais do que posso dizer de alguns advogados depois de uma decisão difícil. Então, estagiário… pronto para o próximo nível ou quer voltar para a lagoa da Joana?",
+					"Options": [
+						{
+							"Placeholder": "Depois da lagoa, eu aguento até a ONU.",
+							"Goes": "vasconcelos-op1"
+						},
+						{
+							"Placeholder": "Depende. Nesse caso também tem gente querendo ‘direito adquirido’?",
+							"Goes": "vasconcelos-op2"
+						},
+						{
+							"Placeholder": "Dependendo dos honorários, acho que dou conta.",
+							"Goes": "vasconcelos-op3"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op1",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Calma, embaixador. Antes da ONU vem a mesa de audiência, o juiz mal-humorado e a petição sem errar o básico. Se sobreviver a isso, a gente conversa.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-op4"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op2",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Boa. Já aprendeu que ‘direito adquirido’ é o guarda-chuva favorito de quem está encurralado. Você mesmo vai perceber isso lendo o caso.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-op4"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op3",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Finalmente alguém sincero. Primeiro entender o caso, depois merecer os honorários. Advogado que pensa só em dinheiro vira exemplo nas aulas de ética.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-op4"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op4",
+					"Title": "Cena",
+					"Text": "Certo, vamos para o caso...",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-op5"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op5",
+					"Title": "Cena",
+					"Text": "Cliente: Miguel. Ex-deputado. Nome conhecido, passado barulhento, futuro… em aberto.",
+					"Options": [
+						{
+							"Placeholder": "Ele é o alvo dessa manchete?",
+							"Goes": "vasconcelos-op6"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-op6",
+					"Title": "Cena",
+					"Text": "Exatamente. Operação ainda em fase de investigação, nenhuma condenação, nada de sentença, nada transitado em julgado. Mas, no tribunal da internet, isso aqui foi o suficiente.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-fim"
+						}
+					]
+				},
+				{
+					"ID": "vasconcelos-fim",
+					"Title": "Cena",
+					"Text": "Agora é a parte que me interessa: quero ver como você se vira com isso à luz do Direito e se você enxerga além do barulho.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "vasconcelos-fim"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "cena3-caso-miguel",
+			"StartIn": "p1",
+			"EndIn": "p4",
+			"DialogNodes": [
+				{
+					"ID": "p1",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Manchete no site do Jornalista - ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO! Olhando pra peça, que conflitos você enxerga?",
+					"Options": [
+						{
+							"Placeholder": "O direito exclusivo de Carlos explorar economicamente o seu blog, sem qualquer interferência, já que se trata de propriedade privada na esfera digital.",
+							"Goes": "p2"
+						},
+						{
+							"Placeholder": "De um lado, a liberdade de informação e de expressão exercida por Carlos em seu blog; de outro, a proteção da honra e da imagem de Miguel, especialmente diante da forma como ele foi apresentado na manchete e na matéria.",
+							"Goes": "p2"
+						},
+						{
+							"Placeholder": "Apenas o direito de Miguel à intimidade, já que a honra e a imagem não são relevantes quando se trata de ex-agente político.",
+							"Goes": "p2"
+						},
+						{
+							"Placeholder": "Somente a liberdade de expressão de Carlos, pois, na condição de ex-deputado, Miguel deveria aceitar qualquer exposição como parte da vida pública.",
+							"Goes": "p2"
+						}
+					]
+				},
+				{
+					"ID": "p2",
+					"Title": "Dr. Vasconcelos",
+					"Text": "A operação ainda estava em fase de investigação, sem condenação. Mesmo assim, a manchete do blog cravou na tela: ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO!’. Avaliando esse detalhe, qual linha de raciocínio você enxerga como alinhadas com o Direito?",
+					"Options": [
+						{
+							"Placeholder": "Defenderia que a presunção de inocência impede que Miguel seja apresentado como se já estivesse comprovadamente envolvido em esquema de corrupção, de modo que Carlos poderia noticiar a operação, mas com linguagem que deixasse claro o caráter ainda investigativo dos fatos.",
+							"Goes": "p3"
+						},
+						{
+							"Placeholder": "Sustentaria que, uma vez deflagrada operação policial, a presunção de inocência perde força no campo social, permitindo manchetes que já associem o ex-deputado de forma categórica a esquemas de corrupção.",
+							"Goes": "p3"
+						},
+						{
+							"Placeholder": "Argumentaria que a presunção de inocência é um conceito restrito ao processo penal, sem relevância para a forma como a imprensa formula manchetes sobre operações policiais.",
+							"Goes": "p3"
+						},
+						{
+							"Placeholder": "Alegaria que, por ser ex-deputado, Miguel não pode invocar a presunção de inocência contra manchetes jornalísticas, pois esse princípio só protege cidadãos comuns.",
+							"Goes": "p3"
+						}
+					]
+				},
+				{
+					"ID": "p3",
+					"Title": "Dr. Vasconcelos",
+					"Text": "A matéria não ficou só na manchete. Carlos foi sem dó na imagem: escolheu uma foto do Miguel algemado, cercado por agentes, tirada no calor da operação, e colocou isso logo abaixo de ‘ESCÂNDALO: EX-DEPUTADO É FLAGRADO EM OPERAÇÃO MILIONÁRIA DE CORRUPÇÃO!’. O advogado de Miguel questionou esse uso da foto, dizendo que aquilo não era apenas ‘ilustrar a notícia’, mas jogar contra a honra dele. Se você estivesse ajudando a montar essa parte da tese, que leitura jurídica faria?",
+					"Options": [
+						{
+							"Placeholder": "Afirmar que, por se tratar de imagem vinculada a fato de interesse público, não há discussão jurídica relevante sobre a forma como ela é utilizada na matéria.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Sustentar que a imagem de Miguel algemado até poderia ser usada para ilustrar a existência da operação, mas que, combinada com a manchete e o texto que o vinculam à ‘operação milionária de corrupção’ como se sua participação já estivesse definida, ela reforça a ideia de culpa e agrava o dano à sua imagem.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Defender que a utilização da imagem é um detalhe secundário, pois o que realmente importa é apenas o conteúdo textual da notícia.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Alegar que qualquer restrição ao uso de imagens relacionadas a operações policiais violaria a liberdade de imprensa.",
+							"Goes": "p4"
+						}
+					]
+				},
+				{
+					"ID": "p4",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Juntando tudo: ex-deputado, operação ainda em fase investigativa, manchete em tom de escândalo, e escolha de imagem que o coloca no centro da cena. O advogado de Miguel precisa entregar pro juiz uma conclusão clara sobre o comportamento de Carlos. Se essa peça estivesse na sua mão, como você fecharia o raciocínio?",
+					"Options": [
+						{
+							"Placeholder": "Que Carlos exerceu de forma plena e regular sua liberdade de imprensa, já que, em casos de corrupção, a imprensa tem o dever de usar linguagem dura para sensibilizar a opinião pública.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Que a situação se resume a um episódio de mau gosto comunicacional, sem repercussão relevante na esfera jurídica.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Que, diante da condição de ex-deputado, Miguel deveria suportar qualquer tipo de exposição midiática, inclusive manchetes que o retratem como personagem central da corrupção, sem possibilidade de reparação.",
+							"Goes": "p4"
+						},
+						{
+							"Placeholder": "Que Carlos tinha o direito de informar sobre a operação envolvendo Miguel, mas extrapolou ao apresentá-lo como se já estivesse envolvido em esquema milionário de corrupção, combinando texto e imagem de modo a atingir sua honra e sua imagem, o que pode justificar direito de resposta e indenização.",
+							"Goes": "p4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "after_caso_miguel",
+			"StartIn": "p1",
+			"EndIn": "p6",
+			"DialogNodes": [
+				{
+					"ID": "p1",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Se você prestou atenção, esse caso não era só sobre um blog barulhento. Era sobre como se equilibra microfone e reputação dentro da Constituição.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p2"
+						}
+					]
+				},
+				{
+					"ID": "p2",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Você viu: liberdade de informar não é licença pra condenar alguém na manchete; honra e imagem não servem de escudo pra esconder tudo o que é de interesse público; e a tal presunção de inocência não vive só no processo penal, ela sangra pra fora, na forma como a sociedade enxerga a pessoa.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p3"
+						}
+					]
+				},
+				{
+					"ID": "p3",
+					"Title": "Dr. Vasconcelos",
+					"Text": "No fim das contas, o juiz não está escolhendo um lado bonzinho contra um lado malvado. Ele está tentando impedir duas catástrofes diferentes: a censura de um lado... e o linchamento moral do outro.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p4"
+						}
+					]
+				},
+				{
+					"ID": "p4",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Agora a pergunta é: se esse processo estivesse na sua mesa, você saberia conduzir de uma forma que não virasse panfleto de nenhum dos dois? Porque advogado bom não entra na audiência como fã de ninguém. Entra como quem entendeu o caso melhor que todo mundo.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p5"
+						}
+					]
+				},
+				{
+					"ID": "p5",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Mas calma, estagiário. Por enquanto, eu só preciso que você enxergue os conflitos certos e pare de achar que ‘é só uma notícia’. Quando chegar a hora de você assinar a petição… aí sim eu começo a ficar realmente exigente.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p6"
+						}
+					]
+				},
+				{
+					"ID": "p6",
+					"Title": "Dr. Vasconcelos",
+					"Text": "Vai tomar um café, respirar um pouco...porque o que espero de você é mais do que análises...",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "p6"
+						}
+					]
+				}
+			]
+		}
+	]
+}

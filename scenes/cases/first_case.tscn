@@ -75,7 +75,7 @@ script = ExtResource("2_uq2ah")
 metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
 
 [node name="LargePaper1" type="Sprite2D" parent="DragAndDrop/RelevantAreaController/Doc_3"]
-position = Vector2(6.00815e-05, 12)
+position = Vector2(-9.53656e-07, 12)
 scale = Vector2(0.699115, 0.680982)
 texture = ExtResource("4_0lq4y")
 
@@ -206,7 +206,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogProvider" parent="." instance=ExtResource("9_k1im2")]
 dialog_json_file = "res://assets/dialogs/source/case/case_one_dialog.json"
-context = "caso-um"
+context = "perguntas-vasconcelos-1"
 
 [connection signal="mouse_entered" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DragAndDrop/RelevantAreaController/Doc_4" to="DragAndDrop/RelevantAreaController/Doc_4" method="_on_mouse_exited"]
