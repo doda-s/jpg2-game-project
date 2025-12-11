@@ -1456,12 +1456,13 @@ shape = SubResource("RectangleShape2D_b52dl")
 dialog_json_file = "res://assets/dialogs/source/dialog_scope.json"
 context = "dialog-demonstration-1"
 
-[node name="OutSideDoor" parent="." groups=["doors"] instance=ExtResource("11_0fltd")]
+[node name="OutSideDoor" parent="." instance=ExtResource("11_0fltd")]
 position = Vector2(-608, -28)
 door_id = "3"
-target_scene_path = "res://scenes/worlds/main_city/main_city_D2T.tscn"
+target_id = ""
+target_scene_path = "res://scenes/worlds/main_city/main_city_M.tscn"
 
 [node name="PlayerRoomDoor" parent="." groups=["doors"] instance=ExtResource("11_0fltd")]
 position = Vector2(112, -28)
 door_id = "2"
-target_scene_path = "res://scenes/worlds/player_room_map/player_room_map_D2T.tscn"
+target_scene_path = "res://scenes/worlds/player_room_map/player_room_map_D2T.tscnE"
