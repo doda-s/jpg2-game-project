@@ -15,7 +15,7 @@ func _on_area_2d_body_exited(body):
 
 func _ready():
 	Globals.transport_to_target()
-	
+		
 func _process(delta):
 	if player_can_interact and Input.is_action_just_pressed("interact"):
 		Globals.target_door_id = target_id

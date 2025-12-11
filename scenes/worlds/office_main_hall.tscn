@@ -1,12 +1,12 @@
 [gd_scene load_steps=21 format=4 uid="uid://07xptjdmlx0u"]
 
 [ext_resource type="Texture2D" uid="uid://dattxbiarodre" path="res://assets/mp_house_interiors_tileset_pack/walls_background.png" id="1_m3b63"]
-[ext_resource type="PackedScene" uid="uid://dasf0eah3mcul" path="res://resources/ui/player_hud.tscn" id="1_o0cp8"]
+[ext_resource type="PackedScene" path="res://resources/ui/player_hud.tscn" id="1_o0cp8"]
 [ext_resource type="Texture2D" uid="uid://w6wwlkwmrexc" path="res://assets/mp_house_interiors_tileset_pack/interior_void.png" id="2_25bdk"]
 [ext_resource type="Texture2D" uid="uid://cvqey80j1kwck" path="res://assets/mp_house_interiors_tileset_pack/office.png" id="2_v17nl"]
 [ext_resource type="Texture2D" uid="uid://cju30x27m2qf4" path="res://assets/mp_house_interiors_tileset_pack/living_room.png" id="3_25bdk"]
 [ext_resource type="PackedScene" uid="uid://pftpfvcl56bh" path="res://resources/entities/player.tscn" id="4_o0cp8"]
-[ext_resource type="PackedScene" uid="uid://dcma5d5hoxtd7" path="res://resources/entities/secretary_npc.tscn" id="6_o0cp8"]
+[ext_resource type="PackedScene" path="res://resources/entities/secretary_npc.tscn" id="6_o0cp8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqxst"]
 texture = ExtResource("1_m3b63")

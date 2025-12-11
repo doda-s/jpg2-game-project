@@ -24,7 +24,7 @@ grow_vertical = 2
 script = ExtResource("1_idqd0")
 
 [node name="6255Ae05-1b3e-4240-ad82-ad989a501e7a" type="Sprite2D" parent="StartMenu"]
-position = Vector2(578, 362)
+position = Vector2(581, 323)
 scale = Vector2(0.75, 0.632813)
 texture = ExtResource("2_r0pvr")
 
