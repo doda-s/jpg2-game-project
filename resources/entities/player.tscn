@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://pftpfvcl56bh"]
+[gd_scene load_steps=16 format=3 uid="uid://pftpfvcl56bh"]
 
 [ext_resource type="Script" uid="uid://spirl3hbi36k" path="res://scripts/player/player.gd" id="1_1ie0h"]
 [ext_resource type="PackedScene" uid="uid://cf11q68cn7wn" path="res://resources/components/moviment_component.tscn" id="2_08t41"]
@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bdwro6mqcm6jn" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_03.png" id="6_aj70s"]
 [ext_resource type="Texture2D" uid="uid://c4f8byppuytgu" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_04.png" id="7_f2fsf"]
 [ext_resource type="Texture2D" uid="uid://cfo4c0cw5hede" path="res://assets/player/IDLE/ADVOGADO/ADVOGADO_IDLE_05.png" id="8_p8jiw"]
+[ext_resource type="Texture2D" uid="uid://jhpo1j7w27q6" path="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_01.png" id="9_uwaia"]
+[ext_resource type="Texture2D" uid="uid://yo6i4y4bpwq1" path="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_02.png" id="10_m0xx1"]
+[ext_resource type="Texture2D" uid="uid://cfs7rh0vew017" path="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_03.png" id="11_r0d8o"]
+[ext_resource type="Texture2D" uid="uid://dy2ugn6yp5ofr" path="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_04.png" id="12_lp8sv"]
+[ext_resource type="Texture2D" uid="uid://cc8d6me3kseq6" path="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_05.png" id="13_pejtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08t41"]
 size = Vector2(14, 36)
@@ -33,6 +38,26 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_uwaia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m0xx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r0d8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lp8sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pejtn")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 8.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -53,12 +78,10 @@ _jump_force = 130.0
 position = Vector2(0, -25)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-10, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_uwaia")
-animation = &"idle"
+animation = &"walking"
 autoplay = "idle"
-frame = 4
-frame_progress = 0.286639
+frame_progress = 0.418113
 centered = false
-offset = Vector2(0, -19)
+offset = Vector2(-5, -18)
