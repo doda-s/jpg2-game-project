@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yo6i4y4bpwq1"
-path="res://.godot/imported/ADVOGADO_ANDANDO_02.png-c18e8e2278ce3582c374ad3c832746b7.ctex"
+uid="uid://dy2ugn6yp5ofr"
+path="res://.godot/imported/ADVOGADO_ANDANDO_04.png-63996bec0d8270d53b48845e33801fae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/ANDANDO/Nova pasta/ADVOGADO_ANDANDO_02.png"
-dest_files=["res://.godot/imported/ADVOGADO_ANDANDO_02.png-c18e8e2278ce3582c374ad3c832746b7.ctex"]
+source_file="res://assets/player/ANDANDO/ADVOGADO_ANDANDO_04.png"
+dest_files=["res://.godot/imported/ADVOGADO_ANDANDO_04.png-63996bec0d8270d53b48845e33801fae.ctex"]
 
 [params]
 
