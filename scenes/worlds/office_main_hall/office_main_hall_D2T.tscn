@@ -1208,7 +1208,7 @@ position = Vector2(84, 0)
 [node name="PlayerOfficeDoor" parent="." groups=["doors"] instance=ExtResource("8_tsh3g")]
 position = Vector2(48, -28)
 door_id = "2"
-target_scene_path = "res://scenes/worlds/player_office_room/player_office_room.tscn"
+target_scene_path = "res://scenes/worlds/player_office_room/player_office_room_D2T.tscn"
 
 [node name="BossDoor" parent="." groups=["doors"] instance=ExtResource("8_tsh3g")]
 position = Vector2(-160, -28)
