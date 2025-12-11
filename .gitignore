@@ -8,3 +8,5 @@ test/
 # Visual Studio Code
 
 .vscode/
+
+build/
